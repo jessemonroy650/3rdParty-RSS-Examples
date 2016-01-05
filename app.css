@@ -1,0 +1,11 @@
+body {margin:0px;font-size:large;box-sizing:border-box;}
+a {text-decoration:none;color:#000000;}
+#appIcon {float:left;}
+#exitApp {margin:0;float:right;}
+#content {margin:1em;}
+#footer {background:lightblue;}
+#header {margin:0;padding:0;}
+.hidden {visibility:collapse;display:none;}
+.expose {visibility:visible;display:block;} /* Here for completeness only. */
+.copyright {padding:5px;align:left;font-style:italic;font-size:small;}
+.marginSpacer {margin:0.5em;}
