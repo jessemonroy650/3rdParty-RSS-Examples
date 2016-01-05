@@ -82,7 +82,7 @@ var readerApp = {
             xmlDoc = $.parseXML( data ),
             $xml = $( xmlDoc ),
             $title = $xml.find( "title" );
-            $('content').html($title.text());
+            $('#content').html($title.text());
         });
     }
 
