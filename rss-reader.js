@@ -77,11 +77,7 @@ var readerApp = {
     get : function() {
         $.get(AppInfo.RSS, function(data, errorCode) {
             console.log("got data");
-            alert("got data:" + errorCode);
-            xmlDoc = $.parseXML( data ),
-            $xml = $( xmlDoc ),
-            $title = $xml.find( "title" );
-            alert( $title.text() );
+            alert("got data:" + data);
         });
     }
 
