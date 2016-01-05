@@ -65,8 +65,9 @@ var AppInfo = {
     // App Title
     TITLE : "Jesse Monroy",
     //RSS url
-    RSS : "http://codesnippets.altervista.org/css/default.css"
-    //RSS : "https://cordova.apache.org/feed.xml" // "http://feeds.feedburner.com/raymondcamdensblog"
+    //RSS : "http://codesnippets.altervista.org/css/default.css"
+    //RSS : "http://feeds.feedburner.com/raymondcamdensblog"
+    RSS : "https://cordova.apache.org/feed.xml"
 };
 
 var readerApp = {
@@ -78,6 +79,10 @@ var readerApp = {
         $.get(AppInfo.RSS, function(data, errorCode) {
             console.log("got data");
             alert("got data:" + data);
+            xmlDoc = $.parseXML( data ),
+            $xml = $( xmlDoc ),
+            $title = $xml.find( "title" );
+            $('content').html($title.text());
         });
     }
 
