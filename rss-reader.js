@@ -75,9 +75,9 @@ var readerApp = {
         $('#appTitle').html(AppInfo.TITLE);
     },
     get : function() {
-        $.get(AppInfo.RSS, function(data, errorCode) {
+        $.getJSON(AppInfo.RSS, function(data, errorCode) {
             console.log("got data");
-            alert("got data");
+            alert("got data:" + errorCode);
         });
     }
 
