@@ -75,9 +75,13 @@ var readerApp = {
         $('#appTitle').html(AppInfo.TITLE);
     },
     get : function() {
-        $.getJSON(AppInfo.RSS, function(data, errorCode) {
+        $.get(AppInfo.RSS, function(data, errorCode) {
             console.log("got data");
             alert("got data:" + errorCode);
+            xmlDoc = $.parseXML( data ),
+            $xml = $( xmlDoc ),
+            $title = $xml.find( "title" );
+            alert( $title.text() );
         });
     }
 
