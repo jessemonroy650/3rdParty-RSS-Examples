@@ -108,8 +108,9 @@ var readerApp = {
             $.each(currentFeed.entries, function(i, v) {
                 s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
+            $("#linksList").remove();
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw1' );
-            $("#linksList").html(s);
+            $("#linksList").append(s);
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw2' );
             //$("#linksList").listview("refresh");
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw3' );
