@@ -5,6 +5,7 @@
 var configMenu = {isVisible:false};
 var feedList   = {isVisible:false};
 var story      = {isVisible:false};
+var feedInput  = {isVisible:false};
 
 $('#getData').on('click', function(event) {
     console.log('#getData');
@@ -36,7 +37,8 @@ $('#menuIcon').on('click', function(event) {
     }
 });
 
-$('#feedBtn').on('click', function(event) {
+$('#toggleBtn').on('click', function(event) {
+    console.log('#toggleBtn');
     if (story.isVisible) {
         readerApp.hideStory();
     } else {
@@ -44,7 +46,14 @@ $('#feedBtn').on('click', function(event) {
     }
 });
 
-
+$('#addFeed').on('click', function(event) {
+    console.log('#addFeed');
+    if (feedInput.isVisible) {
+        readerApp.hideAddFeed();
+    } else {
+        readerApp.showAddFeed();
+    }
+});
 
 var buttons = {
 

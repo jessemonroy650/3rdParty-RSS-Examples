@@ -15,7 +15,7 @@
     <div id=appTitle>Generic RSS Reader</div>
     <img id=menuIcon src=images/3menubars_black.png>
 </div>
-<div  id=feedBtn class="button button-block button-rounded button-primary button-large">Feed</div>
+<div  id=toggleBtn class="button button-block button-rounded button-primary button-large">Feed</div>
 <!--
   <button id=exitApp class="button button-pill button-primary button-large">Exit</button>
  -->
@@ -25,7 +25,13 @@ storeavailable: <span id=storeavailable>no</span>
 <div id=RSSListContainter class="hidden colorPrimaryLight">
     <ul id=RSSList class=plain-list>
         <li id=Cordova class="contentLink button button-block">Cordova</li>
+        <li id=addFeed class="button button-block">Add a Feed</li>
     </ul>
+</div>
+
+<div id=feedInput class="hidden colorPrimary">
+    <input id=addField type=text placeholder="RSS feed URL" class=clearBoth>
+    <button id=addBtn class="button button-rounded button-primary" >Add Feed</button>
 </div>
 
 <div id=content class=clearBoth>
@@ -36,7 +42,7 @@ storeavailable: <span id=storeavailable>no</span>
 <div id=story class="hidden clearBoth">
 </div>
 
-<pre id=dbug></pre>
+<pre id=dbug class="hidden clearBoth"></pre>
 
 <button id=getData class="button button-pill button-action button-large">getData</button>
 

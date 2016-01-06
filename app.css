@@ -23,3 +23,11 @@ a {text-decoration:none;color:#000000;}
 /* This cause an issue with zepto/jquery when the list is inserted */
 /* #linksList > li {overflow:hidden;} */
 .contentLink {overflow:hidden;}
+
+/*  */
+#feedInput {margin:0.2em;padding:0.2em;}
+#addField {font-size:large;padding:0.1em;}
+
+
+
+

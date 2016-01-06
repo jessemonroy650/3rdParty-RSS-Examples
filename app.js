@@ -36,8 +36,8 @@ var app = {
         }
         app.init();
         if (localStore.test('#storeavailable')) {
-            localStore.put('Cordova','https://cordova.apache.org/feed.xml');
-            $('#Cordova').html(localStore.get('Cordova'));
+            localStore.put('0','https://cordova.apache.org/feed.xml');
+            $('#Cordova').html(localStore.get('0'));
         }
         readerApp.init();
         buttons.init();
