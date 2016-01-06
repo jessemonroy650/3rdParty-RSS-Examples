@@ -78,10 +78,9 @@ var readerApp = {
     },
     get : function() {
         $.get(AppInfo.RSS, function(data, errorCode) {
-            console.log("got data");
-            alert("got data:" + data);
-            alert(JSON.stringify(xml2json(data)));
-            $('dbug').html(JSON.stringify(xml2json(data),'\t'));
+            var rss = JSON.stringify(xml2json(data));
+            //console.log("got data"); alert("got data:" + data);
+            $('dbug').html(rss.channel.title);
         });
     },
     addFeed : function () {
