@@ -22,7 +22,7 @@ var readerApp = {
             var xml    = $( data );
             var title  = xml.find( "title" );
             var items  = xml.find( "item" );
-            $('#feedBtn').html(title.text());
+            $('#toggleBtn').html(title.text());
             $('#dbug').html('title:' + title.text() + ":" + items.length );
             $.each(items, function(i, v) {
                 entry = {
