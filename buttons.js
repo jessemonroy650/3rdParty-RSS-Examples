@@ -4,6 +4,7 @@
 
 var configMenu = {isVisible:false};
 var feedList   = {isVisible:false};
+var story      = {isVisible:false};
 
 $('#getData').on('click', function(event) {
     console.log('#getData');
@@ -35,6 +36,15 @@ $('#menuIcon').on('click', function(event) {
     }
 });
 
+$('#feedBtn').on('click', function(event) {
+    if (story.isVisible) {
+        readerApp.hideStory();
+    } else {
+        readerApp.showStory();
+    }
+});
+
+
 
 var buttons = {
 
@@ -47,7 +57,8 @@ var buttons = {
         $('.contentLink').on('click',function(event) {
             //console.log('.contentLink:' + event.target.id);
             //alert('.contentLink:' + event.target.id);
-            readerApp.showStory(event.target.id);
+            currentFeed.selectedStory = event.target.id;
+            readerApp.showStory();
         }); 
     },
 

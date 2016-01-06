@@ -69,14 +69,14 @@ var AppInfo = {
     //RSS : "http://feeds.feedburner.com/raymondcamdensblog"
     RSS : "https://cordova.apache.org/feed.xml",
     entries : [],
-    selectedEntry : ""
+    selectedStory : ""
 
 };
 //
 var currentFeed = {
     RSS           : "https://cordova.apache.org/feed.xml",
     entries       : [],
-    selectedEntry : ""
+    selectedStory : ""
 };
 
 var readerApp = {
@@ -94,7 +94,7 @@ var readerApp = {
             var xml    = $( data );
             var title  = xml.find( "title" );
             var items  = xml.find( "item" );
-            $('#feed').html(title.text());
+            $('#feedBtn').html(title.text());
             $('#dbug').html('title:' + title.text() + ":" + items.length );
             $.each(items, function(i, v) {
                 entry = {
@@ -121,19 +121,22 @@ var readerApp = {
     removeFeed : function () {
     },
     hideLinksList : function () {
-        $('linksList').addClass('hidden');
+        $('#linksList').addClass('hidden');
     },
     showLinksList : function () {
-        $('linksList').removeClass('hidden');
+        $('#linksList').removeClass('hidden');
     },
-    showStory : function (storyId) {
+    showStory : function () {
         alert('readerApp:showStory - storyId:' + storyId );
+        var storyId = currentFeed.selectedStory;
         $('#story').html('STORY' + currentFeed.entries[storyId].description);
         $('#story').removeClass('hidden');
+        story.isVisible = true;
         readerApp.hideLinksList();
     },
     hideStory : function () {
         $('#story').addClass('hidden');
+        story.isVisible = false;
         readerApp.showLinksList();
     }    
 }
