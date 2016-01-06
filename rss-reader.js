@@ -105,7 +105,7 @@ var readerApp = {
             $('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'List' );
             //now draw the list
             var s = '';
-            $.each(entries, function(i, v) {
+            $.each(currentFeed.entries, function(i, v) {
                 s += '<li><a href="#contentPage" class="contentLink" data-entryid="'+i+'">' + v.title + '</a></li>';
             });
             $("#linksList").append(s);
