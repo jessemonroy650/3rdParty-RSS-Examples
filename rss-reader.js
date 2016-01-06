@@ -68,6 +68,15 @@ var AppInfo = {
     //RSS : "http://codesnippets.altervista.org/css/default.css"
     //RSS : "http://feeds.feedburner.com/raymondcamdensblog"
     RSS : "https://cordova.apache.org/feed.xml"
+    entries : [];
+    var selectedEntry = "";
+
+};
+//
+var currentFeed = {
+    RSS           : "https://cordova.apache.org/feed.xml"
+    entries       : [];
+    selectedEntry : "";
 };
 
 var readerApp = {
@@ -77,24 +86,23 @@ var readerApp = {
         $('#appTitle').html(AppInfo.TITLE);
     },
     get : function() {
-        $.get(AppInfo.RSS, function(data, errorCode) {
+        $.get(currentFeed.RSS, function(data, errorCode) {
             alert("got data");
             //console.log("got data");
-            $xml = $( data );
-            $title = $xml.find( "title" );
+            var $xml = $( data );
+            var $title = $xml.find( "title" );
+            var $items = $xml.find( "item" );
             $('#feed').html($title.text());
-            $('#dbug').html('title:' + $title.text());
-            $items = $xml.find( "item" );
-            $('#dbug').html( $('#dbug').html() + ":" + $items.length );
+            $('#dbug').html('title:' + $title.text() + ":" + $items.length );
             $.each(items, function(i, v) {
                 entry = {
                     title:$(v).find("title").text(),
                     link:$(v).find("link").text(),
                     description:$.trim($(v).find("description").text())
                 };
-                entries.push(entry);
+                currentFeed.entries.push(entry);
             });
-            $('#dbug').html( $('#dbug').html() + ":" + 'Done.' );
+            $('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'Done.' );
         });
     },
     addFeed : function () {
