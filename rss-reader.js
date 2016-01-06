@@ -83,7 +83,7 @@ var readerApp = {
             var the = JSON.stringify(rssData);
             //console.log("got data");
             //alert("got data:" + the.rss.pubDate);
-            $('#dbug').html(the);
+            //$('#dbug').html(the);
             xmlDoc = $.parseXML( data ),
             $xml = $( xmlDoc ),
             $title = $xml.find( "title" );
