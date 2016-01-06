@@ -108,11 +108,11 @@ var readerApp = {
             $.each(currentFeed.entries, function(i, v) {
                 s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
-            $('#dbug').html( 'Draw1' );
+            $('#dbug').html( $('#dbug').html() + ":" + 'Draw1' );
             $("#linksList").append(s);
-            $('#dbug').html( 'Draw2' );
+            $('#dbug').html( $('#dbug').html() + ":" + 'Draw2' );
             //$("#linksList").listview("refresh");
-            $('#dbug').html( 'Draw3' );
+            $('#dbug').html( $('#dbug').html() + ":" + 'Draw3' );
 
         });
     },
