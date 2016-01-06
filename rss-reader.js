@@ -121,8 +121,8 @@ var readerApp = {
     removeFeed : function () {
     },
     showStory : function (storyId) {
-        alert('storyId:' + storyId );
-        $('#story').html(currentFeed.entries[storyId])
+        alert('readerApp:showStory - storyId:' + storyId );
+        $('#story').html('STORY' + currentFeed.entries[storyId]);
     },
     hideStory : function () {
     }    
