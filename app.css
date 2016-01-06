@@ -19,7 +19,7 @@ a {text-decoration:none;color:#000000;}
 #RSSListContainter {margin:0;padding:0;}
 #RSSList {font-size:medium;}
 .plain-list {list-style-type:none;margin:0;padding:0.1em;}
-#RSSList > li {overflow:hidden;}
+/* #RSSList > li {overflow:hidden;} */
 /* This cause an issue with zepto/jquery when the list is inserted */
 /* #linksList > li {overflow:hidden;} */
 .contentLink {overflow:hidden;}

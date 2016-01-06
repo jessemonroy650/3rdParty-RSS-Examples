@@ -109,7 +109,7 @@ var readerApp = {
                 s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw1' );
-            $("#linksList").append(s);
+            $("#linksList").html(s);
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw2' );
             //$("#linksList").listview("refresh");
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw3' );
