@@ -67,6 +67,8 @@ $('#addFeed').on('click', function(event) {
     }
 });
 
+
+
 var buttons = {
 
     init : function () {
@@ -81,6 +83,12 @@ var buttons = {
             currentFeed.selectedStory = event.target.id;
             //readerApp.showStory();
             $('#toggleBtn').trigger('click');
+        }); 
+    },
+
+    readmore : function (link) {   
+        $('#readMore').on('click', function(event) {
+            window.open('_system', link );
         }); 
     },
 

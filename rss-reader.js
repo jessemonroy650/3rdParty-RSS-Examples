@@ -65,10 +65,11 @@ var readerApp = {
         $('#story').html(
             '<h2>'  + theStory.title + '</h2>' +
             '<div>' + theStory.description  + '</div>' +
-            '<a href=' + theStory.link + '>Read More ..</a>'
+            '<button id=readMore>Read More ..</button>'
         );
-        $('#story').removeClass('hidden');
-        readerApp.hideLinksList();
+        buttons.readmore(theStory.link);   // create handler to open browser
+        $('#story').removeClass('hidden'); // make story visible
+        readerApp.hideLinksList();         // hide the other links
     },
     hideStory : function () {
         $('#story').addClass('hidden');
