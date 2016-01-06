@@ -31,11 +31,11 @@ $('#menuIcon').on('click', function(event) {
     if (feedList.isVisible) {
         feedList.isVisible = false;
         $('#RSSListContainter').addClass('hidden');
-        readerApp.hideLinksList()
+        //readerApp.hideLinksList()
     } else {
         feedList.isVisible = true;
         $('#RSSListContainter').removeClass('hidden');
-        readerApp.showLinksList()
+        //readerApp.showLinksList()
     }
 });
 
