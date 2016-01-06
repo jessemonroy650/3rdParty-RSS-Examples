@@ -6,7 +6,7 @@ $(document).ready(function() {
 
     //EDIT THESE LINES
     //Title of the blog
-    var TITLE = "Jesse Monroy";
+    var TITLE = "Generic CSS Reader";
     //RSS url
     var RSS = "http://feedproxy.google.com/RaymondCamdensColdfusionBlog";
     //Stores entries
@@ -63,7 +63,7 @@ $(document).ready(function() {
 //EDIT THESE LINES
 var AppInfo = {
     // App Title
-    TITLE : "Jesse Monroy",
+    TITLE : "Generic CSS Reader",
     //RSS url
     //RSS : "http://codesnippets.altervista.org/css/default.css"
     //RSS : "http://feeds.feedburner.com/raymondcamdensblog"
@@ -85,7 +85,7 @@ var readerApp = {
         console.log("readerApp.init");
         $('#appTitle').html(AppInfo.TITLE);
     },
-    get : function() {
+    getFeed : function() {
         $.get(currentFeed.RSS, function(data, errorCode) {
             //alert("got data");
             //console.log("got data");
@@ -106,7 +106,7 @@ var readerApp = {
             //now draw the list
             var s = '';
             $.each(currentFeed.entries, function(i, v) {
-                s += '<li id="' + i + '" class="button button-block">' + i + ':' + v.title + '</li>';
+                s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
             $("#linksList").append(s);
             $("#linksList").listview("refresh");

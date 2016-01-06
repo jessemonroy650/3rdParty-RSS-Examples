@@ -3,7 +3,7 @@
 */
 $('#getData').on('click', function(event) {
     console.log('#getData');
-    readerApp.get();
+    readerApp.getFeed();
 });
 
 $('#appIcon').on('click', function(event) {
@@ -21,3 +21,8 @@ $('#menuIcon').on('click', function(event) {
         $('#RSSListContainter').removeClass('hidden');
     }
 });
+
+$('.contentLink').on('click',function(event) {
+    console.log('.contentLink');
+    alert('.contentLink');
+}); 
