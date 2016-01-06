@@ -46,14 +46,10 @@ var readerApp = {
     },
     showAddFeed : function () {
         $('#feedInput').removeClass('hidden');
-        feedInput.isVisible = true;
-
         readerApp.hideLinksList();
     },
     hideAddFeed : function () {
         $('#feedInput').addClass('hidden');
-        feedInput.isVisible = false;
-
         readerApp.showLinksList();
     },
     showLinksList : function () {
@@ -72,12 +68,10 @@ var readerApp = {
             '<a href=' + theStory.link + '>Read More ..</a>'
         );
         $('#story').removeClass('hidden');
-        story.isVisible = true;
         readerApp.hideLinksList();
     },
     hideStory : function () {
         $('#story').addClass('hidden');
-        story.isVisible = false;
         readerApp.showLinksList();
     }    
 }

@@ -15,27 +15,33 @@ $('#getData').on('click', function(event) {
     }
 });
 
+$('#Cordova').on('click', function(event) {
+    console.log('#Cordova');
+    if (readerApp.needFeed) {
+        readerApp.getFeed();
+        readerApp.needFeed = false;
+    }
+});
+
 $('#appIcon').on('click', function(event) {
     console.log('#appIcon');
     if (configMenu.isVisible) {
-        configMenu.isVisible = false;
         $('#configMenu').addClass('hidden');
+        configMenu.isVisible = false;
     } else {
-        configMenu.isVisible = true;
         $('#configMenu').removeClass('hidden');
+        configMenu.isVisible = true;
     }
 });
 
 $('#menuIcon').on('click', function(event) {
     console.log('#menuIcon');
     if (feedList.isVisible) {
-        feedList.isVisible = false;
         $('#RSSListContainter').addClass('hidden');
-        //readerApp.hideLinksList()
+        feedList.isVisible = false;
     } else {
-        feedList.isVisible = true;
         $('#RSSListContainter').removeClass('hidden');
-        //readerApp.showLinksList()
+        feedList.isVisible = true;
     }
 });
 
@@ -43,8 +49,10 @@ $('#toggleBtn').on('click', function(event) {
     console.log('#toggleBtn');
     if (story.isVisible) {
         readerApp.hideStory();
+        story.isVisible = false;
     } else {
         readerApp.showStory();
+        story.isVisible = true;
     }
 });
 
@@ -52,8 +60,10 @@ $('#addFeed').on('click', function(event) {
     console.log('#addFeed');
     if (feedInput.isVisible) {
         readerApp.hideAddFeed();
+        feedInput.isVisible = false;
     } else {
         readerApp.showAddFeed();
+        feedInput.isVisible = true;
     }
 });
 
