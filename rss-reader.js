@@ -114,7 +114,7 @@ var readerApp = {
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw2' );
             //$("#linksList").listview("refresh");
             //$('#dbug').html( $('#dbug').html() + ":" + 'Draw3' );
-            buttons.init();
+            buttons.rebind();
         });
     },
     addFeed : function () {

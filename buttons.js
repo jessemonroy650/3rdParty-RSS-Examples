@@ -2,11 +2,6 @@
     Date: 2016-01-05
 */
 
-var buttons = {
-
-    listVisible : false,
-
-    init : function () {
         console.log("buttons.init");
         $('#getData').on('click', function(event) {
             console.log('#getData');
@@ -27,6 +22,13 @@ var buttons = {
                 $('#RSSListContainter').removeClass('hidden');
             }
         });
+
+
+var buttons = {
+
+    listVisible : false,
+
+    init : function () {
         buttons.dynamic();
     },
 
