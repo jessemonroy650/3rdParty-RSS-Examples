@@ -80,8 +80,8 @@ var readerApp = {
         $.get(AppInfo.RSS, function(data, errorCode) {
             var the = JSON.stringify(xml2json(data));
             //console.log("got data");
-            alert("got data:" + the.rss.channel.title);
-            $('#dbug').html(the.rss.channel.title);
+            alert("got data:" + the);
+            //$('#dbug').html(the.rss.channel.title);
         });
     },
     addFeed : function () {
