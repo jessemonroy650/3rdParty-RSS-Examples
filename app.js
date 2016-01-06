@@ -41,6 +41,7 @@ var app = {
         }
         readerApp.init();
         buttons.init();
+        $('#getData').trigger('click');
     },
     init : function () {
         console.log('app.init');
