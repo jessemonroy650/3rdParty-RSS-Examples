@@ -89,12 +89,12 @@ var readerApp = {
         $.get(currentFeed.RSS, function(data, errorCode) {
             alert("got data");
             //console.log("got data");
-            var xml    = ( data );
-            var title = xml.find( "title" );
+            var xml    = $( data );
+            var title  = xml.find( "title" );
             var items  = xml.find( "item" );
             $('#feed').html(title.text());
             $('#dbug').html('title:' + title.text() + ":" + items.length );
-/*
+/* */
             $.each(items, function(i, v) {
                 entry = {
                     title:$(v).find("title").text(),
@@ -104,7 +104,7 @@ var readerApp = {
                 currentFeed.entries.push(entry);
             });
             $('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'Done.' );
-*/
+
         });
     },
     addFeed : function () {
