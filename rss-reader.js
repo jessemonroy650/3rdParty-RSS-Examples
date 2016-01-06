@@ -120,12 +120,21 @@ var readerApp = {
     },
     removeFeed : function () {
     },
+    hideLinksList : function () {
+        $('linksList').addClass('hidden');
+    },
+    showLinksList : function () {
+        $('linksList').removeClass('hidden');
+    },
     showStory : function (storyId) {
         alert('readerApp:showStory - storyId:' + storyId );
-        $('#story').html('STORY' + currentFeed.entries[storyId]);
+        $('#story').html('STORY' + currentFeed.entries[storyId].description);
         $('#story').removeClass('hidden');
+        readerApp.hideLinksList();
     },
     hideStory : function () {
+        $('#story').addClass('hidden');
+        readerApp.showLinksList();
     }    
 }
 
