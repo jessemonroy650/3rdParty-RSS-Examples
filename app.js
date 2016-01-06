@@ -24,15 +24,21 @@ var app = {
             // Get rid of 300ms delay 
             document.addEventListener('DOMContentLoaded', function() { FastClick.attach(document.body); }, false);
             //
-            document.getElementById('exitApp').addEventListener('click', function() {
+/*          document.getElementById('exitApp').addEventListener('click', function() {
                 app.exit();
             });
+*/
         } else if (device.platform == 'browser') {
-            document.getElementById('exitApp').addEventListener('click', function() {
+/*          document.getElementById('exitApp').addEventListener('click', function() {
                 app.exit();
             });
+*/
         }
         app.init();
+        if (localStore.test('#storeavailable')) {
+            localStore.put('Cordova','https://cordova.apache.org/feed.xml');
+            $('#Cordova').html(localStore.get('Cordova'));
+        }
         readerApp.init();
     },
     init : function () {

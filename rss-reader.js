@@ -73,14 +73,16 @@ var AppInfo = {
 var readerApp = {
     self : {},
     init : function () {
+        console.log("readerApp.init");
         $('#appTitle').html(AppInfo.TITLE);
     },
     get : function() {
         $.get(AppInfo.RSS, function(data, errorCode) {
             console.log("got data");
             alert("got data:" + data);
-            alert(xml2json(data));
+            alert(JSON.stringify(xml2json(data),2));
         });
+    },
+    addFeed : function () {
     }
-
 }

@@ -1,11 +1,22 @@
 body {margin:0px;font-size:large;box-sizing:border-box;}
 a {text-decoration:none;color:#000000;}
-#appIcon {float:left;}
-#exitApp {margin:0;float:right;}
+#header {margin:0;padding:0;height:50px;}
+#appIcon {margin:0;padding:2px;float:left;height:46px;}
+#appTitle {display:inline-block;margin:0.2em;}
+#menuIcon {margin:0;padding:0;float:right;}
+#feedBtn {margin:0;padding:0;width:100%}
+#exitApp {margin:0.1em;float:right;}
 #content {margin:1em;}
 #footer {background:lightblue;}
-#header {margin:0;padding:0;}
 .hidden {visibility:collapse;display:none;}
 .expose {visibility:visible;display:block;} /* Here for completeness only. */
 .copyright {padding:5px;align:left;font-style:italic;font-size:small;}
 .marginSpacer {margin:0.5em;}
+.clearBoth {clear:both}
+
+/*  */
+
+#RSSlistContainter {margin:0;padding:0;}
+#RSSlist {font-size:medium;}
+.plain-list {list-style-type:none;margin:0;padding:0.2em;}
+#RSSlist > li {overflow:hidden;}

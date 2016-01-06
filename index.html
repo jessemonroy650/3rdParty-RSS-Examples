@@ -12,11 +12,23 @@
 <body >
 <div id=header class="button button-block button-large">
     <img id=appIcon src=images/favicon-48x48.png>
-    <span id=appTitle>Generic RSS Reader</span>
-    <button id=exitApp class="button button-pill button-primary button-large">Exit</button>
+    <div id=appTitle>Generic RSS Reader</div>
+    <img id=menuIcon src=images/3menubars_black.png>
+</div>
+<div  id=feed class="button button-block button-rounded button-primary button-large">Feed</div>
+<!--
+  <button id=exitApp class="button button-pill button-primary button-large">Exit</button>
+ -->
+<div class=hidden>
+storeavailable: <span id=storeavailable>no</span>
+</div>
+<div id=RSSlistContainter class="hidden colorPrimaryLight">
+    <ul id=RSSlist class=plain-list>
+        <li id=Cordova class="button button-block">Cordova</li>
+    </ul>
 </div>
 
-<div id=content>content</div>
+<div id=content class=clearBoth>content</div>
 
 <button id=getData class="button button-pill button-action button-large">getData</button>
 
@@ -26,8 +38,8 @@
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="js/fastclick.js"></script>
     <script type="text/javascript" src="js/zepto-1.1.6.js"></script>
-    <!-- <script type="text/javascript" src="jquery-1.11.1.js"></script> -->
-    <script type="text/javascript" src="xml2json.js"></script>
+    <script type="text/javascript" src="localstorage.js"></script>
+    <script type="text/javascript" src="js/xml2json.js"></script>
     <script type="text/javascript" src="rss-reader.js"></script>
     <script type="text/javascript" src="buttons.js"></script>
     <script type="text/javascript" src="app.js"></script>
