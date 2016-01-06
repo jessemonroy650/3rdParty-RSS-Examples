@@ -20,5 +20,5 @@ a {text-decoration:none;color:#000000;}
 #RSSList {font-size:medium;}
 .plain-list {list-style-type:none;margin:0;padding:0.1em;}
 #RSSList > li {overflow:hidden;}
-#linksList > li {overflow:hidden;}
-.contentLink {}
+/* #linksList > li {overflow:hidden;} */
+.contentLink {overflow:hidden;}

@@ -106,12 +106,13 @@ var readerApp = {
             //now draw the list
             var s = '';
             $.each(currentFeed.entries, function(i, v) {
-                //s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
-                s += '<li id="' + i + '" class="contentLink">' + v.title + '</li>';
+                s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
+            $('#dbug').html( 'Draw1' );
             $("#linksList").append(s);
+            $('#dbug').html( 'Draw2' );
             $("#linksList").listview("refresh");
-            $('#dbug').html( 'Draw' );
+            $('#dbug').html( 'Draw3' );
 
         });
     },

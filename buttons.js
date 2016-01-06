@@ -23,6 +23,6 @@ $('#menuIcon').on('click', function(event) {
 });
 
 $('.contentLink').on('click',function(event) {
-    console.log('.contentLink');
-    alert('.contentLink');
+    //console.log('.contentLink:' + event.target.id);
+    alert('.contentLink:' + event.target.id);
 }); 
