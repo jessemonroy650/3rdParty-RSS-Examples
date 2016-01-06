@@ -40,6 +40,7 @@ var app = {
             $('#Cordova').html(localStore.get('Cordova'));
         }
         readerApp.init();
+        buttons.init();
     },
     init : function () {
         console.log('app.init');

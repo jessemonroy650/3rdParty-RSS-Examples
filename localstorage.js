@@ -5,8 +5,8 @@
 var localStore = {
     //
     test : function (id) {
-        console.log("localStore.test");
         var v = localStore.storageAvailable('localStorage')
+        console.log("localStore.test:" + v);
         $(id).html(v);
         return v;
     },
