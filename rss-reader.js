@@ -79,10 +79,11 @@ var readerApp = {
     get : function() {
         $.get(AppInfo.RSS, function(data, errorCode) {
             alert("got data");
-            var the = JSON.stringify(xml2json(data));
+            var rssData = xml2json(data)
+            var the = JSON.stringify(rssData,null,2);
             //console.log("got data");
-            alert("got data:" + the.rss.pubDate);
-            //$('#dbug').html(the.rss.channel.title);
+            //alert("got data:" + the.rss.pubDate);
+            $('#dbug').html(the);
         });
     },
     addFeed : function () {
