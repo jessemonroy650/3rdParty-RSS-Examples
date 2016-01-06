@@ -80,7 +80,7 @@ var readerApp = {
         $.get(AppInfo.RSS, function(data, errorCode) {
             alert("got data");
             var rssData = xml2json(data)
-            var the = JSON.stringify(rssData,null,2);
+            var the = JSON.stringify(rssData);
             //console.log("got data");
             //alert("got data:" + the.rss.pubDate);
             $('#dbug').html(the);
