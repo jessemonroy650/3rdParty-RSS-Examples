@@ -87,7 +87,7 @@ var readerApp = {
             xmlDoc = $.parseXML( data ),
             $xml = $( xmlDoc ),
             $title = $xml.find( "title" );
-            $('#dbug').html($title.text());
+            $('#dbug').html('title:' + $title.text());
         });
     },
     addFeed : function () {
