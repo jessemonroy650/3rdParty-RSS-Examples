@@ -110,7 +110,7 @@ var readerApp = {
             });
             $("#linksList").append(s);
             $("#linksList").listview("refresh");
-            $('#dbug').html( $('#dbug').html() + ": + 'Draw' );
+            $('#dbug').html( $('#dbug').html() + ':' + 'Draw' );
 
         });
     },
