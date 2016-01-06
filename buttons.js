@@ -54,7 +54,7 @@ var buttons = {
     },
 
     dynamic : function () {
-        $('.contentLink').on('click',function(event) {
+        $('.contentLink').on('click', function(event) {
             //console.log('.contentLink:' + event.target.id);
             //alert('.contentLink:' + event.target.id);
             currentFeed.selectedStory = event.target.id;

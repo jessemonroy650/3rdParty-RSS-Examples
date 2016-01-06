@@ -127,9 +127,14 @@ var readerApp = {
         $('#linksList').removeClass('hidden');
     },
     showStory : function () {
-        alert('readerApp:showStory - storyId:' + storyId );
-        var storyId = currentFeed.selectedStory;
-        $('#story').html('STORY' + currentFeed.entries[storyId].description);
+        //alert('readerApp:showStory - storyId:' + storyId );
+        var storyId  = currentFeed.selectedStory;
+        var theStory = currentFeed.entries[storyId];
+        $('#story').html(
+            '<h2>'  + theStory.title + '</h2>' +
+            '<div>' + theStory.description  + '</div>' +
+            '<a href=' + theStory.link + '>Read More ..</a>'
+        );
         $('#story').removeClass('hidden');
         story.isVisible = true;
         readerApp.hideLinksList();
