@@ -67,16 +67,16 @@ var AppInfo = {
     //RSS url
     //RSS : "http://codesnippets.altervista.org/css/default.css"
     //RSS : "http://feeds.feedburner.com/raymondcamdensblog"
-    RSS : "https://cordova.apache.org/feed.xml"
-    entries : [];
-    var selectedEntry = "";
+    RSS : "https://cordova.apache.org/feed.xml",
+    entries : [],
+    selectedEntry : ""
 
 };
 //
 var currentFeed = {
-    RSS           : "https://cordova.apache.org/feed.xml"
-    entries       : [];
-    selectedEntry : "";
+    RSS           : "https://cordova.apache.org/feed.xml",
+    entries       : [],
+    selectedEntry : ""
 };
 
 var readerApp = {
