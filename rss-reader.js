@@ -81,6 +81,8 @@ var currentFeed = {
 
 var readerApp = {
     self : {},
+    needFeed : true,
+    //
     init : function () {
         console.log("readerApp.init");
         $('#appTitle').html(AppInfo.TITLE);
@@ -109,14 +111,21 @@ var readerApp = {
                 s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
             $("#linksList li").remove();
-            $('#dbug').html( $('#dbug').html() + ":" + 'Draw1' );
             $("#linksList").append(s);
-            $('#dbug').html( $('#dbug').html() + ":" + 'Draw2' );
-            //$("#linksList").listview("refresh");
-            //$('#dbug').html( $('#dbug').html() + ":" + 'Draw3' );
+            $('#dbug').html( $('#dbug').html() + ":" + 'Done' );
             buttons.rebind();
         });
     },
     addFeed : function () {
-    }
+    },
+    removeFeed : function () {
+    },
+    showStory : function (storyId) {
+        alert('storyId:' + storyId );
+        $('#story').html(currentFeed.entries[storyId])
+    },
+    hideStory : function () {
+    }    
 }
+
+
