@@ -84,8 +84,8 @@ var readerApp = {
             //console.log("got data");
             //alert("got data:" + the.rss.pubDate);
             //$('#dbug').html(the);
-            xmlDoc = $.parseXML( data );
-            $xml = $( xmlDoc );
+            //xmlDoc = $.parseXML( data );
+            $xml = $( data );
             $title = $xml.find( "title" );
             $('#dbug').html('title:' + $title.text());
         });
