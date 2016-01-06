@@ -88,6 +88,8 @@ var readerApp = {
             $xml = $( data );
             $title = $xml.find( "title" );
             $('#dbug').html('title:' + $title.text());
+            $item = $xml.find( "item" );
+            $('#dbug').html( $('#dbug').html() + ":" + $item.length );
         });
     },
     addFeed : function () {
