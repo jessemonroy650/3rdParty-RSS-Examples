@@ -79,7 +79,8 @@ var buttons = {
             //console.log('.contentLink:' + event.target.id);
             //alert('.contentLink:' + event.target.id);
             currentFeed.selectedStory = event.target.id;
-            readerApp.showStory();
+            //readerApp.showStory();
+            $('#toggleBtn').trigger('click');
         }); 
     },
 
