@@ -102,18 +102,22 @@ var readerApp = {
                 };
                 currentFeed.entries.push(entry);
             });
-            $('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'List' );
+            //$('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'List' );
             //now draw the list
             var s = '';
             $.each(currentFeed.entries, function(i, v) {
-                s += '<li id="' + String(i) + '" class="contentLink button button-block">' + v.title + '</li>';
+                s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
             $("#linksList li").remove();
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw1' );
             $("#linksList").append(s);
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw2' );
             //$("#linksList").listview("refresh");
-            $('#dbug').html( $('#dbug').html() + ":" + 'Draw3' );
+            //$('#dbug').html( $('#dbug').html() + ":" + 'Draw3' );
+$('.contentLink').on('click',function(event) {
+    //console.log('.contentLink:' + event.target.id);
+    alert('.contentLink:' + event.target.id);
+}); 
 
         });
     },
