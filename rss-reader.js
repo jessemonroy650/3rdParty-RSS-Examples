@@ -106,7 +106,7 @@ var readerApp = {
             //now draw the list
             var s = '';
             $.each(currentFeed.entries, function(i, v) {
-                s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
+                s += '<li id="' + String(i) + '" class="contentLink button button-block">' + v.title + '</li>';
             });
             $("#linksList li").remove();
             $('#dbug').html( $('#dbug').html() + ":" + 'Draw1' );
