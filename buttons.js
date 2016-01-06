@@ -88,7 +88,7 @@ var buttons = {
 
     readmore : function (link) {   
         $('#readMore').on('click', function(event) {
-            window.open('_system', link );
+            window.open(link, '_system' );
         }); 
     },
 
