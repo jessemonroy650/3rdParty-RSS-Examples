@@ -79,17 +79,22 @@ var readerApp = {
     get : function() {
         $.get(AppInfo.RSS, function(data, errorCode) {
             alert("got data");
-            var rssData = xml2json(data)
-            var the = JSON.stringify(rssData);
             //console.log("got data");
-            //alert("got data:" + the.rss.pubDate);
-            //$('#dbug').html(the);
-            //xmlDoc = $.parseXML( data );
             $xml = $( data );
             $title = $xml.find( "title" );
+            $('#feed').html($title.text());
             $('#dbug').html('title:' + $title.text());
-            $item = $xml.find( "item" );
-            $('#dbug').html( $('#dbug').html() + ":" + $item.length );
+            $items = $xml.find( "item" );
+            $('#dbug').html( $('#dbug').html() + ":" + $items.length );
+            $.each(items, function(i, v) {
+                entry = {
+                    title:$(v).find("title").text(),
+                    link:$(v).find("link").text(),
+                    description:$.trim($(v).find("description").text())
+                };
+                entries.push(entry);
+            });
+            $('#dbug').html( $('#dbug').html() + ":" + 'Done.' );
         });
     },
     addFeed : function () {
