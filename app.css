@@ -6,7 +6,7 @@ a {text-decoration:none;color:#000000;}
 #menuIcon {margin:0;padding:0;float:right;}
 #feedBtn {margin:0;padding:0;width:100%}
 #exitApp {margin:0.1em;float:right;}
-#content {margin:1em;}
+#content {margin:0.5em;}
 #footer {background:lightblue;}
 .hidden {visibility:collapse;display:none;}
 .expose {visibility:visible;display:block;} /* Here for completeness only. */
@@ -20,3 +20,4 @@ a {text-decoration:none;color:#000000;}
 #RSSList {font-size:medium;}
 .plain-list {list-style-type:none;margin:0;padding:0.1em;}
 #RSSList > li {overflow:hidden;}
+#linksList > li {overflow:hidden;}

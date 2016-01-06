@@ -87,7 +87,7 @@ var readerApp = {
     },
     get : function() {
         $.get(currentFeed.RSS, function(data, errorCode) {
-            alert("got data");
+            //alert("got data");
             //console.log("got data");
             var xml    = $( data );
             var title  = xml.find( "title" );
