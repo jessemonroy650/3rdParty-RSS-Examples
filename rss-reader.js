@@ -106,7 +106,7 @@ var readerApp = {
             //now draw the list
             var s = '';
             $.each(currentFeed.entries, function(i, v) {
-                s += '<li><a href="#contentPage" class="contentLink" data-entryid="'+i+'">' + v.title + '</a></li>';
+                s += '<li id="' + i + '" class="button button-block">' + v.title + '</li>';
             });
             $("#linksList").append(s);
             $("#linksList").listview("refresh");

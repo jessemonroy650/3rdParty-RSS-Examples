@@ -16,7 +16,7 @@ a {text-decoration:none;color:#000000;}
 
 /*  */
 
-#RSSlistContainter {margin:0;padding:0;}
-#RSSlist {font-size:medium;}
-.plain-list {list-style-type:none;margin:0;padding:0.2em;}
-#RSSlist > li {overflow:hidden;}
+#RSSListContainter {margin:0;padding:0;}
+#RSSList {font-size:medium;}
+.plain-list {list-style-type:none;margin:0;padding:0.1em;}
+#RSSList > li {overflow:hidden;}

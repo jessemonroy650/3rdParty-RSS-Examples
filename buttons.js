@@ -15,9 +15,9 @@ $('#menuIcon').on('click', function(event) {
     console.log('#menuIcon');
     if (listVisible) {
         listVisible = false;
-        $('#RSSlistContainter').addClass('hidden');
+        $('#RSSListContainter').addClass('hidden');
     } else {
         listVisible = true;
-        $('#RSSlistContainter').removeClass('hidden');
+        $('#RSSListContainter').removeClass('hidden');
     }
 });
