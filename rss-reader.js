@@ -111,7 +111,7 @@ var readerApp = {
             $('#dbug').html( 'Draw1' );
             $("#linksList").append(s);
             $('#dbug').html( 'Draw2' );
-            $("#linksList").listview("refresh");
+            //$("#linksList").listview("refresh");
             $('#dbug').html( 'Draw3' );
 
         });
