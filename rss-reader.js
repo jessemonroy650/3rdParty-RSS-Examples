@@ -94,7 +94,6 @@ var readerApp = {
             var items  = xml.find( "item" );
             $('#feed').html(title.text());
             $('#dbug').html('title:' + title.text() + ":" + items.length );
-/* */
             $.each(items, function(i, v) {
                 entry = {
                     title:$(v).find("title").text(),
@@ -104,6 +103,13 @@ var readerApp = {
                 currentFeed.entries.push(entry);
             });
             $('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'Done.' );
+            //now draw the list
+            var s = '';
+            $.each(entries, function(i, v) {
+                s += '<li><a href="#contentPage" class="contentLink" data-entryid="'+i+'">' + v.title + '</a></li>';
+            });
+            $("#linksList").append(s);
+            $("#linksList").listview("refresh");
 
         });
     },
