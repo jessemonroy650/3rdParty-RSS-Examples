@@ -123,6 +123,7 @@ var readerApp = {
     showStory : function (storyId) {
         alert('readerApp:showStory - storyId:' + storyId );
         $('#story').html('STORY' + currentFeed.entries[storyId]);
+        $('#story').removeClass('hidden');
     },
     hideStory : function () {
     }    
