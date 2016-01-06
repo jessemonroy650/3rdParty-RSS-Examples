@@ -102,7 +102,7 @@ var readerApp = {
                 };
                 currentFeed.entries.push(entry);
             });
-            $('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'Done.' );
+            $('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'List' );
             //now draw the list
             var s = '';
             $.each(entries, function(i, v) {
@@ -110,6 +110,7 @@ var readerApp = {
             });
             $("#linksList").append(s);
             $("#linksList").listview("refresh");
+            $('#dbug').html( $('#dbug').html() + ": + 'Draw' );
 
         });
     },
