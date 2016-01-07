@@ -67,14 +67,15 @@ var app = {
 
 // This is to have the 'deviceready' code from firing in a webbrowser.
 var device = {platform:'browser'};
+document.addEventListener("deviceready", onDeviceReady, false);
 
 // Thanks http://www.quirksmode.org/js/detect.html
+/*
 if ('mozApps' in navigator) {
     document.addEventListener("DOMContentLoaded", onDeviceReady, false);
     document.getElementById("product").innerHTML = "got mozApps";
 } else {
-    //$('#appState').html('addEventListener');
     document.addEventListener("deviceready", onDeviceReady, false);
     document.getElementById("product").innerHTML = JSON.stringify(navigator);
 }
-
+*/
