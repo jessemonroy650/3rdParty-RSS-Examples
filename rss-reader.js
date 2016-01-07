@@ -16,9 +16,9 @@ var readerApp = {
         console.log("readerApp.init");
     },
     getFeed : function() {
-        $('#feedStatus').html('Contacting Server'):
+        $('#feedStatus').html('Contacting Server');
         $.get(currentFeed.RSS, function(data, errorCode) {
-            $('#feedStatus').html('Got Feed'):
+            $('#feedStatus').html('Got Feed');
             //alert("got data");
             //console.log("got data");
             var xml    = $( data );
@@ -43,7 +43,7 @@ var readerApp = {
             $("#linksList li").remove();
             $("#linksList").append(s);
             $('#dbug').html( $('#dbug').html() + ":" + 'Done' );
-            $('#feedStatus').html('Done.'):
+            $('#feedStatus').html('Done.');
             buttons.rebind();
         });
     },
