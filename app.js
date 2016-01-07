@@ -39,7 +39,7 @@ var app = {
         // Trap the resume event
         document.addEventListener("resume", app.onResume, false);
         // reset the need for a Feed
-        readerFeed.needFeed = true;
+        readerApp.needFeed = true;
         // get the first RSS feed on startup
         $('#getData').trigger('click');
         $('#appState').html('deviceready done');
@@ -67,15 +67,12 @@ var app = {
 
 // This is to have the 'deviceready' code from firing in a webbrowser.
 var device = {platform:'browser'};
-document.addEventListener("deviceready", onDeviceReady, false);
 
 // Thanks http://www.quirksmode.org/js/detect.html
-/*
 if ('mozApps' in navigator) {
-    document.addEventListener("DOMContentLoaded", onDeviceReady, false);
+    document.addEventListener("DOMContentLoaded", app.onDeviceReady, false);
     document.getElementById("product").innerHTML = "got mozApps";
 } else {
-    document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", app.onDeviceReady, false);
     document.getElementById("product").innerHTML = JSON.stringify(navigator);
 }
-*/
