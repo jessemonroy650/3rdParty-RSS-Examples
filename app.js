@@ -1,9 +1,6 @@
 /*
     Date: 2016-01-05
 */
-// This is to have the 'deviceready' code from firing in a webbrowser.
-var device = {platform:'browser'};
-
 var app = {
     self : {},
 
@@ -23,16 +20,12 @@ var app = {
         } else if (device.platform == 'Android') {
             // Get rid of 300ms delay 
             document.addEventListener('DOMContentLoaded', function() { FastClick.attach(document.body); }, false);
-            //
-/*          document.getElementById('exitApp').addEventListener('click', function() {
-                app.exit();
-            });
-*/
+            // 
+            document.addEventListener("backbutton", app.onBackButton, false);
+            // exit app on [exit button]
+/*          document.getElementById('exitApp').addEventListener('click', function() { app.exit(); }); */
         } else if (device.platform == 'browser') {
-/*          document.getElementById('exitApp').addEventListener('click', function() {
-                app.exit();
-            });
-*/
+/*          document.getElementById('exitApp').addEventListener('click', function() { alert('app.exit'); }); */
         }
         app.init();
         if (localStore.test('#storeavailable')) {
@@ -41,10 +34,22 @@ var app = {
         }
         readerApp.init();
         buttons.init();
+        // Trap the resume event
+        document.addEventListener("resume", app.onResume, false);
+        // reset the need for a Feed
+        readerFeed.needFeed = true;
+        // get the first RSS feed on startup
         $('#getData').trigger('click');
     },
     init : function () {
         console.log('app.init');
+    },
+    onResume : function () {
+        console.log('app.onResume');
+        alert('resume');
+    },
+    onBackButton : function () {
+        // Don't do anything. Ingore button, for now.
     },
     exit : function () {
         console.log('Called app.exit()');
@@ -56,12 +61,15 @@ var app = {
     }
 };
 
-//
-// Wait for PhoneGap to load
-document.addEventListener("deviceready", app.onDeviceReady, false);
+// This is to have the 'deviceready' code from firing in a webbrowser.
+var device = {platform:'browser'};
 
-// https://developer.mozilla.org/en-US/docs/Web/Events
-window.addEventListener("load", function(event) {
-    console.log("window has loaded.");
-    app.onDeviceReady();
-  });
+// Thanks http://www.quirksmode.org/js/detect.html
+if ('mozApps' in navigator) {
+    document.addEventListener("DOMContentLoaded", onDeviceReady, false);
+    document.getElementById("product").innerHTML = "got mozApps";
+} else {
+    document.addEventListener("deviceready", onDeviceReady, false);
+    document.getElementById("product").innerHTML = JSON.stringify(navigator);
+}
+
