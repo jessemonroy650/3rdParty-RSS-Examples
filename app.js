@@ -5,6 +5,7 @@ var app = {
     self : {},
 
     onDeviceReady : function () {
+        $('#appState').html('deviceready');
         console.log("device ready.");
         //alert("device ready.");
         if (device.platform === "iOS") {
@@ -18,6 +19,7 @@ var app = {
             // hide the Splash Screen for iOS only
             navigator.splashscreen.hide();
         } else if (device.platform == 'Android') {
+            $('#appState').html('Android');
             // Get rid of 300ms delay 
             document.addEventListener('DOMContentLoaded', function() { FastClick.attach(document.body); }, false);
             // 
@@ -40,11 +42,13 @@ var app = {
         readerFeed.needFeed = true;
         // get the first RSS feed on startup
         $('#getData').trigger('click');
+        $('#appState').html('deviceready done');
     },
     init : function () {
         console.log('app.init');
     },
     onResume : function () {
+        $('#appState').html('app.onResume');
         console.log('app.onResume');
         alert('resume');
     },
@@ -69,6 +73,7 @@ if ('mozApps' in navigator) {
     document.addEventListener("DOMContentLoaded", onDeviceReady, false);
     document.getElementById("product").innerHTML = "got mozApps";
 } else {
+    //$('#appState').html('addEventListener');
     document.addEventListener("deviceready", onDeviceReady, false);
     document.getElementById("product").innerHTML = JSON.stringify(navigator);
 }
