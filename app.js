@@ -22,7 +22,7 @@ var app = {
             $('#appState').html('Android');
             // Get rid of 300ms delay 
             document.addEventListener('DOMContentLoaded', function() { FastClick.attach(document.body); }, false);
-            // 
+            // trap the [back button]
             document.addEventListener("backbutton", app.onBackButton, false);
             // exit app on [exit button]
 /*          document.getElementById('exitApp').addEventListener('click', function() { app.exit(); }); */
@@ -54,6 +54,7 @@ var app = {
     },
     onBackButton : function () {
         // Don't do anything. Ingore button, for now.
+        $('#appState').html('onBackButton');
     },
     exit : function () {
         console.log('Called app.exit()');
