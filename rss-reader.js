@@ -47,10 +47,8 @@ var readerApp = {
         });
     },
     getStory : function (displayFunc) {
-        //alert('readerApp:showStory - storyId:' + storyId );
-        var storyId  = currentFeed.selectedStory;
-        var theStory = currentFeed.entries[storyId];
-        // fire only if we have a valid reference for theStory and where to put it.
+        var theStory = currentFeed.entries[currentFeed.selectedStory];
+        // fire only if we have a valid reference for theStory and a displayFunc.
         if (theStory && displayFunc) {
             displayFunc(theStory);
         }

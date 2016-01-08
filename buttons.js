@@ -80,7 +80,6 @@ $('#toggleStory').on('click', function(event) {
             );
             buttons.readmore(parm.link);   // create handler to open browser
         };
-        
         readerApp.getStory(loadStory);
         $('#story').removeClass('hidden'); // make story visible
         $('#linksList').addClass('hidden');
@@ -113,34 +112,42 @@ $('#cancelBtn').on('click', function(event) {
 });
 
 var buttons = {
-    dynamicTag : null,
+    listTag : null,
+    storyTag : null,
+    browserTag : null,
 
     init : function (tag) {
-        buttons.dynamicTag = tag;
+        buttons.listTag = tag.list;
+        buttons.storyTag = tag.story;
+        buttons.browserTag = tag.browser;
         console.log("buttons.init");
         buttons.dynamic();
     },
 
-    dynamic : function (tag) {
-        if (! tag) {
-            tag = buttons.dynamicTag;
-        }
-        if (tag) {
-            $(tag).on('click', function(event) {
+    dynamic : function () {
+        if (buttons.listTag && buttons.storyTag) {
+            $(buttons.listTag).on('click', function(event) {
                 //console.log('.contentLink:' + event.target.id);
                 //alert('.contentLink:' + event.target.id);
                 currentFeed.selectedStory = event.target.id;
-                $('#toggleStory').trigger('click');
+                $(buttons.storyTag).trigger('click');
             });
         } else {
             alert('Cannot bind dynamic buttons');
         }
     },
 
-    readmore : function (link) {   
-        $('#readMore').on('click', function(event) {
-            window.open(link, '_system');
-        }); 
+    readmore : function (link, tag) {   
+        if (! tag) {
+            tag = buttons.browserTag;
+        }
+        if (tag) {
+            $(tag).on('click', function(event) {
+                window.open(link, '_system');
+            });
+        } else {
+            alert('Cannot bind dynamic buttons #2');
+        }
     },
 
     rebind : function () {

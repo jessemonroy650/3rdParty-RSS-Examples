@@ -41,7 +41,11 @@ var app = {
         // Initialize the Reader
         readerApp.init();
         // setup dynamic button linker
-        buttons.init('.contentLink');
+        buttons.init({
+            list: '.contentLink',
+            story: '#toggleStory',
+            browser: '#readMore'
+        });
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the first RSS feed on startup
