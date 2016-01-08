@@ -55,6 +55,8 @@ var readerApp = {
         $('#feedInput').addClass('hidden');
         readerApp.showLinksList();
     },
+    addFeed: function (){
+    },
     showLinksList : function () {
         $('#linksList').removeClass('hidden');
     },
@@ -65,19 +67,20 @@ var readerApp = {
         //alert('readerApp:showStory - storyId:' + storyId );
         var storyId  = currentFeed.selectedStory;
         var theStory = currentFeed.entries[storyId];
-        $('#story').html(
-            '<h2>'  + theStory.title + '</h2>' +
-            '<div>' + theStory.description  + '</div>' +
-            '<button id=readMore>Read More ..</button>'
-        );
-        buttons.readmore(theStory.link);   // create handler to open browser
-        $('#story').removeClass('hidden'); // make story visible
-        readerApp.hideLinksList();         // hide the other links
+        // fire only if we have a valid reference
+        if (theStory) {
+            $('#story').html(
+                '<h2>'  + theStory.title + '</h2>' +
+                '<div>' + theStory.description  + '</div>' +
+                '<button id=readMore>Read More ..</button>'
+            );
+            buttons.readmore(theStory.link);   // create handler to open browser
+            $('#story').removeClass('hidden'); // make story visible
+        }
+        readerApp.hideLinksList();         // hide the other story links
     },
     hideStory : function () {
         $('#story').addClass('hidden');
         readerApp.showLinksList();
     }    
 }
-
-

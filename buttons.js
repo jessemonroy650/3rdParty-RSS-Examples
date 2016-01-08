@@ -26,10 +26,12 @@ $('#Cordova').on('click', function(event) {
 $('#appIcon').on('click', function(event) {
     console.log('#appIcon');
     if (configMenu.isVisible) {
-        $('#configMenu').addClass('hidden');
+        readerApp.showLinksList();           // show our list of stories
+        $('#configMenu').addClass('hidden'); // hide our config menu 
         configMenu.isVisible = false;
     } else {
-        $('#configMenu').removeClass('hidden');
+        readerApp.hideLinksList();              // hide our list of stories
+        $('#configMenu').removeClass('hidden'); // show our config menu 
         configMenu.isVisible = true;
     }
 });
@@ -37,10 +39,12 @@ $('#appIcon').on('click', function(event) {
 $('#menuIcon').on('click', function(event) {
     console.log('#menuIcon');
     if (feedList.isVisible) {
-        $('#RSSListContainter').addClass('hidden');
+        readerApp.showLinksList();                  // show our list of stories
+        $('#RSSListContainter').addClass('hidden'); // hide our config menu 
         feedList.isVisible = false;
     } else {
-        $('#RSSListContainter').removeClass('hidden');
+        readerApp.hideLinksList();                     // hide our list of stories
+        $('#RSSListContainter').removeClass('hidden'); // show our config menu 
         feedList.isVisible = true;
     }
 });
@@ -67,7 +71,16 @@ $('#addFeed').on('click', function(event) {
     }
 });
 
+$('#addBtn').on('click', function(event) {
+    console.log('#addBtn');
+    readerApp.addFeed();
+});
 
+$('#cancelBtn').on('click', function(event) {
+    console.log('#cancelBtn');
+    $('#addField').val('');
+    $('#addFeed').trigger('click');
+});
 
 var buttons = {
 

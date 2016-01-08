@@ -12,7 +12,9 @@ a {text-decoration:none;color:#000000;}
 .expose {visibility:visible;display:block;} /* Here for completeness only. */
 .copyright {padding:5px;align:left;font-style:italic;font-size:small;}
 .marginSpacer {margin:0.5em;}
-.clearBoth {clear:both}
+.clearBoth  {clear:both;}
+.floatLeft  {float:left;}
+.floatRight {float:right;}
 
 /*  */
 
