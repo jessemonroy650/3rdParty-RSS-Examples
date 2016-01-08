@@ -16,17 +16,20 @@ var readerApp = {
         console.log("readerApp.init");
     },
     getFeed : function(externalElements) {
-        $('.feedStatus').html('Contacting Server');
+        //$('.feedStatus').html
+        externalElements['status']('Contacting Server');
         $.get(currentFeed.RSS, function(data, errorCode) {
-            $('.feedStatus').html('Got Feed');
+            //$('.feedStatus').html
+            externalElements['status']('Got Feed');
             //alert("got data");
             //console.log("got data");
             var xml    = $( data );
             var title  = xml.find( "title" );
             var items  = xml.find( "item" );
+            //$('#toggleStory').html
             externalElements['title'](title.text());
-            //$('#toggleStory').html(title.text());
-            $('#dbug').html('title:' + title.text() + ":" + items.length );
+            //$('#dbug').html
+            externalElements['dbug']('title:' + title.text() + ":" + items.length );
             $.each(items, function(i, v) {
                 entry = {
                     title:$(v).find("title").text(),
@@ -41,10 +44,14 @@ var readerApp = {
             $.each(currentFeed.entries, function(i, v) {
                 s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
-            $("#linksList li").remove();
-            $("#linksList").append(s);
-            $('#dbug').html( $('#dbug').html() + ":" + 'Done' );
-            $('.feedStatus').html('Done.');
+            //$("#linksList li").remove();
+            externalElements['clear']();
+            //$("#linksList").append(s);
+            externalElements['attach'](s);
+            //$('#dbug').html
+            externalElements['dbug']( $('#dbug').html() + ":" + 'Done' );
+            //$('.feedStatus').html
+            externalElements['status']('Done.');
             buttons.rebind();
         });
     },

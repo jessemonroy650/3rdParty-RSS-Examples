@@ -40,6 +40,8 @@ $('#getData').on('click', function(event) {
         $('.feedStatus').html('getting Data');
         var passingReference = {
             title:  function (parm) { $('#toggleStory').html(parm); },
+            clear:  function (parm) { $("#linksList li").remove(); },
+            attach: function (parm) { $("#linksList").append(parm); },
             dbug:   function (parm) { $('#dbug').html(parm); },
             status: function (parm) { $('.feedStatus').html(parm); }
         };
