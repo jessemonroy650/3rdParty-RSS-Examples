@@ -35,7 +35,7 @@ var app = {
         //document.addEventListener("resume", app.onResume, false);
         /////////////////////////////////////////////////////////
         // Initialize the app module
-        //app.init();
+        app.init();
         // Test the localStore and report to 'id=storeavailable'
         if (localStore.test('#storeavailable')) {
             localStore.put('0','https://cordova.apache.org/feed.xml');
