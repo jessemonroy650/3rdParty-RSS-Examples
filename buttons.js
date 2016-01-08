@@ -7,31 +7,15 @@ var feedList   = {isVisible:false};
 var story      = {isVisible:false};
 var feedInput  = {isVisible:false};
 
-$('#getData').on('click', function(event) {
-    console.log('#getData');
-    if (readerApp.needFeed) {
-        readerApp.getFeed();
-        readerApp.needFeed = false;
-    }
-});
-
-$('#Cordova').on('click', function(event) {
-    console.log('#Cordova');
-    if (readerApp.needFeed) {
-        readerApp.getFeed();
-        readerApp.needFeed = false;
-    }
-});
-
 $('#appIcon').on('click', function(event) {
     console.log('#appIcon');
     if (configMenu.isVisible) {
-        readerApp.showLinksList();           // show our list of stories
-        $('#configMenu').addClass('hidden'); // hide our config menu 
+        $('feedContainter').removeClass('hidden'); // show the feeds 
+        $('#configMenu').addClass('hidden');       // hide our config menu 
         configMenu.isVisible = false;
     } else {
-        readerApp.hideLinksList();              // hide our list of stories
-        $('#configMenu').removeClass('hidden'); // show our config menu 
+        $('feedContainter').addClass('hidden');    // hide the feeds 
+        $('#configMenu').removeClass('hidden');    // show our config menu
         configMenu.isVisible = true;
     }
 });
@@ -39,18 +23,42 @@ $('#appIcon').on('click', function(event) {
 $('#menuIcon').on('click', function(event) {
     console.log('#menuIcon');
     if (feedList.isVisible) {
-        readerApp.showLinksList();                  // show our list of stories
+        $('feedContainter').removeClass('hidden');  // show the feeds 
         $('#RSSListContainter').addClass('hidden'); // hide our config menu 
         feedList.isVisible = false;
     } else {
-        readerApp.hideLinksList();                     // hide our list of stories
+        $('feedContainter').addClass('hidden');        // hide the feeds 
         $('#RSSListContainter').removeClass('hidden'); // show our config menu 
         feedList.isVisible = true;
     }
 });
 
-$('#toggleBtn').on('click', function(event) {
-    console.log('#toggleBtn');
+$('#getData').on('click', function(event) {
+    console.log('#getData');
+    if (readerApp.needFeed) {
+        readerApp.getFeed(
+            {theTitle:  $('#toggleStory'),
+             theLinks:  $("#linksList li"),
+             attachPnt: $("#linksList"),
+             dbug:      $('#dbug'),
+             status:    $('#feedStatus')
+        });
+        buttons.rebind();
+        readerApp.needFeed = false;
+    }
+});
+
+$('#Cordova').on('click', function(event) {
+    console.log('#Cordova');
+    if (readerApp.needFeed) {
+        readerApp.getFeed({title: $('#toggleStory')});
+        readerApp.needFeed = false;
+    }
+});
+
+// Toggle the visibility of the "Story"
+$('#toggleStory').on('click', function(event) {
+    console.log('#toggleStory');
     if (story.isVisible) {
         readerApp.hideStory();
         story.isVisible = false;
@@ -63,23 +71,27 @@ $('#toggleBtn').on('click', function(event) {
 $('#addFeed').on('click', function(event) {
     console.log('#addFeed');
     if (feedInput.isVisible) {
-        readerApp.hideAddFeed();
+        //readerApp.hideAddFeed();
+        $('#feedInput').addClass('hidden');
         feedInput.isVisible = false;
     } else {
-        readerApp.showAddFeed();
+        //readerApp.showAddFeed();
+        $('#feedInput').removeClass('hidden');
         feedInput.isVisible = true;
     }
 });
 
 $('#addBtn').on('click', function(event) {
     console.log('#addBtn');
-    readerApp.addFeed();
+    //readerApp.addFeed($('#addField').val());  // Add the data to storage 
+    //$('#addField').val('');                 // clear the field
+    //$('#addFeed').trigger('click');         // trigger the toggle button
 });
 
 $('#cancelBtn').on('click', function(event) {
     console.log('#cancelBtn');
-    $('#addField').val('');
-    $('#addFeed').trigger('click');
+    $('#addField').val('');                   // clear the field
+    $('#addFeed').trigger('click');           // trigger the toggle button
 });
 
 var buttons = {
@@ -95,7 +107,7 @@ var buttons = {
             //alert('.contentLink:' + event.target.id);
             currentFeed.selectedStory = event.target.id;
             //readerApp.showStory();
-            $('#toggleBtn').trigger('click');
+            $('#toggleStory').trigger('click');
         }); 
     },
 

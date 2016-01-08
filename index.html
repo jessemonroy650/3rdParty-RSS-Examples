@@ -16,11 +16,26 @@
     <div id=appTitle>Generic RSS Reader</div>
     <img id=menuIcon src=images/3menubars_black.png>
 </div>
-<!-- ***Toggle Button*** -->
-<div  id=toggleBtn class="button button-block button-rounded button-primary button-large">Feed</div>
-<!--
-  <button id=exitApp class="button button-pill button-primary button-large">Exit</button>
- -->
+
+<!-- ***Feed Containter *** -->
+<div id=feedContainter> 
+    <!-- ***Toggle Button*** -->
+    <div  id=toggleStory class="button button-block button-rounded button-primary button-large">Feed</div>
+
+    <!-- ***Feed Status *** -->
+    <div id=feedStatus class="hidden colorPrimary button button-block">
+        feedStatus: <span id=feedStatus>feedStatus</span>
+    </div>
+
+    <!-- ***RSS Links*** -->
+    <div id=content class=clearBoth>
+        <ul id=linksList class=plain-list></ul>
+    </div>
+
+    <!-- ***RSS Story*** -->
+    <div id=story class="hidden clearBoth"></div>
+</div>
+
 
 <!-- ***App Icon*** -->
 <div id=configMenu class='hidden'>
@@ -34,38 +49,27 @@
         <li id=Cordova class="button button-block">Cordova</li>
         <li id=addFeed class="button button-block">Add a Feed</li>
     </ul>
-</div>
-<!-- ***Feed Status *** -->
-<div id=feedStatus class="hidden colorPrimary button button-block">
-    feedStatus: <span id=feedStatus>feedStatus</span>
-</div>
-
-<!-- ***Feed Input Form*** -->
-<div id=feedInput class="hidden colorPrimary">
-    <input id=addField type=text placeholder="RSS feed URL" class=clearBoth>
-    <button id=addBtn    class="button button-rounded button-primary" >Add Feed</button>
-    <button id=cancelBtn class="button button-rounded button-caution floatRight" >Cancel</button>
+    <!-- ***Feed Input Form*** -->
+    <div id=feedInput class="hidden colorPrimary">
+        <input id=addField type=text placeholder="RSS feed URL" class=clearBoth>
+        <button id=addBtn    class="button button-rounded button-primary" >Add Feed</button>
+        <button id=cancelBtn class="button button-rounded button-caution floatRight" >Cancel</button>
+    </div>
 </div>
 
-<!-- ***RSS Links*** -->
-<div id=content class=clearBoth>
-    <ul id=linksList class=plain-list>
-    </ul>
-</div>
-
-<!-- ***RSS Story*** -->
-<div id=story class="hidden clearBoth">
-</div>
-
+<!-- ***DEBUG*** -->
 <pre id=dbug class="hidden clearBoth"></pre>
 
-<!--
- -->
-  <button id=getData class="hidden button button-pill button-action button-large">getData</button>
+<!-- ***HIDDEN BUTTON*** -->
+<!-- This button is hidden as an alternative method to loading stories. -->
+<button id=getData class="hidden button button-pill button-action button-large">getData</button>
 
+<!-- ***Copyright*** -->
 <div class="copyright">
     <span id=copyright>Created by Jesus Monroy, Jr. &copy; 2016</span>
 </div>
+
+<!-- ***Javascript * Javascript * Javascript*** -->
     <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" src="js/fastclick.js"></script>
     <script type="text/javascript" src="js/zepto-1.1.6.js"></script>
@@ -77,3 +81,8 @@
     </script>
 </body>
 </html>
+
+<!--
+  <button id=exitApp class="button button-pill button-primary button-large">Exit</button>
+ -->
+<!--  -->

@@ -15,17 +15,19 @@ var readerApp = {
     init : function () {
         console.log("readerApp.init");
     },
-    getFeed : function() {
+    getFeed : function(externalElements) {
         $('#feedStatus').html('Contacting Server');
         $.get(currentFeed.RSS, function(data, errorCode) {
-            $('#feedStatus').html('Got Feed');
+            // $('#feedStatus')
+            externalElements['status'].html('Got Feed');
             //alert("got data");
             //console.log("got data");
             var xml    = $( data );
             var title  = xml.find( "title" );
             var items  = xml.find( "item" );
-            $('#toggleBtn').html(title.text());
-            $('#dbug').html('title:' + title.text() + ":" + items.length );
+            externalElements['theTitle'].html(title.text());
+            // $('#dbug')
+            externalElements['dbug'].html('title:' + title.text() + ":" + items.length );
             $.each(items, function(i, v) {
                 entry = {
                     title:$(v).find("title").text(),
@@ -40,28 +42,27 @@ var readerApp = {
             $.each(currentFeed.entries, function(i, v) {
                 s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
-            $("#linksList li").remove();
-            $("#linksList").append(s);
-            $('#dbug').html( $('#dbug').html() + ":" + 'Done' );
-            $('#feedStatus').html('Done.');
-            buttons.rebind();
+            //$("#linksList li")
+            externalElements['theLinks'].remove();
+            //$("#linksList")
+            externalElements['attachPnt'].append(s);
+            // $('#dbug')
+            externalElements['dbug'].html( $('#dbug').html() + ":" + 'Done' );
+            // $('#feedStatus')
+            externalElements['status'].html('Done.');
         });
     },
     showAddFeed : function () {
-        $('#feedInput').removeClass('hidden');
-        readerApp.hideLinksList();
     },
     hideAddFeed : function () {
-        $('#feedInput').addClass('hidden');
-        readerApp.showLinksList();
     },
     addFeed: function (){
     },
     showLinksList : function () {
-        $('#linksList').removeClass('hidden');
+        //$('#linksList').removeClass('hidden');
     },
     hideLinksList : function () {
-        $('#linksList').addClass('hidden');
+        //$('#linksList').addClass('hidden');
     },
     showStory : function () {
         //alert('readerApp:showStory - storyId:' + storyId );
@@ -77,10 +78,8 @@ var readerApp = {
             buttons.readmore(theStory.link);   // create handler to open browser
             $('#story').removeClass('hidden'); // make story visible
         }
-        readerApp.hideLinksList();         // hide the other story links
     },
     hideStory : function () {
         $('#story').addClass('hidden');
-        readerApp.showLinksList();
     }    
 }
