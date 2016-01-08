@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache Cordova</title>
+    <description>Apache Cordova is a set of device APIs that allow a web mobile app developer to access native device function from JavaScript.
+</description>
+    <link>https://cordova.apache.org/</link>
+    <atom:link href="https://cordova.apache.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 20 Dec 2015 14:53:28 -0800</pubDate>
+    <lastBuildDate>Sun, 20 Dec 2015 14:53:28 -0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Cordova iOS 4.0.1</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;prettyprint&quot;&gt;Cordova iOS 4.0.1&lt;/code&gt; has been released. This is a patch release.&lt;/p&gt;
+
+&lt;p&gt;To upgrade:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g cordova
+cd my_project
+cordova platform update ios@4.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To add it explicitly:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova platform add ios@4.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!--more--&gt;
+
+&lt;h2&gt;What&amp;#39;s new in iOS platform&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10185&quot;&gt;CB-10185&lt;/a&gt; - Update CordovaLib.xcodeproj to recommended settings in Xcode 7.2&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10171&quot;&gt;CB-10171&lt;/a&gt; - WebKit Error after migration to iOS@4.0.0&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10155&quot;&gt;CB-10155&lt;/a&gt; - DisallowOverscroll not working&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10168&quot;&gt;CB-10168&lt;/a&gt; - CDVViewController appURL is nil if wwwFolderName is the path to a resource bundle&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10162&quot;&gt;CB-10162&lt;/a&gt; - update reference url for icon images&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10162&quot;&gt;CB-10162&lt;/a&gt; - correct the paths for iOS icon and splashscreen resources&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 18 Dec 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/announcements/2015/12/18/cordova-ios-4.0.1.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2015/12/18/cordova-ios-4.0.1.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Plugins Release</title>
+        <description>&lt;p&gt;The following plugins were updated today:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cordova-plugin-inappbrowser@1.1.1&lt;/li&gt;
+&lt;li&gt;cordova-plugin-wkwebview-engine@1.0.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This release brings &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios@4.0.0&lt;/code&gt; platform compatibility to the &lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-inappbrowser&lt;/code&gt; plugin, and it is also backwards compatible with cordova-ios@3.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-wkwebview-engine&lt;/code&gt; plugin was updated to fix a bug related to loading pages in &lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-inappbrowser&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To install:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova plugin add cordova-plugin-inappbrowser --save
+cordova plugin add cordova-plugin-wkwebview-engine --save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Changes include:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;cordova-plugin-wkwebview-engine@1.0.1&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10190&quot;&gt;CB-10190&lt;/a&gt; - WKWebView engine is not releasing the user-agent lock&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-inappbrowser@1.1.1&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9445&quot;&gt;CB-9445&lt;/a&gt; Improves executeScript callbacks on iOS&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Incremented plugin version.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10040&quot;&gt;CB-10040&lt;/a&gt; - re-fix: backwards compatible with cordova-ios &amp;lt; 4.0&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8534&quot;&gt;CB-8534&lt;/a&gt;: Allow plugins to respond to onReceivedHttpAuthRequest. This closes #82&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-3750&quot;&gt;CB-3750&lt;/a&gt;: Fixes spinner on iOS. This closes #89&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7696&quot;&gt;CB-7696&lt;/a&gt; Document target=_self behavior for Windows&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10040&quot;&gt;CB-10040&lt;/a&gt; - Compile Error in InAppBrowser Plugin for iOS - No known instance method for selector &amp;#39;URLIsWhitelisted:&amp;#39;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 14 Dec 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/news/2015/12/14/plugins-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2015/12/14/plugins-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>Plugins Release</title>
+        <description>&lt;p&gt;The following plugins were updated today:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cordova-plugin-wkwebview-engine@1.0.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is the initial release of this plugin. This plugin requires &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios@4.0.0&lt;/code&gt;. Please read the &lt;a href=&quot;http://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html&quot;&gt;iOS 4.0.0 release blog&lt;/a&gt; for instructions to update. &lt;/p&gt;
+
+&lt;p&gt;To install:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova plugin add cordova-plugin-wkwebview-engine --save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you are thinking of migrating from using the UIWebView on iOS, please read the &lt;a href=&quot;https://github.com/apache/cordova-plugin-wkwebview-engine/blob/master/README.md&quot;&gt;README&lt;/a&gt; and also take note of the &lt;a href=&quot;https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20labels%20%3D%20wkwebview-known-issues&quot;&gt;limitations of this plugin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Changes include:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;cordova-plugin-wkwebview-engine@1.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10146&quot;&gt;CB-10146&lt;/a&gt; - Add to README &lt;code class=&quot;prettyprint&quot;&gt;WKWebViewEngine&lt;/code&gt; quirks that will affect migration from &lt;code class=&quot;prettyprint&quot;&gt;UIWebView&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10133&quot;&gt;CB-10133&lt;/a&gt; - DataClone DOM Exception 25 thrown for postMessage&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10106&quot;&gt;CB-10106&lt;/a&gt; - added bridge proxy&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10107&quot;&gt;CB-10107&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;nativeEvalAndFetch&lt;/code&gt; called for all bridges&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10106&quot;&gt;CB-10106&lt;/a&gt; - &lt;strong&gt;iOS&lt;/strong&gt; bridges need to take into account bridge changes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10073&quot;&gt;CB-10073&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;WKWebViewEngine&lt;/code&gt; should post &lt;code class=&quot;prettyprint&quot;&gt;CDVPluginResetNotification&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; - Updated RELEASENOTES to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10002&quot;&gt;CB-10002&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;WKWebView&lt;/code&gt; should propagate shouldOverrideLoadWithRequest to plugins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9979&quot;&gt;CB-9979&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9972&quot;&gt;CB-9972&lt;/a&gt; Change &lt;strong&gt;ATS&lt;/strong&gt; link to new link&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9636&quot;&gt;CB-9636&lt;/a&gt; - Plugin should detect at runtime &lt;strong&gt;iOS&lt;/strong&gt; 8 and use of &lt;code class=&quot;prettyprint&quot;&gt;file://&lt;/code&gt; url and present an error&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8839&quot;&gt;CB-8839&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;WKWebView&lt;/code&gt; ignores &lt;code class=&quot;prettyprint&quot;&gt;DisallowOverscroll&lt;/code&gt; preference&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8556&quot;&gt;CB-8556&lt;/a&gt; - fix &lt;code class=&quot;prettyprint&quot;&gt;handleOpenURL&lt;/code&gt; for &lt;code class=&quot;prettyprint&quot;&gt;WKWebViewEngine&lt;/code&gt; plugin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8666&quot;&gt;CB-8666&lt;/a&gt; - Update &lt;code class=&quot;prettyprint&quot;&gt;CDVWKWebViewEngine&lt;/code&gt; plugin to use 4.0.x branch code&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Dec 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/news/2015/12/08/wkwebview-engine-plugin-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2015/12/08/wkwebview-engine-plugin-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova iOS 4.0.0</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;prettyprint&quot;&gt;Cordova iOS 4.0.0&lt;/code&gt; has been released.&lt;/p&gt;
+
+&lt;p&gt;This is a major release, and &lt;a href=&quot;https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md&quot;&gt;deprecated APIs have been removed&lt;/a&gt;. Some 3rd party plugins might require updates before they are compatible. This release adds first-class support for pluggable webviews - namely we now support &lt;a href=&quot;https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/&quot;&gt;WKWebView&lt;/a&gt; -- a bundled modern WebView for iOS! &lt;/p&gt;
+
+&lt;p&gt;The platform now supports Asset Catalogs for splashscreens and icons -- this is all transparent to you when using the &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;splash&amp;gt;&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;icon&amp;gt;&lt;/code&gt; tags in &lt;a href=&quot;http://cordova.apache.org/docs/en/latest/config_ref/images.html&quot;&gt;config.xml&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.npmjs.com/package/ios-sim&quot;&gt;ios-sim&lt;/a&gt; is bundled with the platform now, you will not need to install this separately anymore. However for &lt;a href=&quot;https://www.npmjs.com/package/ios-deploy&quot;&gt;ios-deploy&lt;/a&gt; you will need to update your version to the latest.&lt;/p&gt;
+
+&lt;p&gt;The minimum deployment target has been updated to &lt;strong&gt;iOS 8.0&lt;/strong&gt;. This means that this platform release has only been tested on iOS 8 devices and greater only and will only support those iOS versions.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;prettyprint&quot;&gt;cordova-ios@4.0.0&lt;/code&gt; will be the default iOS version in the next version of &lt;code class=&quot;prettyprint&quot;&gt;cordova&lt;/code&gt;. If you just can&amp;#39;t wait though, you can try it out now:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cd my_project
+cordova platform update ios@4.0.0
+# To install the WKWebView engine (optional):
+cordova plugin add cordova-plugin-wkwebview-engine
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We are in the process of releasing the &lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-wkwebview-engine&lt;/code&gt; plugin to &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt;. If you decide to update to &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios@4.0.0&lt;/code&gt; before we release this plugin, please install the plugin via &lt;code class=&quot;prettyprint&quot;&gt;git&lt;/code&gt; for now.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova plugin add https://github.com/apache/cordova-plugin-wkwebview-engine.git#1.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note that the &lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-wkwebview-engine&lt;/code&gt; plugin has some limitations versus the default UIWebView, please consult the &lt;a href=&quot;https://github.com/apache/cordova-plugin-wkwebview-engine/blob/master/README.md&quot;&gt;README&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;In addition to the &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;access&amp;gt;&lt;/code&gt; tag, there is support for the new &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;allow-intent&amp;gt;&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;allow-navigation&amp;gt;&lt;/code&gt; tags, documented &lt;a href=&quot;https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md&quot;&gt;here&lt;/a&gt;. Note that you do &lt;em&gt;not&lt;/em&gt; need &lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-whitelist&lt;/code&gt; installed for &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios-4.0.0&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;prettyprint&quot;&gt;cordova&lt;/code&gt; will convert &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;access&amp;gt;&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;allow-navigation&amp;gt;&lt;/code&gt; tags to the appropriate &lt;a href=&quot;https://developer.apple.com/library/prerelease/ios/technotes/App-Transport-Security-Technote/&quot;&gt;Application Transport Security (ATS)&lt;/a&gt; directives which are new in iOS 9. &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;access&amp;gt;&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;allow-navigation&amp;gt;&lt;/code&gt; tags also &lt;a href=&quot;http://cordova.apache.org/docs/en/latest/guide/appdev/whitelist/index.html&quot;&gt;support two new attributes&lt;/a&gt;: &lt;code class=&quot;prettyprint&quot;&gt;minimum-tls-version&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;requires-forward-secrecy&lt;/code&gt;. &lt;/p&gt;
+
+&lt;p&gt;To upgrade:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g cordova
+cd my_project
+cordova platform update ios@4.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To add it explicitly:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova platform add ios@4.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!--more--&gt;
+
+&lt;h2&gt;What&amp;#39;s new in iOS platform&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10136&quot;&gt;CB-10136&lt;/a&gt; - error in &lt;code class=&quot;prettyprint&quot;&gt;cordova prepare&lt;/code&gt; (Platform API)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10048&quot;&gt;CB-10048&lt;/a&gt; - clobbering of &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;access&amp;gt;&lt;/code&gt; tags to &lt;strong&gt;ATS&lt;/strong&gt; directives &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10057&quot;&gt;CB-10057&lt;/a&gt; - removing &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;access&amp;gt;&lt;/code&gt; tag does not remove &lt;strong&gt;ATS&lt;/strong&gt; entry&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10106&quot;&gt;CB-10106&lt;/a&gt; - added bridge proxy&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9827&quot;&gt;CB-9827&lt;/a&gt; - fixed version file to be requireable&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9827&quot;&gt;CB-9827&lt;/a&gt; - Implement and expose PlatformApi for &lt;strong&gt;iOS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10106&quot;&gt;CB-10106&lt;/a&gt; - &lt;strong&gt;iOS&lt;/strong&gt; bridges need to take into account bridge changes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10072&quot;&gt;CB-10072&lt;/a&gt; - Add &lt;code class=&quot;prettyprint&quot;&gt;SWIFT\_OBJC\_BRIDGING_HEADER&lt;/code&gt; value in &lt;code class=&quot;prettyprint&quot;&gt;build.xcconfig&lt;/code&gt;, remove from &lt;code class=&quot;prettyprint&quot;&gt;pbxproj&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10004&quot;&gt;CB-10004&lt;/a&gt; - Rename &lt;code class=&quot;prettyprint&quot;&gt;CDVSystemSchemes&lt;/code&gt; plugin name to something more appropriate&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10001&quot;&gt;CB-10001&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10003&quot;&gt;CB-10003&lt;/a&gt; Handle &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;allow-navigation&amp;gt;&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;allow-intent&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10025&quot;&gt;CB-10025&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;CDVWhiteList&lt;/code&gt; can&amp;#39;t parse &lt;code class=&quot;prettyprint&quot;&gt;URIs&lt;/code&gt; that don&amp;#39;t have double slashes after the scheme&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9972&quot;&gt;CB-9972&lt;/a&gt; - Remove &lt;strong&gt;iOS&lt;/strong&gt; whitelist&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9883&quot;&gt;CB-9883&lt;/a&gt; &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9948&quot;&gt;CB-9948&lt;/a&gt; Update &lt;code class=&quot;prettyprint&quot;&gt;cordova.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9948&quot;&gt;CB-9948&lt;/a&gt; - Remove deprecated command format from &lt;code class=&quot;prettyprint&quot;&gt;exec.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9883&quot;&gt;CB-9883&lt;/a&gt; - Remove unused &lt;strong&gt;iOS&lt;/strong&gt; bridges&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9836&quot;&gt;CB-9836&lt;/a&gt; - Add &lt;code class=&quot;prettyprint&quot;&gt;.gitattributes&lt;/code&gt; to prevent &lt;code class=&quot;prettyprint&quot;&gt;CRLF&lt;/code&gt; line endings in repos&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9787&quot;&gt;CB-9787&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;[CDVStartPageTest testParametersInStartPage]&lt;/code&gt; unit-test failure&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9917&quot;&gt;CB-9917&lt;/a&gt; - refix. Order matters in &lt;code class=&quot;prettyprint&quot;&gt;.gitattributes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9917&quot;&gt;CB-9917&lt;/a&gt; - Failure: &lt;code class=&quot;prettyprint&quot;&gt;cordova platform add https://github.com/apache/cordova-ios.git#tagOrBranch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9870&quot;&gt;CB-9870&lt;/a&gt; - updated hello world template&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9609&quot;&gt;CB-9609&lt;/a&gt; - Cordova run opts don&amp;#39;t make it through to &lt;code class=&quot;prettyprint&quot;&gt;ios-deploy&lt;/code&gt; on real device&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9893&quot;&gt;CB-9893&lt;/a&gt; - Update API changes doc with more upgrade examples&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9638&quot;&gt;CB-9638&lt;/a&gt; - Cordova/NSData+Base64.h missing from cordova-ios - updated API Changes doc&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9836&quot;&gt;CB-9836&lt;/a&gt; Add .gitattributes to prevent CRLF line endings in repos&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9685&quot;&gt;CB-9685&lt;/a&gt; - A fix for the magnifying glass popping up on &lt;strong&gt;iOS9&lt;/strong&gt; when longpressing the webview. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9800&quot;&gt;CB-9800&lt;/a&gt; - Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;Updated bundled &lt;code class=&quot;prettyprint&quot;&gt;ios-sim&lt;/code&gt; to 5.0.3&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9500&quot;&gt;CB-9500&lt;/a&gt; - Added no sign argument to &lt;strong&gt;iOS&lt;/strong&gt; build&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9787&quot;&gt;CB-9787&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;[CDVStartPageTest testParametersInStartPage]&lt;/code&gt; unit-test failure (improved fix)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9754&quot;&gt;CB-9754&lt;/a&gt; - Icon and launch image warnings&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9719&quot;&gt;CB-9719&lt;/a&gt; - set &lt;code class=&quot;prettyprint&quot;&gt;allow_non_modular_includes&lt;/code&gt; to yes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9685&quot;&gt;CB-9685&lt;/a&gt; - A fix for the magnifying glass popping up on &lt;strong&gt;iOS9&lt;/strong&gt; when longpressing the webview&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9552&quot;&gt;CB-9552&lt;/a&gt; - Updating linked platform removes original files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-6992&quot;&gt;CB-6992&lt;/a&gt; - can&amp;#39;t deploy app if display name contains unicode characters&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9726&quot;&gt;CB-9726&lt;/a&gt; - Update minimum Deployment Target to &lt;strong&gt;iOS 8.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9679&quot;&gt;CB-9679&lt;/a&gt; - Resource rules issue with &lt;strong&gt;iOS 9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9721&quot;&gt;CB-9721&lt;/a&gt; - Set &lt;code class=&quot;prettyprint&quot;&gt;ENABLE_BITCODE&lt;/code&gt; to &lt;code class=&quot;prettyprint&quot;&gt;NO&lt;/code&gt; in &lt;code class=&quot;prettyprint&quot;&gt;build.xcconfig&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9698&quot;&gt;CB-9698&lt;/a&gt; - Add &lt;code class=&quot;prettyprint&quot;&gt;rsync&lt;/code&gt; error handling in ios &lt;code class=&quot;prettyprint&quot;&gt;copy-www-build-step.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9671&quot;&gt;CB-9671&lt;/a&gt; - Remove installation of &lt;code class=&quot;prettyprint&quot;&gt;ios-sim&lt;/code&gt; from &lt;code class=&quot;prettyprint&quot;&gt;travis.yml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9693&quot;&gt;CB-9693&lt;/a&gt; - Fix www copy with spaces in project name&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9690&quot;&gt;CB-9690&lt;/a&gt; - Can&amp;#39;t submit iPad apps to the App Store for &lt;strong&gt;iOS 9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9328&quot;&gt;CB-9328&lt;/a&gt; - Use &lt;code class=&quot;prettyprint&quot;&gt;ios-sim&lt;/code&gt; as a node module, not a CLI utility&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9558&quot;&gt;CB-9558&lt;/a&gt; - Add blob: to &lt;code class=&quot;prettyprint&quot;&gt;allowedSchemes&lt;/code&gt; used by &lt;code class=&quot;prettyprint&quot;&gt;CDVUIWebViewDelegate::shouldLoadRequest&lt;/code&gt; (closes #163)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9558&quot;&gt;CB-9558&lt;/a&gt; - Blob schemes won&amp;#39;t load in iframes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9667&quot;&gt;CB-9667&lt;/a&gt; - create tests failing in &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios 4.x&lt;/code&gt; (related to &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8789&quot;&gt;CB-8789&lt;/a&gt; pull request that didn&amp;#39;t test for projects with spaces in the name)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9650&quot;&gt;CB-9650&lt;/a&gt; - Update API compatibility doc in cordova-ios for &lt;code class=&quot;prettyprint&quot;&gt;AppDelegate.m&lt;/code&gt; template change&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9638&quot;&gt;CB-9638&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;Cordova/NSData+Base64.h&lt;/code&gt; missing from &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios 4.x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8789&quot;&gt;CB-8789&lt;/a&gt; - Support Asset Catalog for App icons and splashscreens&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8789&quot;&gt;CB-8789&lt;/a&gt; - Asset Catalog support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9642&quot;&gt;CB-9642&lt;/a&gt; - Integrate 3.9.0, 3.9.1, 3.9.2 version updates in &lt;code class=&quot;prettyprint&quot;&gt;CDVAvailability.h&lt;/code&gt; into master&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9261&quot;&gt;CB-9261&lt;/a&gt; - localizations broken in Xcode template&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9656&quot;&gt;CB-9656&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;Xcode&lt;/code&gt; can&amp;#39;t find &lt;code class=&quot;prettyprint&quot;&gt;CDVViewController.h&lt;/code&gt; when archiving in &lt;code class=&quot;prettyprint&quot;&gt;Xcode 7.1&lt;/code&gt; beta&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9254&quot;&gt;CB-9254&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;update_cordova_subproject&lt;/code&gt; command for &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios 4.0.0-dev&lt;/code&gt; results in a build error&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9636&quot;&gt;CB-9636&lt;/a&gt; - only load a &lt;code class=&quot;prettyprint&quot;&gt;WebView&lt;/code&gt; engine if the url to load passes the engine&amp;#39;s &lt;code class=&quot;prettyprint&quot;&gt;canLoadRequest&lt;/code&gt; filter&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9610&quot;&gt;CB-9610&lt;/a&gt; - Fix warning in &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios&lt;/code&gt; under &lt;code class=&quot;prettyprint&quot;&gt;Xcode 7&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9613&quot;&gt;CB-9613&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;CDVWhitelist::matches&lt;/code&gt; crashes when there is no hostname in a URL&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9485&quot;&gt;CB-9485&lt;/a&gt; - Use &lt;code class=&quot;prettyprint&quot;&gt;absoluteString&lt;/code&gt; method of &lt;code class=&quot;prettyprint&quot;&gt;NSURL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8365&quot;&gt;CB-8365&lt;/a&gt; - Add &lt;code class=&quot;prettyprint&quot;&gt;NSInteger&lt;/code&gt;, &lt;code class=&quot;prettyprint&quot;&gt;NSUInteger&lt;/code&gt; factory methods to &lt;code class=&quot;prettyprint&quot;&gt;CDVPluginResult&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9266&quot;&gt;CB-9266&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;cordova run&lt;/code&gt; for &lt;strong&gt;iOS&lt;/strong&gt; does not see non-running emulators&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9462&quot;&gt;CB-9462&lt;/a&gt; - &lt;strong&gt;iOS&lt;/strong&gt; 3.9.0 breaks npm link modules&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9453&quot;&gt;CB-9453&lt;/a&gt; - Updating to &lt;strong&gt;iOS@3.9.0&lt;/strong&gt; not building&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9273&quot;&gt;CB-9273&lt;/a&gt; - Copy www build phase node is not found&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9266&quot;&gt;CB-9266&lt;/a&gt; - changed target default to iPhone-5 in the interim&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8197&quot;&gt;CB-8197&lt;/a&gt; - Switch to nodejs for ios platform scripts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9203&quot;&gt;CB-9203&lt;/a&gt; - &lt;strong&gt;iOS&lt;/strong&gt; unit-tests should use tmp instead of same folder&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8468&quot;&gt;CB-8468&lt;/a&gt; - Application freezes if breakpoint hits JavaScript callback invoked from native&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8812&quot;&gt;CB-8812&lt;/a&gt; - moved system schemes handler into its own plugin (&lt;code class=&quot;prettyprint&quot;&gt;CDVSystemSchemes&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8812&quot;&gt;CB-8812&lt;/a&gt; - protocol hander raises error on second firing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9050&quot;&gt;CB-9050&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;cordova run --list&lt;/code&gt; does not show that you have an outdated &lt;code class=&quot;prettyprint&quot;&gt;ios-sim&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8730&quot;&gt;CB-8730&lt;/a&gt; - Can&amp;#39;t deploy to device&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8788&quot;&gt;CB-8788&lt;/a&gt; - Drop &lt;code class=&quot;prettyprint&quot;&gt;armv7s&lt;/code&gt; from default &lt;strong&gt;iOS&lt;/strong&gt; Cordova build to align with &lt;code class=&quot;prettyprint&quot;&gt;Xcode 6&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9046&quot;&gt;CB-9046&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;cordova run ios --emulator --target&lt;/code&gt; &amp;quot;iPhone-5, 7.1&amp;quot; (target with runtime) does not work&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8906&quot;&gt;CB-8906&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;cordova run ios --target&lt;/code&gt; doesn&amp;#39;t work&lt;/li&gt;
+&lt;li&gt;Incremented &lt;code class=&quot;prettyprint&quot;&gt;ios-sim&lt;/code&gt; version to 4.0.0&lt;/li&gt;
+&lt;li&gt;Incremented &lt;code class=&quot;prettyprint&quot;&gt;ios-deploy&lt;/code&gt; version to 1.7.0&lt;/li&gt;
+&lt;li&gt;Incremented &lt;code class=&quot;prettyprint&quot;&gt;xcodebuild&lt;/code&gt; version to 6.0.0&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8895&quot;&gt;CB-8895&lt;/a&gt; - Change &lt;code class=&quot;prettyprint&quot;&gt;CDVStartPageTests::testParametersInStartPage&lt;/code&gt; into an async test&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8047&quot;&gt;CB-8047&lt;/a&gt; - &lt;strong&gt;WKWebView&lt;/strong&gt; &lt;strong&gt;iOS8&lt;/strong&gt; &lt;code class=&quot;prettyprint&quot;&gt;wkwebview&lt;/code&gt; / local webserver plugin orientation issue&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8838&quot;&gt;CB-8838&lt;/a&gt; - Moved &lt;code class=&quot;prettyprint&quot;&gt;commandQueue&lt;/code&gt; push into &lt;code class=&quot;prettyprint&quot;&gt;non-WK_WEBVIEW_BINDING&lt;/code&gt; branch. (closes #136)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8868&quot;&gt;CB-8868&lt;/a&gt; - &lt;strong&gt;ios&lt;/strong&gt; 4.0.x cannot archive&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7767&quot;&gt;CB-7767&lt;/a&gt; - Removed &lt;code class=&quot;prettyprint&quot;&gt;NSData+Base64&lt;/code&gt; files, updated unit tests.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8710&quot;&gt;CB-8710&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios&lt;/code&gt; jasmine tests do not clean up build products, tests can only be run once&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7767&quot;&gt;CB-7767&lt;/a&gt; - Remove usage of &lt;code class=&quot;prettyprint&quot;&gt;NSData+Base64&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8709&quot;&gt;CB-8709&lt;/a&gt; - Remove usage of obsolete &lt;code class=&quot;prettyprint&quot;&gt;CDVLocalStorage&lt;/code&gt; fix in &lt;code class=&quot;prettyprint&quot;&gt;CDVViewController.m&lt;/code&gt; (plus style fix-ups)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8270&quot;&gt;CB-8270&lt;/a&gt; - Update &lt;code class=&quot;prettyprint&quot;&gt;Objective-C&lt;/code&gt; unit tests for &lt;code class=&quot;prettyprint&quot;&gt;JSON&lt;/code&gt; serialization. Cleaned up unit test workspace as well.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8690&quot;&gt;CB-8690&lt;/a&gt; - Exported headers were not in Public section, but Project. Moved.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8690&quot;&gt;CB-8690&lt;/a&gt; - Group files into folders in &lt;code class=&quot;prettyprint&quot;&gt;CordovaLib/Classes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8697&quot;&gt;CB-8697&lt;/a&gt; - Remove obsolete &lt;code class=&quot;prettyprint&quot;&gt;merges&lt;/code&gt; folder reference in default template(s)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-5520&quot;&gt;CB-5520&lt;/a&gt; - Remove all frameworks specified in the templates. Rely on implicit Clang Module loading.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-5520&quot;&gt;CB-5520&lt;/a&gt; - Removed most Build Settings from &lt;code class=&quot;prettyprint&quot;&gt;.pbxproj&lt;/code&gt; to &lt;code class=&quot;prettyprint&quot;&gt;.xcconfig&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-5520&quot;&gt;CB-5520&lt;/a&gt; - Added &lt;code class=&quot;prettyprint&quot;&gt;cordova/build*.xcconfig&lt;/code&gt; support in the default template (IDE use)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8678&quot;&gt;CB-8678&lt;/a&gt; - Mismatched case typo in startup plugin name in &lt;code class=&quot;prettyprint&quot;&gt;config.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7428&quot;&gt;CB-7428&lt;/a&gt; - Add bridging header.  Make sure all deployment targets are 7.0 Add swift runtime to search path (closes #133)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7826&quot;&gt;CB-7826&lt;/a&gt; - Add &lt;code class=&quot;prettyprint&quot;&gt;CDVPlugin&lt;/code&gt; support for getting items from plugin resource bundles&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8640&quot;&gt;CB-8640&lt;/a&gt; - Template-ize &lt;code class=&quot;prettyprint&quot;&gt;CDVAvailability.h&lt;/code&gt; for coho release tool&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8678&quot;&gt;CB-8678&lt;/a&gt; - Included core plugins should be added through configuration, not code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8643&quot;&gt;CB-8643&lt;/a&gt; - Drop &lt;strong&gt;iOS&lt;/strong&gt; 6 support, minimum &lt;strong&gt;iOS&lt;/strong&gt; 7&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8677&quot;&gt;CB-8677&lt;/a&gt; - Remove conditional &lt;code class=&quot;prettyprint&quot;&gt;IsAtLeastIosVersion&lt;/code&gt; code (plus style fix-ups)&lt;/li&gt;
+&lt;li&gt;Update version to 4.0.0 in &lt;code class=&quot;prettyprint&quot;&gt;CDVAvailability.h&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8556&quot;&gt;CB-8556&lt;/a&gt; - &lt;code class=&quot;prettyprint&quot;&gt;handleOpenURL&lt;/code&gt; functionality to be removed to a plugin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8474&quot;&gt;CB-8474&lt;/a&gt; - Remove local/remote push notification delegates from &lt;code class=&quot;prettyprint&quot;&gt;CDVAppDelegate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8464&quot;&gt;CB-8464&lt;/a&gt; - Remove non-ARC code in &lt;code class=&quot;prettyprint&quot;&gt;AppDelegate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8473&quot;&gt;CB-8473&lt;/a&gt; - Remove &lt;code class=&quot;prettyprint&quot;&gt;AppDelegate&lt;/code&gt; code from template (includes uncrustify style fix-ups)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8664&quot;&gt;CB-8664&lt;/a&gt; - Make &lt;code class=&quot;prettyprint&quot;&gt;CDVPlugin&lt;/code&gt; initializer private&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7753&quot;&gt;CB-7753&lt;/a&gt; - Remove &lt;code class=&quot;prettyprint&quot;&gt;CDV_IsIPad&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;CDV_IsIPhone5&lt;/code&gt; macros in &lt;code class=&quot;prettyprint&quot;&gt;CDVAvailabiltyDeprecated.h&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7000&quot;&gt;CB-7000&lt;/a&gt; - Remove deprecated &lt;code class=&quot;prettyprint&quot;&gt;CDVPlugin&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;CDVPluginResult&lt;/code&gt; methods&lt;/li&gt;
+&lt;li&gt;Make webView property dynamic in &lt;code class=&quot;prettyprint&quot;&gt;CDVViewController&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;CDVPlugin&lt;/code&gt; (from &lt;code class=&quot;prettyprint&quot;&gt;CDVWebViewEngineProtocol&lt;/code&gt; reference). Added scrollView category to &lt;code class=&quot;prettyprint&quot;&gt;UIView&lt;/code&gt; for backwards compatibility reasons.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8032&quot;&gt;CB-8032&lt;/a&gt; - Added a &lt;code class=&quot;prettyprint&quot;&gt;typedef&lt;/code&gt; for block definition.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8032&quot;&gt;CB-8032&lt;/a&gt; - Add new property in &lt;code class=&quot;prettyprint&quot;&gt;CDVCommandDelegate&lt;/code&gt; (&lt;code class=&quot;prettyprint&quot;&gt;urlTransformer&lt;/code&gt;), plus style fixups.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-6884&quot;&gt;CB-6884&lt;/a&gt; - Support new Cordova bridge under &lt;strong&gt;iOS&lt;/strong&gt; 8 &lt;code class=&quot;prettyprint&quot;&gt;WKWebView&lt;/code&gt; (typo fix)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7184&quot;&gt;CB-7184&lt;/a&gt; - Implement support for &lt;code class=&quot;prettyprint&quot;&gt;mediaPlaybackAllowsAirPlay&lt;/code&gt; in &lt;code class=&quot;prettyprint&quot;&gt;UIWebView&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;WKWebView&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7047&quot;&gt;CB-7047&lt;/a&gt; - Support &lt;code class=&quot;prettyprint&quot;&gt;config.xml&lt;/code&gt; preferences for &lt;code class=&quot;prettyprint&quot;&gt;WKWebView&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7182&quot;&gt;CB-7182&lt;/a&gt; - Running mobile-spec in an &lt;strong&gt;iOS&lt;/strong&gt; 8 project but using &lt;code class=&quot;prettyprint&quot;&gt;UIWebView&lt;/code&gt; results in an exception&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7047&quot;&gt;CB-7047&lt;/a&gt; - Support &lt;code class=&quot;prettyprint&quot;&gt;config.xml&lt;/code&gt; preferences for &lt;code class=&quot;prettyprint&quot;&gt;WKWebView&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7182&quot;&gt;CB-7182&lt;/a&gt; - Running &lt;code class=&quot;prettyprint&quot;&gt;mobile-spec&lt;/code&gt; in an &lt;strong&gt;iOS&lt;/strong&gt; 8 project but using &lt;code class=&quot;prettyprint&quot;&gt;UIWebView&lt;/code&gt; results in an exception&lt;/li&gt;
+&lt;li&gt;Split into Public and Private headers more clearly. Delete most deprectated symbols.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Dec 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2015/12/08/cordova-ios-4.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Tools Release</title>
+        <description>&lt;p&gt;New patch update of &lt;code class=&quot;prettyprint&quot;&gt;cordova-cli&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;cordova&lt;/code&gt; are now live!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/cordova-lib&quot;&gt;cordova-lib@5.4.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/cordova&quot;&gt;cordova@5.4.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We had to fix a few issues that were discovered with the recent 5.4.0 release.&lt;/p&gt;
+
+&lt;p&gt;To update your tools:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If you have &lt;code class=&quot;prettyprint&quot;&gt;cordova&lt;/code&gt; installed:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g cordova@latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;h2&gt;cordova-lib&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9976&quot;&gt;CB-9976&lt;/a&gt; Reinstall plugins for platforms if they were installed with &lt;code class=&quot;prettyprint&quot;&gt;cordova@&amp;lt;5.4.0&lt;/code&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9981&quot;&gt;CB-9981&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;path.parse&lt;/code&gt; only available on &lt;code class=&quot;prettyprint&quot;&gt;node 0.12+&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9987&quot;&gt;CB-9987&lt;/a&gt; Adds compatibility layer for &lt;code class=&quot;prettyprint&quot;&gt;cordova.raw.*&lt;/code&gt; methods&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9975&quot;&gt;CB-9975&lt;/a&gt; Fix issue with using &lt;code class=&quot;prettyprint&quot;&gt;all&lt;/code&gt; as orientation value&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9984&quot;&gt;CB-9984&lt;/a&gt; Bumps &lt;code class=&quot;prettyprint&quot;&gt;plist&lt;/code&gt; version and fixes failing &lt;code class=&quot;prettyprint&quot;&gt;cordova-common&lt;/code&gt; test&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;cordova-cli&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10049&quot;&gt;CB-10049&lt;/a&gt; updated cordova-lib dependency to 5.4.1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Pinned Platform Versions for &lt;strong&gt;Cordova CLI 5.4.0&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cordova Amazon-FireOS: ~3.6.3&lt;/li&gt;
+&lt;li&gt;Cordova Android: ~4.1.0 (4.1.1)&lt;/li&gt;
+&lt;li&gt;Cordova BlackBerry10: ~3.8.0&lt;/li&gt;
+&lt;li&gt;Cordova Browser: ~4.0.0&lt;/li&gt;
+&lt;li&gt;Cordova FirefoxOS: ~3.6.3&lt;/li&gt;
+&lt;li&gt;Cordova iOS: ~3.9.0 (3.9.2)&lt;/li&gt;
+&lt;li&gt;Cordova OSX: ~4.0.0&lt;/li&gt;
+&lt;li&gt;Cordova Ubuntu: ~4.0.0&lt;/li&gt;
+&lt;li&gt;Cordova Windows: ~4.1.0&lt;/li&gt;
+&lt;li&gt;Cordova WebOS: ~3.7.0&lt;/li&gt;
+&lt;li&gt;Cordova WP8: ~3.8.1&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 24 Nov 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/news/2015/11/24/tools-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2015/11/24/tools-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>tools</category>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>Plugins Release</title>
+        <description>&lt;p&gt;The following plugins were updated today:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cordova-plugin-battery-status@1.1.1&lt;/li&gt;
+&lt;li&gt;cordova-plugin-camera@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-console@1.0.2&lt;/li&gt;
+&lt;li&gt;cordova-plugin-contacts@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-device@1.1.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-device-motion@1.2.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-device-orientation@1.0.2&lt;/li&gt;
+&lt;li&gt;cordova-plugin-dialogs@1.2.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-file@4.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-file-transfer@1.4.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-geolocation@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-globalization@1.0.2&lt;/li&gt;
+&lt;li&gt;cordova-plugin-inappbrowser@1.1.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-legacy-whitelist@1.1.1&lt;/li&gt;
+&lt;li&gt;cordova-plugin-media@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-media-capture@1.1.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-network-information@1.1.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-splashscreen@3.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-statusbar@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-test-framework@1.1.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-vibration@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-whitelist@1.2.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following plugins now require &lt;code class=&quot;prettyprint&quot;&gt;cordova-android@5.0.0&lt;/code&gt;. Please read the &lt;a href=&quot;http://cordova.apache.org/announcements/2015/11/09/cordova-android-5.0.0.html&quot;&gt;Android 5.0.0 release blog&lt;/a&gt; for instructions to update. &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cordova-plugin-camera@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-contacts@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-file@4.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-geolocation@2.0.0&lt;/li&gt;
+&lt;li&gt;cordova-plugin-media@2.0.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Update&lt;/h2&gt;
+
+&lt;p&gt;Since &lt;code class=&quot;prettyprint&quot;&gt;cordova-android@5.0.0&lt;/code&gt; isn&amp;#39;t yet pinned by default in &lt;code class=&quot;prettyprint&quot;&gt;cordova&lt;/code&gt;, you will have to explicitly install these new versions of these five plugins now. The previous released versions of the above five plugins are still set to &lt;code class=&quot;prettyprint&quot;&gt;latest&lt;/code&gt; on npm instead of these newly released versions. These will be set to &lt;code class=&quot;prettyprint&quot;&gt;latest&lt;/code&gt; once we release &lt;code class=&quot;prettyprint&quot;&gt;cordova@6&lt;/code&gt; which will have &lt;code class=&quot;prettyprint&quot;&gt;cordova-android@5.0.0&lt;/code&gt; pinned.&lt;/p&gt;
+
+&lt;p&gt;E.g. &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova plugin add cordova-plugin-camera@2.0.0 --save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To see what versions exist for a plugin, run &lt;code class=&quot;prettyprint&quot;&gt;npm info PLUGINNAME versions&lt;/code&gt;. &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;You can update any plugin by removing it, and then re-adding it.&lt;/p&gt;
+
+&lt;p&gt;E.g. To update your camera plugin:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova plugin rm cordova-plugin-camera --save
+cordova plugin add cordova-plugin-camera --save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Changes include:&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;cordova-plugin-battery-status@1.1.1&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-camera@2.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8863&quot;&gt;CB-8863&lt;/a&gt; correct block usage for &lt;code class=&quot;prettyprint&quot;&gt;async&lt;/code&gt; calls&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-5479&quot;&gt;CB-5479&lt;/a&gt; changed &lt;code class=&quot;prettyprint&quot;&gt;saveToPhotoAlbum&lt;/code&gt; to save uncompressed images for &lt;strong&gt;Android&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9169&quot;&gt;CB-9169&lt;/a&gt; Fixed &lt;code class=&quot;prettyprint&quot;&gt;filetype&lt;/code&gt; for uncompressed images and added quirk for &lt;strong&gt;Android&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9446&quot;&gt;CB-9446&lt;/a&gt; Removing &lt;code class=&quot;prettyprint&quot;&gt;CordovaResource&lt;/code&gt; library code in favour of the code we&amp;#39;re supposed to be deprecating because that at least works.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9942&quot;&gt;CB-9942&lt;/a&gt; Normalize line endings in Camera plugin docs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9910&quot;&gt;CB-9910&lt;/a&gt; Add permission request for some gallery requests for &lt;strong&gt;Android&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7668&quot;&gt;CB-7668&lt;/a&gt; Adding a sterner warning for &lt;code class=&quot;prettyprint&quot;&gt;allowedit&lt;/code&gt; on &lt;strong&gt;Android&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;Using the &lt;code class=&quot;prettyprint&quot;&gt;CordovaResourceApi&lt;/code&gt; to fine paths of files in the background thread.  If the file doesn&amp;#39;t exist, return the content &lt;code class=&quot;prettyprint&quot;&gt;URI&lt;/code&gt;. &lt;/li&gt;
+&lt;li&gt;Add engine tag for &lt;strong&gt;Cordova-Android 5.0.x&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9583&quot;&gt;CB-9583&lt;/a&gt;: Added support for &lt;strong&gt;Marshmallow&lt;/strong&gt; permissions (&lt;strong&gt;Android 6.0&lt;/strong&gt;)&lt;/li&gt;
+&lt;li&gt;Try to use &lt;code class=&quot;prettyprint&quot;&gt;realpath&lt;/code&gt; filename instead of default &lt;code class=&quot;prettyprint&quot;&gt;modified.jpg&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-6190&quot;&gt;CB-6190&lt;/a&gt; &lt;strong&gt;iOS&lt;/strong&gt; camera plugin ignores quality parameter&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9633&quot;&gt;CB-9633&lt;/a&gt; &lt;strong&gt;iOS&lt;/strong&gt; Taking a Picture With Option &lt;code class=&quot;prettyprint&quot;&gt;destinationType:NATIVE_URI&lt;/code&gt; doesn&amp;#39;t show image&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9745&quot;&gt;CB-9745&lt;/a&gt; Camera plugin docs should be generated from the source&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9622&quot;&gt;CB-9622&lt;/a&gt; &lt;strong&gt;WP8&lt;/strong&gt; Camera Option &lt;code class=&quot;prettyprint&quot;&gt;destinationType:NATIVE_URI&lt;/code&gt; is a &lt;code class=&quot;prettyprint&quot;&gt;NO-OP&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9623&quot;&gt;CB-9623&lt;/a&gt; Fixes various issues when &lt;code class=&quot;prettyprint&quot;&gt;encodingType&lt;/code&gt; set to &lt;code class=&quot;prettyprint&quot;&gt;png&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9591&quot;&gt;CB-9591&lt;/a&gt; Retaining aspect ratio when resizing&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9443&quot;&gt;CB-9443&lt;/a&gt; Pick correct &lt;code class=&quot;prettyprint&quot;&gt;maxResolution&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9151&quot;&gt;CB-9151&lt;/a&gt; Trigger &lt;code class=&quot;prettyprint&quot;&gt;captureAction&lt;/code&gt; only once&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9413&quot;&gt;CB-9413&lt;/a&gt; Close &lt;code class=&quot;prettyprint&quot;&gt;RandomAccessStream&lt;/code&gt; once copied&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-5661&quot;&gt;CB-5661&lt;/a&gt; Remove outdated &lt;strong&gt;iOS&lt;/strong&gt; quirks about memory&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9349&quot;&gt;CB-9349&lt;/a&gt; Focus control and nice UI&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9259&quot;&gt;CB-9259&lt;/a&gt; Forgot to add another check on which &lt;code class=&quot;prettyprint&quot;&gt;URI&lt;/code&gt; we&amp;#39;re using when fixing this thing the first time&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9247&quot;&gt;CB-9247&lt;/a&gt; Added macro to conditionally add &lt;code class=&quot;prettyprint&quot;&gt;NSData+Base64.h&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9247&quot;&gt;CB-9247&lt;/a&gt; Fixes compilation errors with &lt;strong&gt;cordova-ios 4.x&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fix returning native url on &lt;strong&gt;Windows&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-console@1.0.2&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;Document formatting options for the console object&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-5089&quot;&gt;CB-5089&lt;/a&gt; Document supported methods for console object&lt;/li&gt;
+&lt;li&gt;reverted &lt;code class=&quot;prettyprint&quot;&gt;d58f218b9149d362ebb0b8ce697cf403569d14cd&lt;/code&gt; because &lt;code class=&quot;prettyprint&quot;&gt;logger&lt;/code&gt; is not needed on &lt;strong&gt;Android&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-contacts@2.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9728&quot;&gt;CB-9728&lt;/a&gt; Solving memory leak issues due to opened cursor objects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9940&quot;&gt;CB-9940&lt;/a&gt; Adding namespace declarations for &lt;code class=&quot;prettyprint&quot;&gt;m3&lt;/code&gt; and uap to &lt;code class=&quot;prettyprint&quot;&gt;plugin.xml&lt;/code&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9905&quot;&gt;CB-9905&lt;/a&gt; mark tests as pending if &lt;strong&gt;iOS&lt;/strong&gt; permission is blocked.&lt;/li&gt;
+&lt;li&gt;Refactored &lt;code class=&quot;prettyprint&quot;&gt;ContactManager&lt;/code&gt; after feedback&lt;/li&gt;
+&lt;li&gt;Commit of Contacts Plugin with new &lt;code class=&quot;prettyprint&quot;&gt;API&lt;/code&gt; for new &lt;strong&gt;MarshMallow&lt;/strong&gt; permissions for &lt;strong&gt;Android 6.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9823&quot;&gt;CB-9823&lt;/a&gt; Making sure the &lt;code class=&quot;prettyprint&quot;&gt;photoCursor&lt;/code&gt; is always closed.&lt;/li&gt;
+&lt;li&gt;Shortened multiple references to use &lt;code class=&quot;prettyprint&quot;&gt;CommonDataKinds&lt;/code&gt; directly&lt;/li&gt;
+&lt;li&gt;removed multiple calls &lt;code class=&quot;prettyprint&quot;&gt;toLowerCase(Locale.getDefault())&lt;/code&gt; for the same string, use type Phone &lt;code class=&quot;prettyprint&quot;&gt;enum&lt;/code&gt; directly.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8537&quot;&gt;CB-8537&lt;/a&gt; Updated source to pass &lt;code class=&quot;prettyprint&quot;&gt;Fortify&lt;/code&gt; scan.&lt;/li&gt;
+&lt;li&gt;Update &lt;code class=&quot;prettyprint&quot;&gt;ContactProxy.js&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Do not return absolute path for contact images.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9579&quot;&gt;CB-9579&lt;/a&gt; Fixed failed tests when &lt;code class=&quot;prettyprint&quot;&gt;DeleteMe&lt;/code&gt; contact already exists&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9054&quot;&gt;CB-9054&lt;/a&gt;: Can&amp;#39;t fully reproduce, but we should probably wrap this in an exception anyway.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-device@1.1.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Add &lt;code class=&quot;prettyprint&quot;&gt;isVirtual&lt;/code&gt; for &lt;strong&gt;Windows Phone 8.x&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Added basic &lt;strong&gt;Android&lt;/strong&gt; support for hardware serial number&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9865&quot;&gt;CB-9865&lt;/a&gt; Better simulator detection for &lt;strong&gt;iOS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;Added &lt;strong&gt;WP8&lt;/strong&gt; implementation&lt;/li&gt;
+&lt;li&gt;update to use &lt;code class=&quot;prettyprint&quot;&gt;TARGET_OS_SIMULATOR&lt;/code&gt; as &lt;code class=&quot;prettyprint&quot;&gt;TARGET_IPHONE_SIMULATOR&lt;/code&gt; is deprecated.&lt;/li&gt;
+&lt;li&gt;update code to use &amp;#39;isVirtual&amp;#39;&lt;/li&gt;
+&lt;li&gt;create test to verify existence and type of new property &amp;#39;isVirtual&amp;#39;&lt;/li&gt;
+&lt;li&gt;add &lt;code class=&quot;prettyprint&quot;&gt;isSimulator&lt;/code&gt; for &lt;strong&gt;iOS&lt;/strong&gt; &amp;amp; &lt;strong&gt;Android&lt;/strong&gt; device&lt;/li&gt;
+&lt;li&gt;Updated documentation to mention backwards compatibility&lt;/li&gt;
+&lt;li&gt;Updated &lt;strong&gt;README&lt;/strong&gt; to reflect new behaviour and quirks on &lt;strong&gt;iOS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Check user defaults first to maintain backwards compatibility&lt;/li&gt;
+&lt;li&gt;Changed &lt;code class=&quot;prettyprint&quot;&gt;UUID&lt;/code&gt; to use &lt;code class=&quot;prettyprint&quot;&gt;[UIDevice identifierForVendor]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-device-motion@1.2.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;access all &lt;code class=&quot;prettyprint&quot;&gt;accel&lt;/code&gt; properties via getters&lt;/li&gt;
+&lt;li&gt;Return error when &lt;code class=&quot;prettyprint&quot;&gt;accelerometer&lt;/code&gt; not available, skip/pending tests when accel not available, use getters for properties&lt;/li&gt;
+&lt;li&gt;Returning an &lt;code class=&quot;prettyprint&quot;&gt;OK PluginResult.Status&lt;/code&gt; when starting&lt;/li&gt;
+&lt;li&gt;Update &lt;code class=&quot;prettyprint&quot;&gt;README.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Added &lt;strong&gt;Android&lt;/strong&gt; quirk &lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9426&quot;&gt;CB-9426&lt;/a&gt; Fix exception when using device motion plugin on &lt;strong&gt;browser&lt;/strong&gt; platform.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9339&quot;&gt;CB-9339&lt;/a&gt; Increase the default sensor accuracy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-device-orientation@1.0.2&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-4596&quot;&gt;CB-4596&lt;/a&gt; Fix &lt;code class=&quot;prettyprint&quot;&gt;timestamp&lt;/code&gt; to be &lt;code class=&quot;prettyprint&quot;&gt;DOMTimeStamp&lt;/code&gt; across the board&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9426&quot;&gt;CB-9426&lt;/a&gt; Fix exception when using device orientation plugin on &lt;strong&gt;browser&lt;/strong&gt; platform.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-dialogs@1.2.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8549&quot;&gt;CB-8549&lt;/a&gt; Updated source to pass &lt;code class=&quot;prettyprint&quot;&gt;Fortify&lt;/code&gt; scan.&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;add &lt;code class=&quot;prettyprint&quot;&gt;CSS class&lt;/code&gt; to prompt &lt;code class=&quot;prettyprint&quot;&gt;div&lt;/code&gt; for &lt;strong&gt;Windows&lt;/strong&gt; platform&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9347&quot;&gt;CB-9347&lt;/a&gt; - fix to allow to stack multiple &lt;code class=&quot;prettyprint&quot;&gt;UIAlertControllers&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-file@4.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8497&quot;&gt;CB-8497&lt;/a&gt; Fix handling of file paths with &lt;code class=&quot;prettyprint&quot;&gt;#&lt;/code&gt; character&lt;/li&gt;
+&lt;li&gt;Do not inject default &lt;code class=&quot;prettyprint&quot;&gt;AndroidPersistentFileLocation&lt;/code&gt; into &lt;code class=&quot;prettyprint&quot;&gt;config.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9891&quot;&gt;CB-9891&lt;/a&gt;: Fix permission errors due to &lt;code class=&quot;prettyprint&quot;&gt;URI encoding&lt;/code&gt; inconsistency on &lt;strong&gt;Android&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code class=&quot;prettyprint&quot;&gt;NullPointer Exception&lt;/code&gt; in &lt;strong&gt;Android 5&lt;/strong&gt; and above due to invalid column name on cursor&lt;/li&gt;
+&lt;li&gt;Fix default persistent file location&lt;/li&gt;
+&lt;li&gt;fix &lt;code class=&quot;prettyprint&quot;&gt;applicationDirectory&lt;/code&gt; to use &lt;code class=&quot;prettyprint&quot;&gt;ms-appx:///&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;strong&gt;Windows&lt;/strong&gt; paths to &lt;code class=&quot;prettyprint&quot;&gt;cordova.file&lt;/code&gt; object&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9851&quot;&gt;CB-9851&lt;/a&gt; Document &lt;code class=&quot;prettyprint&quot;&gt;cdvfile&lt;/code&gt; protocol quirk - using &lt;code class=&quot;prettyprint&quot;&gt;cdvfile://&lt;/code&gt; in the &lt;code class=&quot;prettyprint&quot;&gt;DOM&lt;/code&gt; is not supported on &lt;strong&gt;Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9752&quot;&gt;CB-9752&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;getDirectory&lt;/code&gt; fails on valid directory with assets filesystem&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7253&quot;&gt;CB-7253&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;requestFileSystem&lt;/code&gt; fails when no external storage is present&lt;/li&gt;
+&lt;li&gt;Adding permissions for &lt;strong&gt;Marshmallow&lt;/strong&gt;. Now supports &lt;strong&gt;Android 6.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;always use setters to fix memory issues without &lt;code class=&quot;prettyprint&quot;&gt;ARC&lt;/code&gt; for &lt;strong&gt;iOS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9331&quot;&gt;CB-9331&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;getFreeDiskSpace&lt;/code&gt; &lt;strong&gt;iOS&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;override &lt;code class=&quot;prettyprint&quot;&gt;resolveLocalFileSystemURL&lt;/code&gt; by &lt;code class=&quot;prettyprint&quot;&gt;webkitResolveLocalFileSystemURL&lt;/code&gt; for &lt;strong&gt;browser&lt;/strong&gt; platform add &lt;code class=&quot;prettyprint&quot;&gt;.project&lt;/code&gt; into git ignore list&lt;/li&gt;
+&lt;li&gt;Fail with &lt;code class=&quot;prettyprint&quot;&gt;FileError.ENCODING_ERR&lt;/code&gt; on encoding exception.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9544&quot;&gt;CB-9544&lt;/a&gt; Add file plugin for &lt;strong&gt;OSX&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9539&quot;&gt;CB-9539&lt;/a&gt; Fixed test failure on &lt;strong&gt;Android&lt;/strong&gt; emulator&lt;/li&gt;
+&lt;li&gt;Added docs on &lt;code class=&quot;prettyprint&quot;&gt;CSP&lt;/code&gt; rules needed for using &lt;code class=&quot;prettyprint&quot;&gt;cdvfile&lt;/code&gt; in DOM src. This closes #120&lt;/li&gt;
+&lt;li&gt;Added &lt;code class=&quot;prettyprint&quot;&gt;cdvfile&lt;/code&gt; protocol purpose description and examples&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-file-transfer@1.4.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9879&quot;&gt;CB-9879&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;getCookie&lt;/code&gt;s can cause unhandled &lt;code class=&quot;prettyprint&quot;&gt;NullPointerException&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-6928&quot;&gt;CB-6928&lt;/a&gt; Wrong behaviour transferring cacheable content&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-51&quot;&gt;CB-51&lt;/a&gt; FileTransfer - Support &lt;code class=&quot;prettyprint&quot;&gt;PUT&lt;/code&gt; Method&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9906&quot;&gt;CB-9906&lt;/a&gt; cleanup duplicate code, removed 2nd &lt;code class=&quot;prettyprint&quot;&gt;isWP8&lt;/code&gt; declaration.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9950&quot;&gt;CB-9950&lt;/a&gt; Unpend Filetransfer spec.27 on &lt;strong&gt;wp8&lt;/strong&gt; as custom headers are now supported&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9843&quot;&gt;CB-9843&lt;/a&gt; Added &lt;strong&gt;wp8&lt;/strong&gt; quirk to test spec 12&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8431&quot;&gt;CB-8431&lt;/a&gt; File Transfer tests crash on &lt;strong&gt;Android Lollipop&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9790&quot;&gt;CB-9790&lt;/a&gt; Align &lt;code class=&quot;prettyprint&quot;&gt;FileUploadOptions&lt;/code&gt; &lt;code class=&quot;prettyprint&quot;&gt;fileName&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;mimeType&lt;/code&gt; default parameter values to the docs on &lt;strong&gt;iOS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9385&quot;&gt;CB-9385&lt;/a&gt; Return &lt;code class=&quot;prettyprint&quot;&gt;FILE_NOT_FOUND_ERR&lt;/code&gt; when receiving &lt;code class=&quot;prettyprint&quot;&gt;404&lt;/code&gt; code on &lt;strong&gt;iOS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9791&quot;&gt;CB-9791&lt;/a&gt; Decreased download and upload tests timeout&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-geolocation@2.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9907&quot;&gt;CB-9907&lt;/a&gt; Handle &lt;strong&gt;iOS&lt;/strong&gt; tests that fail when ios simulator does not have a location&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8826&quot;&gt;CB-8826&lt;/a&gt; Check for &lt;code class=&quot;prettyprint&quot;&gt;NSLocationWhenInUseUsageDescription&lt;/code&gt; first&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9105&quot;&gt;CB-9105&lt;/a&gt;: Fixing &lt;code class=&quot;prettyprint&quot;&gt;JS&lt;/code&gt; errors in the shim&lt;/li&gt;
+&lt;li&gt;Added support for new permissions model for &lt;strong&gt;Android 6.0&lt;/strong&gt; aka &lt;strong&gt;Marshmallow&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Expect &lt;code class=&quot;prettyprint&quot;&gt;lastPosition&lt;/code&gt; to have a &lt;code class=&quot;prettyprint&quot;&gt;timestamp&lt;/code&gt; that is already in &lt;code class=&quot;prettyprint&quot;&gt;msecs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-4596&quot;&gt;CB-4596&lt;/a&gt; Date objects are supposed to be &lt;code class=&quot;prettyprint&quot;&gt;DOMTimeStamp&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9355&quot;&gt;CB-9355&lt;/a&gt; Fix Geolocation plugin start watch fail related to unset &lt;code class=&quot;prettyprint&quot;&gt;MovementThreshold&lt;/code&gt; on &lt;strong&gt;Windows 10&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-globalization@1.0.2&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9409&quot;&gt;CB-9409&lt;/a&gt; check that &lt;code class=&quot;prettyprint&quot;&gt;localeIdentifier&lt;/code&gt; has underscore&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9476&quot;&gt;CB-9476&lt;/a&gt;: &lt;code class=&quot;prettyprint&quot;&gt;Mobilespec&lt;/code&gt; crash on startup when running on &lt;strong&gt;Windows 10&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Fixing license headers and adding &lt;code class=&quot;prettyprint&quot;&gt;moment.js&lt;/code&gt; to &lt;code class=&quot;prettyprint&quot;&gt;.ratignore&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-inappbrowser@1.1.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Invoke webview if using local file&lt;/li&gt;
+&lt;li&gt;Fixed &lt;code class=&quot;prettyprint&quot;&gt;zIndex&lt;/code&gt; issue on &lt;strong&gt;Windows 8&lt;/strong&gt;, where InAppBrowser opens behind default app.&lt;/li&gt;
+&lt;li&gt;fix &lt;code class=&quot;prettyprint&quot;&gt;async&lt;/code&gt; self usage&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9150&quot;&gt;CB-9150&lt;/a&gt; Fix InAppBrowser &lt;code class=&quot;prettyprint&quot;&gt;executeScript&lt;/code&gt; crash on &lt;strong&gt;Windows&lt;/strong&gt; if no data returned&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10008&quot;&gt;CB-10008&lt;/a&gt; Fix InAppBrowser popup layout on &lt;strong&gt;Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Setting &lt;code class=&quot;prettyprint&quot;&gt;setStatusBarStyle&lt;/code&gt; to &lt;code class=&quot;prettyprint&quot;&gt;-1&lt;/code&gt; causes &lt;code class=&quot;prettyprint&quot;&gt;CGContextSaveGState&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9167&quot;&gt;CB-9167&lt;/a&gt; Fix crash on &lt;strong&gt;browser&lt;/strong&gt; window close &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9799&quot;&gt;CB-9799&lt;/a&gt; Fixed &lt;code class=&quot;prettyprint&quot;&gt;javaDoc&lt;/code&gt; errors.&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9760&quot;&gt;CB-9760&lt;/a&gt; InAppBrowser: fallback to default &lt;code class=&quot;prettyprint&quot;&gt;window.open&lt;/code&gt; behavior on &lt;strong&gt;Ripple&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9378&quot;&gt;CB-9378&lt;/a&gt; Fix InAppBrowser not taking whole screen on &lt;strong&gt;Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9158&quot;&gt;CB-9158&lt;/a&gt; - InAppBrowser &lt;code class=&quot;prettyprint&quot;&gt;zoomControls&lt;/code&gt; are always set to true&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-legacy-whitelist@1.1.1&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-media@2.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Media now supports new permissions for &lt;strong&gt;Android 6.0&lt;/strong&gt; aka &lt;strong&gt;Marshmallow&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9619&quot;&gt;CB-9619&lt;/a&gt; Fixed tests waiting for precise position&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9606&quot;&gt;CB-9606&lt;/a&gt; Fixes arguments parsing in &lt;code class=&quot;prettyprint&quot;&gt;seekAudio&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9605&quot;&gt;CB-9605&lt;/a&gt; Fixes issue with playback resume after pause on &lt;strong&gt;WP8&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;fix record and play &lt;code class=&quot;prettyprint&quot;&gt;NullPointerException&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9237&quot;&gt;CB-9237&lt;/a&gt; Add &lt;code class=&quot;prettyprint&quot;&gt;cdvfile://&lt;/code&gt; support to media plugin on &lt;strong&gt;Windows&lt;/strong&gt; platform&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9238&quot;&gt;CB-9238&lt;/a&gt; Media plugin cannot record audio on &lt;strong&gt;Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Added &lt;strong&gt;iOS&lt;/strong&gt; platform &lt;code class=&quot;prettyprint&quot;&gt;media.setRate&lt;/code&gt; auto test&lt;/li&gt;
+&lt;li&gt;Add &lt;strong&gt;iOS&lt;/strong&gt; platform check in &lt;code class=&quot;prettyprint&quot;&gt;Media.prototype.setRate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code class=&quot;prettyprint&quot;&gt;Media.prototype.setRate&lt;/code&gt; method (only for &lt;strong&gt;iOS&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-media-capture@1.1.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9249&quot;&gt;CB-9249&lt;/a&gt; Fix &lt;strong&gt;iOS&lt;/strong&gt; warnings in Media Capture plugin&lt;/li&gt;
+&lt;li&gt;Document the quality property in &lt;strong&gt;Android&lt;/strong&gt; quirks&lt;/li&gt;
+&lt;li&gt;Add &lt;code class=&quot;prettyprint&quot;&gt;CaptureVideoOption&lt;/code&gt; for quality&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-network-information@1.1.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;These notifications are objects so their address always evaluates to true.&lt;/li&gt;
+&lt;li&gt;Update &lt;code class=&quot;prettyprint&quot;&gt;NetworkManager.java&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9542&quot;&gt;CB-9542&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;Browser Proxy&lt;/code&gt; not defined correctly&lt;/li&gt;
+&lt;li&gt;Solved &lt;code class=&quot;prettyprint&quot;&gt;toLowerCase&lt;/code&gt; issue with &lt;code class=&quot;prettyprint&quot;&gt;Locale.US&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-splashscreen@3.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9750&quot;&gt;CB-9750&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;FadeSplashDuration&lt;/code&gt; is now in &lt;code class=&quot;prettyprint&quot;&gt;msecs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8875&quot;&gt;CB-8875&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;FadeSplashScreen&lt;/code&gt; was not fading&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9467&quot;&gt;CB-9467&lt;/a&gt; SplashScreen does not show any image in hosted app on &lt;strong&gt;Windows 10&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7282&quot;&gt;CB-7282&lt;/a&gt; Document &lt;code class=&quot;prettyprint&quot;&gt;AutoHideSplashScreenpreference&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9327&quot;&gt;CB-9327&lt;/a&gt; - Splashscreen not receiving &lt;code class=&quot;prettyprint&quot;&gt;CDVPageLoadNotification&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;WP8: Avoid config &lt;code class=&quot;prettyprint&quot;&gt;value&lt;/code&gt; of a wrong element.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-statusbar@2.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Added &lt;code class=&quot;prettyprint&quot;&gt;weakSelf&lt;/code&gt; reference for block use&lt;/li&gt;
+&lt;li&gt;Fixes &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-4712&quot;&gt;CB-4712&lt;/a&gt;, &lt;a href=&quot;https://issues.apache.org/jira/browse/CB-5439&quot;&gt;CB-5439&lt;/a&gt; statusbar issues&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7965&quot;&gt;CB-7965&lt;/a&gt; Add cordova-plugin-statusbar support for &lt;strong&gt;browser&lt;/strong&gt; platform&lt;/li&gt;
+&lt;li&gt;Don&amp;#39;t use &lt;code class=&quot;prettyprint&quot;&gt;IsAtLeastiOSVersion&lt;/code&gt; macro to determine height&lt;/li&gt;
+&lt;li&gt;Use correct statusbar height for landscape orientation in &lt;strong&gt;iOS&lt;/strong&gt; &amp;gt;= 8&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9202&quot;&gt;CB-9202&lt;/a&gt; updated repo url to github mirror in package.json&lt;/li&gt;
+&lt;li&gt;Added verbose install text for users on &amp;lt; cordova 5.0&lt;/li&gt;
+&lt;li&gt;update docs for &lt;code class=&quot;prettyprint&quot;&gt;StatusBarBackgroundColor&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-test-framework@1.1.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8973&quot;&gt;CB-8973&lt;/a&gt;: Changed the functionality of making the &lt;code class=&quot;prettyprint&quot;&gt;log&lt;/code&gt; appear and disappear&lt;/li&gt;
+&lt;li&gt;Ensure &lt;code class=&quot;prettyprint&quot;&gt;WinJS&lt;/code&gt; is available when adding &lt;strong&gt;Windows&lt;/strong&gt; unhandled error hook&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-vibration@2.0.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;Fixed &lt;strong&gt;browser&lt;/strong&gt; platform to pass tests and combined tests&lt;/li&gt;
+&lt;li&gt;Removed call to add &lt;code class=&quot;prettyprint&quot;&gt;proxy&lt;/code&gt; and renamed &lt;strong&gt;browser&lt;/strong&gt; file&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-7966&quot;&gt;CB-7966&lt;/a&gt; Add cordova-plugin-vibration support for &lt;strong&gt;browser&lt;/strong&gt; platform&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9166&quot;&gt;CB-9166&lt;/a&gt;: Changed &lt;code class=&quot;prettyprint&quot;&gt;plugin.xml&lt;/code&gt; framework reference condition to be valid XML.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;cordova-plugin-whitelist@1.2.0&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;removed &lt;strong&gt;iOS&lt;/strong&gt; engine check from &lt;code class=&quot;prettyprint&quot;&gt;plugin.xml&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-10035&quot;&gt;CB-10035&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;RELEASENOTES&lt;/code&gt; to be newest to oldest&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9972&quot;&gt;CB-9972&lt;/a&gt; - Remove &lt;strong&gt;iOS&lt;/strong&gt; whitelist&lt;/li&gt;
+&lt;li&gt;Updated the text, it should read 4.0.x and greater, since this plugin will be required for &lt;code class=&quot;prettyprint&quot;&gt;cordova-android 5.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;Updated &lt;code class=&quot;prettyprint&quot;&gt;plugin.xml &amp;lt;info&amp;gt;&lt;/code&gt; tag to remove warning about not needing this plugin if you are using the &lt;strong&gt;iOS 9 SDK&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9738&quot;&gt;CB-9738&lt;/a&gt; - Disable whitelist use when runtime environment is &lt;strong&gt;iOS 9&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9740&quot;&gt;CB-9740&lt;/a&gt; - Add &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;info&amp;gt;&lt;/code&gt; tag describing whitelist plugin not needed on &lt;code class=&quot;prettyprint&quot;&gt;cordova-ios&lt;/code&gt; and cordova-android 3.x`&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9568&quot;&gt;CB-9568&lt;/a&gt; - Update whitelist plugin to allow all network access by default&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9337&quot;&gt;CB-9337&lt;/a&gt; - enable use of &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;access&amp;gt;&lt;/code&gt; tags for native code network requests&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 24 Nov 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/news/2015/11/24/plugins-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2015/11/24/plugins-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>CVE annoucements for Cordova-Android</title>
+        <description>&lt;p&gt;Two older vulerabilities were brought to our attention, and while we found that they were fixed in later versions of Cordova, we are required to announce these
+vulnerabilities, and to encourage users to upgrade to a supported version of Cordova, the lowest stable version currently being Android 4.1.0.  We are no longer supporting
+Cordova-Android 3.x due to security issues related to the legacy whitelist implementation, and we recommend that users upgrade to Cordova Android 5.0.x for Marshmallow support.&lt;/p&gt;
+
+&lt;p&gt;When using the Cordova CLI, the command to use 4.1.0 of Cordova Android is:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova platform add android@4.1.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The security issues are CVE-2015-5256 and CVE-2015-5257&lt;/p&gt;
+
+&lt;p&gt;For your convenience, the text of the CVEs are included here.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;CVE-2015-5256: Apache Cordova vulnerable to improper application of whitelist restrictions on Android&lt;/p&gt;
+
+&lt;p&gt;Severity: Medium&lt;/p&gt;
+
+&lt;p&gt;Vendor:
+The Apache Software Foundation&lt;/p&gt;
+
+&lt;p&gt;Versions Affected:
+Cordova Android 3.7.2 and earlier&lt;/p&gt;
+
+&lt;p&gt;Description:
+Android applications created using Apache Cordova that use a remote server contain a vulnerability where whitelist restrictions are not properly applied.
+Improperly crafted URIs could be used to circumvent the whitelist, allowing for the execution of non-whitelisted Javascript.&lt;/p&gt;
+
+&lt;p&gt;Upgrade path:
+Developers who are concerned about this should rebuild their applications with Cordova Android 4.1.1.  Developers using remote content roots should also
+use SSL, as well as Content Source Policy to further mitigate this issue.&lt;/p&gt;
+
+&lt;p&gt;Credit: Muneaki Nishimura of Sony Digital Network Applications, Inc&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;CVE-2015-5257: Weak Randomization of BridgeSecret for Apache Cordova Android&lt;/p&gt;
+
+&lt;p&gt;Severity: Low&lt;/p&gt;
+
+&lt;p&gt;Vendor:
+The Apache Software Foundation&lt;/p&gt;
+
+&lt;p&gt;Versions Affected:
+Cordova Android versions up to 3.6.4&lt;/p&gt;
+
+&lt;p&gt;Description:&lt;/p&gt;
+
+&lt;p&gt;Cordova uses a bridge that allows the Native Application to communicate with the HTML and Javascript that control the user interface.  To protect this bridge on Android, the 
+framework uses a BridgeSecret to protect it from third-party hijacking.  However, the BridgeSecret is not sufficiently random and can be determined in certain scenarios.&lt;/p&gt;
+
+&lt;p&gt;Upgreade Path:
+Developers who are concerned about this issue should rebuild their applications with Cordova Android 4.1.1 or later.  Versions after 3.6.4 do not contain this vulnerability.&lt;/p&gt;
+
+&lt;p&gt;Credit: David Kaplan &amp;amp; Roee Hay, IBM X-Force Application Security Research Team&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/announcements/2015/11/20/security.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2015/11/20/security.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        <category>security</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Apache Cordova Windows 4.2.0</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;prettyprint&quot;&gt;Cordova Windows 4.2.0&lt;/code&gt; has been released!&lt;/p&gt;
+
+&lt;p&gt;This release adds support for &lt;strong&gt;back button&lt;/strong&gt; handling on &lt;strong&gt;Windows 10&lt;/strong&gt; and
+&lt;strong&gt;Windows Phone 8.1&lt;/strong&gt; and various other improvements. It will be the default
+Windows version after the next &lt;code class=&quot;prettyprint&quot;&gt;cordova-cli&lt;/code&gt; release.&lt;/p&gt;
+
+&lt;p&gt;To upgrade:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g cordova
+cd my_project
+cordova platform update windows@4.2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To add it explicitly:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova platform add windows@4.2.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For non-CLI projects or for pre-3.0 projects, refer to the &lt;a href=&quot;http://cordova.apache.org/docs/en/dev/guide_platforms_index.md.html&quot;&gt;upgrade guides&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2&gt;What&amp;#39;s new in Windows&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8481&quot;&gt;CB-8481&lt;/a&gt; Add backbutton support on Windows 10 and Windows Phone 8.1&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9565&quot;&gt;CB-9565&lt;/a&gt; Fixed build failure for Windows 10 when using Node x64&lt;/li&gt;
+&lt;li&gt;Changed output path of windows platforms to support cumulative build in VS&lt;/li&gt;
+&lt;li&gt;Created new solution file for dev14 and renaming old to vs2013.sln&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9870&quot;&gt;CB-9870&lt;/a&gt; Updated hello world template&lt;/li&gt;
+&lt;li&gt;Fixed internetClientServer capability name in prepare and docs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9800&quot;&gt;CB-9800&lt;/a&gt; Fixing contribute link&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9836&quot;&gt;CB-9836&lt;/a&gt; Add .gitattributes to prevent CRLF line endings in repos&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9632&quot;&gt;CB-9632&lt;/a&gt; Fixed tests not to fail on Travis-CI&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8936&quot;&gt;CB-8936&lt;/a&gt; Introduced --dump arg to log script&lt;/li&gt;
+&lt;li&gt;Fix the case of Q requires&lt;/li&gt;
+&lt;li&gt;Fixed up &amp;quot;resport&amp;quot; to &amp;quot;report&amp;quot;&lt;/li&gt;
+&lt;li&gt;Adds Travis badge&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 11 Nov 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/announcements/2015/11/11/cordova-windows-4.2.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2015/11/11/cordova-windows-4.2.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Cordova Android 5.0.0</title>
+        <description>&lt;p&gt;We are happy to announce that &lt;code class=&quot;prettyprint&quot;&gt;Cordova Android 5.0.0&lt;/code&gt; has been released.&lt;/p&gt;
+
+&lt;p&gt;With this release, there is now support for &lt;strong&gt;Android Marshmallow&lt;/strong&gt; permission checking in plugins. Due to the nature of the recent &lt;strong&gt;Android&lt;/strong&gt; changes, the major version has been incremented to reflect the new API changes.  Only plugins that use certain permissions as defined by &lt;strong&gt;Google&lt;/strong&gt; are affected by this change. The following core plugins needed to be updated:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-camera&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-geolocation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-contacts&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-file&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;prettyprint&quot;&gt;cordova-plugin-media&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are in the process of releasing these plugins to &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt;. If you decide to update to &lt;code class=&quot;prettyprint&quot;&gt;cordova-android@5.0.0&lt;/code&gt; before we release the plugins, please install these updated plugins via &lt;code class=&quot;prettyprint&quot;&gt;git&lt;/code&gt; for now.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova plugin add https://github.com/apache/cordova-plugin-camera.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Information on how to use the new &lt;strong&gt;Android Permission APIs&lt;/strong&gt; can be found in the Cordova documentation, which can be found &lt;a href=&quot;http://cordova.apache.org/docs/en/latest/guide/platforms/android/plugin.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To upgrade:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g cordova
+cd my_project
+cordova platform update android@5.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To add it explicitly:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cordova platform add android@5.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!--more--&gt;
+
+&lt;h2&gt;What&amp;#39;s new in Android platform&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9909&quot;&gt;CB-9909&lt;/a&gt; Shouldn&amp;#39;t escape spaces in paths on &lt;strong&gt;Windows&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9870&quot;&gt;CB-9870&lt;/a&gt; updated hello world template&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9880&quot;&gt;CB-9880&lt;/a&gt; Fixes platform update failure when upgrading from &lt;code class=&quot;prettyprint&quot;&gt;android@&amp;lt;4.1.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9844&quot;&gt;CB-9844&lt;/a&gt; Remove old &lt;code class=&quot;prettyprint&quot;&gt;.java&lt;/code&gt; after renaming activity&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9800&quot;&gt;CB-9800&lt;/a&gt;  Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9782&quot;&gt;CB-9782&lt;/a&gt;  Check in &lt;code class=&quot;prettyprint&quot;&gt;cordova-common&lt;/code&gt; dependency&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9909&quot;&gt;CB-9835&lt;/a&gt; Downgrade &lt;code class=&quot;prettyprint&quot;&gt;properties-parser&lt;/code&gt; to prevent failures in &lt;strong&gt;Node&lt;/strong&gt; &amp;lt; &lt;code class=&quot;prettyprint&quot;&gt;4.x&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9782&quot;&gt;CB-9782&lt;/a&gt;  Implements PlatformApi contract for Android platform.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9826&quot;&gt;CB-9826&lt;/a&gt;  Fixed &lt;code class=&quot;prettyprint&quot;&gt;test-build&lt;/code&gt; script on windows.&lt;/li&gt;
+&lt;li&gt;Refactor of the Cordova Plugin/Permissions API&lt;/li&gt;
+&lt;li&gt;Bump up to API level 23&lt;/li&gt;
+&lt;li&gt;Commiting code to handle permissions, and the special case of the Geolocation Plugin&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9608&quot;&gt;CB-9608&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;cordova-android&lt;/code&gt; no longer builds on &lt;strong&gt;Node 0.10&lt;/strong&gt; or below&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9080&quot;&gt;CB-9080&lt;/a&gt; &lt;code class=&quot;prettyprint&quot;&gt;Cordova CLI&lt;/code&gt; run for &lt;strong&gt;Android&lt;/strong&gt; versions &lt;code class=&quot;prettyprint&quot;&gt;4.1.1&lt;/code&gt; and lower throws error&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9557&quot;&gt;CB-9557&lt;/a&gt; Fixes apk install failure when switching from debug to release build&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9496&quot;&gt;CB-9496&lt;/a&gt; removed permissions added for crosswalk&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9402&quot;&gt;CB-9402&lt;/a&gt;  Allow to set gradle&lt;code class=&quot;prettyprint&quot;&gt;distubutionUrl&lt;/code&gt; via &lt;code class=&quot;prettyprint&quot;&gt;env variable&lt;/code&gt; &lt;code class=&quot;prettyprint&quot;&gt;CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9428&quot;&gt;CB-9428&lt;/a&gt;  update script now bumps up &lt;code class=&quot;prettyprint&quot;&gt;minSdkVersion&lt;/code&gt; to &lt;code class=&quot;prettyprint&quot;&gt;14&lt;/code&gt; if it is less than that.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9430&quot;&gt;CB-9430&lt;/a&gt;  Fixes &lt;code class=&quot;prettyprint&quot;&gt;check_reqs&lt;/code&gt; failure when &lt;code class=&quot;prettyprint&quot;&gt;javac&lt;/code&gt; returns an extra line&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9172&quot;&gt;CB-9172&lt;/a&gt;  Improved emulator deploy stability. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9409&quot;&gt;CB-9404&lt;/a&gt;  Fixed an exception when path contained &lt;code class=&quot;prettyprint&quot;&gt;-debug&lt;/code&gt; or &lt;code class=&quot;prettyprint&quot;&gt;-release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8320&quot;&gt;CB-8320&lt;/a&gt;  Setting up gradle so we can use &lt;code class=&quot;prettyprint&quot;&gt;CordovaLib&lt;/code&gt; as a standard &lt;strong&gt;Android&lt;/strong&gt; Library&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9185&quot;&gt;CB-9185&lt;/a&gt;  Fixed an issue when unsigned apks couldn&amp;#39;t be found.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9397&quot;&gt;CB-9397&lt;/a&gt;  Fixes minor issues with &lt;code class=&quot;prettyprint&quot;&gt;cordova requirements android&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9389&quot;&gt;CB-9389&lt;/a&gt;  Fixes build/check_reqs hang&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 09 Nov 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/announcements/2015/11/09/cordova-android-5.0.0.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/announcements/2015/11/09/cordova-android-5.0.0.html</guid>
+        
+        <category>news</category>
+        
+        <category>releases</category>
+        
+        
+        <category>announcements</category>
+        
+      </item>
+    
+      <item>
+        <title>Tools Release: November 6th, 2015</title>
+        <description>&lt;p&gt;New versions of cordova tools are now live!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/cordova-lib&quot;&gt;cordova-lib@5.4.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/cordova&quot;&gt;cordova@5.4.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/plugman&quot;&gt;plugman@1.0.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.org/package/cordova-js&quot;&gt;cordova-js@4.1.2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Release highlights:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fixed issues with using &lt;strong&gt;Node 4 &amp;amp; 5&lt;/strong&gt; and &lt;strong&gt;npm 3&lt;/strong&gt;. &lt;/li&gt;
+&lt;li&gt;Cordova will now auto convert old-style plugin IDs to new style plugin IDs when doing a &lt;code class=&quot;prettyprint&quot;&gt;cordova plugin add&lt;/code&gt;. This only happens if the old-style plugin ID exists in the &lt;a href=&quot;https://github.com/stevengill/cordova-registry-mapper&quot;&gt;registry-mapper&lt;/a&gt;, it will be auto converted to the new ID and fetched from &lt;a href=&quot;https://www.npmjs.com&quot;&gt;npm&lt;/a&gt; instead. &lt;/li&gt;
+&lt;li&gt;Cordova &lt;code class=&quot;prettyprint&quot;&gt;CLI&lt;/code&gt; will now know if a newer version is available and will prompt users to update.&lt;/li&gt;
+&lt;li&gt;Some core utility methods from &lt;code class=&quot;prettyprint&quot;&gt;cordova-lib&lt;/code&gt; have been moved into a new module named &lt;a href=&quot;https://github.com/apache/cordova-lib/tree/master/cordova-commo://github.com/apache/cordova-lib/tree/master/cordova-common&quot;&gt;&lt;code class=&quot;prettyprint&quot;&gt;cordova-common&lt;/code&gt;&lt;/a&gt;. &lt;code class=&quot;prettyprint&quot;&gt;cordova-common&lt;/code&gt; is shared among &lt;code class=&quot;prettyprint&quot;&gt;cordova-lib&lt;/code&gt; and cordova platforms.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To update your tools:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If you have &lt;code class=&quot;prettyprint&quot;&gt;cordova&lt;/code&gt; installed:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g cordova@latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you have &lt;code class=&quot;prettyprint&quot;&gt;plugman&lt;/code&gt; installed:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;npm install -g plugman@latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--more--&gt;
+
+&lt;h1&gt;Changes include:&lt;/h1&gt;
+
+&lt;h2&gt;Platform updates&lt;/h2&gt;
+
+&lt;p&gt;When adding these platforms to your project, the following versions are now used by default.
+These platform versions were released recently, and the tools&amp;#39; defaults were updated:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://cordova.apache.org/announcements/2015/11/02/cordova-ios-3-9-2.html&quot;&gt;Cordova iOS ~3.9.0 (3.9.2)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;cordova-lib&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Updated &lt;code class=&quot;prettyprint&quot;&gt;cordova-app-hello-world&lt;/code&gt; to &lt;code class=&quot;prettyprint&quot;&gt;3.10.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9935&quot;&gt;CB-9935&lt;/a&gt; Fix Cordova &lt;code class=&quot;prettyprint&quot;&gt;CLI&lt;/code&gt; silently failing with &lt;strong&gt;node.js v5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9834&quot;&gt;CB-9834&lt;/a&gt; Introduce compat map for hook requires&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9902&quot;&gt;CB-9902&lt;/a&gt; Fix broken &lt;code class=&quot;prettyprint&quot;&gt;cordova run --list&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9800&quot;&gt;CB-9800&lt;/a&gt; Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9736&quot;&gt;CB-9736&lt;/a&gt; Extra main activity generated when an android package name is specified&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9675&quot;&gt;CB-9675&lt;/a&gt; &lt;strong&gt;OSX&lt;/strong&gt; App Icons are not properly copied.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9758&quot;&gt;CB-9758&lt;/a&gt; Mobilespec crashes adding plugins on &lt;strong&gt;OS X&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9782&quot;&gt;CB-9782&lt;/a&gt; Update &lt;code class=&quot;prettyprint&quot;&gt;create/update&lt;/code&gt; signatures for PlatformApi polyfill&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9815&quot;&gt;CB-9815&lt;/a&gt; Engine &lt;code class=&quot;prettyprint&quot;&gt;name=&amp;quot;cordova&amp;quot;&lt;/code&gt; should check tools version, not platforms. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9824&quot;&gt;CB-9824&lt;/a&gt; removed plugin download counter code from lib&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9821&quot;&gt;CB-9821&lt;/a&gt; Fix &lt;code class=&quot;prettyprint&quot;&gt;EventEmitter&lt;/code&gt; incorrect trace level usages&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9813&quot;&gt;CB-9813&lt;/a&gt; Keep module-to-plugin mapping at hand.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9598&quot;&gt;CB-9598&lt;/a&gt; Fixes broken &lt;code class=&quot;prettyprint&quot;&gt;require&lt;/code&gt; for &lt;strong&gt;FFOS&lt;/strong&gt; plugin handler&lt;/li&gt;
+&lt;li&gt;Update &lt;code class=&quot;prettyprint&quot;&gt;serve&lt;/code&gt; to use &lt;code class=&quot;prettyprint&quot;&gt;express&lt;/code&gt; implementation of &lt;code class=&quot;prettyprint&quot;&gt;cordova-serve&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9712&quot;&gt;CB-9712&lt;/a&gt; Fix &lt;code class=&quot;prettyprint&quot;&gt;CLI 5.3&lt;/code&gt; breaking with &lt;strong&gt;node 3.3.3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9598&quot;&gt;CB-9598&lt;/a&gt; Fixes broken require calls that aren&amp;#39;t covered by tests&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9589&quot;&gt;CB-9589&lt;/a&gt; auto convert old plugin ids to new npm ids using &lt;a href=&quot;https://github.com/stevengill/cordova-registry-mapper&quot;&gt;registry-mapper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pick &lt;code class=&quot;prettyprint&quot;&gt;ConfigParser&lt;/code&gt; changes from apache@0c3614e&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9743&quot;&gt;CB-9743&lt;/a&gt; Removes system frameworks handling from &lt;code class=&quot;prettyprint&quot;&gt;ConfigChanges&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9598&quot;&gt;CB-9598&lt;/a&gt; Cleans out code which has been moved to &lt;code class=&quot;prettyprint&quot;&gt;cordova-common&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9598&quot;&gt;CB-9598&lt;/a&gt; Switches LIB to use &lt;code class=&quot;prettyprint&quot;&gt;cordova-common&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9569&quot;&gt;CB-9569&lt;/a&gt; Support &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;access&amp;gt;&lt;/code&gt; and &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;allow-navigation&amp;gt;&lt;/code&gt; tag translation to Application Transport Security (ATS) &lt;code class=&quot;prettyprint&quot;&gt;Info.plist&lt;/code&gt; directives.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8914&quot;&gt;CB-8914&lt;/a&gt; when project is renamed, remove userdata otherwise project is un-usable in &lt;strong&gt;Xcode&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9665&quot;&gt;CB-9665&lt;/a&gt; Support &lt;code class=&quot;prettyprint&quot;&gt;.xcassets&lt;/code&gt; for icons and splashscreens in the &lt;code class=&quot;prettyprint&quot;&gt;CLI&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9407&quot;&gt;CB-9407&lt;/a&gt; Fixes incorrect applying of &lt;code class=&quot;prettyprint&quot;&gt;plugin-provided&lt;/code&gt; config changes.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8198&quot;&gt;CB-8198&lt;/a&gt; Unified console output logic for core platforms&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9408&quot;&gt;CB-9408&lt;/a&gt; Added support for &lt;code class=&quot;prettyprint&quot;&gt;windows-packageVersion&lt;/code&gt; on &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;widget&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9588&quot;&gt;CB-9588&lt;/a&gt; Add support for &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;resource-file&amp;gt;&lt;/code&gt; on &lt;strong&gt;Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8615&quot;&gt;CB-8615&lt;/a&gt; Improves plugman tests for &lt;strong&gt;Windows&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8615&quot;&gt;CB-8615&lt;/a&gt; &lt;strong&gt;Windows&lt;/strong&gt; &lt;code class=&quot;prettyprint&quot;&gt;.winmd&lt;/code&gt; files with the same names are not added properly when using framework tag with target attribute&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9297&quot;&gt;CB-9297&lt;/a&gt; Parse &lt;strong&gt;Xcode&lt;/strong&gt; project synchronously to avoid issues with &lt;strong&gt;node v4&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9617&quot;&gt;CB-9617&lt;/a&gt; Do not restore plugins after plugin removal.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9631&quot;&gt;CB-9631&lt;/a&gt; Save plugin to &lt;code class=&quot;prettyprint&quot;&gt;config.xml&lt;/code&gt; only if installation succeeds&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9601&quot;&gt;CB-9601&lt;/a&gt; Fix &lt;code class=&quot;prettyprint&quot;&gt;&amp;lt;framework&amp;gt;.versions&lt;/code&gt; support on &lt;strong&gt;Windows&lt;/strong&gt; after &lt;code class=&quot;prettyprint&quot;&gt;semver&lt;/code&gt; update&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9617&quot;&gt;CB-9617&lt;/a&gt; Fixes incorrect project state after adding/removing plugins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9560&quot;&gt;CB-9560&lt;/a&gt; Issue using plugin restore for plugins with common dependencies &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8993&quot;&gt;CB-8993&lt;/a&gt; Plugin restore ignores search path&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9587&quot;&gt;CB-9587&lt;/a&gt; Check if &lt;code class=&quot;prettyprint&quot;&gt;browser&lt;/code&gt; platform added properly before creating parser. &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9604&quot;&gt;CB-9604&lt;/a&gt; Fix error adding &lt;code class=&quot;prettyprint&quot;&gt;browser&lt;/code&gt; platform with PlatformApi polyfill.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9597&quot;&gt;CB-9597&lt;/a&gt; Initial Implementation of PlatformApiPoly&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9354&quot;&gt;CB-9354&lt;/a&gt; Fix array merging with complex items&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9556&quot;&gt;CB-9556&lt;/a&gt; Don&amp;#39;t uninstall dependent plugin if it was installed as a top-level after&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;cordova-cli&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9903&quot;&gt;CB-9903&lt;/a&gt; update &lt;code class=&quot;prettyprint&quot;&gt;cordova-lib&lt;/code&gt; dependency to &lt;code class=&quot;prettyprint&quot;&gt;5.4.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9800&quot;&gt;CB-9800&lt;/a&gt; Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9792&quot;&gt;CB-9792&lt;/a&gt; Make &lt;code class=&quot;prettyprint&quot;&gt;CLI&lt;/code&gt; logging system interrupt process on an error` event&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9788&quot;&gt;CB-9788&lt;/a&gt; Add support of stderr/stdout split to &lt;code class=&quot;prettyprint&quot;&gt;CLI logger&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9784&quot;&gt;CB-9784&lt;/a&gt; Remove &lt;code class=&quot;prettyprint&quot;&gt;CLI logger&lt;/code&gt; levels prefixes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-8198&quot;&gt;CB-8198&lt;/a&gt; Unified console output logic for core platforms&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9523&quot;&gt;CB-9523&lt;/a&gt; Show out of date message for older cordova &lt;code class=&quot;prettyprint&quot;&gt;CLI&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9597&quot;&gt;CB-9597&lt;/a&gt; Updates &lt;code class=&quot;prettyprint&quot;&gt;cli&lt;/code&gt; to pass structured args to platform methods&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;cordova-js&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9800&quot;&gt;CB-9800&lt;/a&gt; Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9370&quot;&gt;CB-9370&lt;/a&gt; Changes &lt;code class=&quot;prettyprint&quot;&gt;jsdom&lt;/code&gt; dependency to avoid package installation issues&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;plugman&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9800&quot;&gt;CB-9800&lt;/a&gt; Fixing contribute link.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://issues.apache.org/jira/browse/CB-9903&quot;&gt;CB-9903&lt;/a&gt; Updated &lt;code class=&quot;prettyprint&quot;&gt;cordova-lib&lt;/code&gt; dependency to &lt;code class=&quot;prettyprint&quot;&gt;5.4.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Pinned Platform Versions for &lt;strong&gt;Cordova CLI 5.4.0&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cordova Amazon-FireOS: ~3.6.3&lt;/li&gt;
+&lt;li&gt;Cordova Android: ~4.1.0 (4.1.1)&lt;/li&gt;
+&lt;li&gt;Cordova BlackBerry10: ~3.8.0&lt;/li&gt;
+&lt;li&gt;Cordova Browser: ~4.0.0&lt;/li&gt;
+&lt;li&gt;Cordova FirefoxOS: ~3.6.3&lt;/li&gt;
+&lt;li&gt;Cordova iOS: ~3.9.0 (3.9.2)&lt;/li&gt;
+&lt;li&gt;Cordova OSX: ~4.0.0&lt;/li&gt;
+&lt;li&gt;Cordova Ubuntu: ~4.0.0&lt;/li&gt;
+&lt;li&gt;Cordova Windows: ~4.1.0&lt;/li&gt;
+&lt;li&gt;Cordova WebOS: ~3.7.0&lt;/li&gt;
+&lt;li&gt;Cordova WP8: ~3.8.1&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 06 Nov 2015 00:00:00 -0800</pubDate>
+        <link>https://cordova.apache.org/news/2015/11/06/tools-release.html</link>
+        <guid isPermaLink="true">https://cordova.apache.org/news/2015/11/06/tools-release.html</guid>
+        
+        <category>release</category>
+        
+        <category>tools</category>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -25,12 +25,15 @@ var app = {
             // trap the [back button]
             document.addEventListener("backbutton", app.onBackButton, false);
             // exit app on [exit button]
-/*          document.getElementById('exitApp').addEventListener('click', function() { app.exit(); }); */
+            document.getElementById('exitApp').addEventListener('click', function() { app.exit(); });
         } else if (device.platform == 'browser') {
-/*          document.getElementById('exitApp').addEventListener('click', function() { alert('app.exit'); }); */
+            document.getElementById('exitApp').addEventListener('click', function() { alert('app.exit'); });
         }
-        // Trap the resume event
+        /////////////////////////////////////////////////////////
+        // Trap the pause/resume event
+        document.addEventListener("pause",  app.onPause, false);
         document.addEventListener("resume", app.onResume, false);
+        /////////////////////////////////////////////////////////
         // Initialize the app module
         app.init();
         // Test the localStore and report to 'id=storeavailable'
@@ -42,18 +45,23 @@ var app = {
         readerApp.init();
         // setup dynamic button linker
         buttons.init({
-            list: '.contentLink',
-            story: '#toggleStory',
+            list:    '.contentLink',
+            story:   '#toggleStory',
             browser: '#readMore'
         });
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the first RSS feed on startup
         $('#getData').trigger('click');
-        $('#appState').html('deviceready done');
+        $('#appState').html('deviceready done.');
     },
     init : function () {
         console.log('app.init');
+        $('#appState').html('app.init');
+    },
+    onPause : function () {
+        console.log('app.onPause');
+        $('#appState').html('app.onPause');
     },
     onResume : function () {
         console.log('app.onResume');
@@ -61,10 +69,11 @@ var app = {
     },
     onBackButton : function () {
         // Don't do anything. Ingore button, for now.
-        $('#appState').html('onBackButton');
+        $('#appState').html('app.onBackButton');
     },
     exit : function () {
         console.log('Called app.exit()');
+        $('#appState').html('app.exit');
         if ('app' in navigator) {
             navigator.app.exitApp();
         } else {
