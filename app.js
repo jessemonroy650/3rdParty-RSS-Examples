@@ -9,7 +9,7 @@ var app = {
         console.log("device ready.");
         //alert("device ready.");
         if (device.platform === "iOS") {
-            alert("got iOS.");
+            $('#appState').html('iOS');
             // hide Exit button. They don't have one on iOS devices.
             // http://www.mzcart.com/javascript-how-to-addremove-css-class-from-a-dom-element/
             document.getElementById('exitApp').classList.add("hidden");
@@ -31,8 +31,8 @@ var app = {
         }
         /////////////////////////////////////////////////////////
         // Trap the pause/resume event
-        document.addEventListener("pause",  app.onPause, false);
-        document.addEventListener("resume", app.onResume, false);
+        //document.addEventListener("pause",  app.onPause, false);
+        //document.addEventListener("resume", app.onResume, false);
         /////////////////////////////////////////////////////////
         // Initialize the app module
         app.init();
