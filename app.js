@@ -56,9 +56,8 @@ var app = {
         console.log('app.init');
     },
     onResume : function () {
-        $('#appState').html('app.onResume');
         console.log('app.onResume');
-        //alert('resume');
+        $('#appState').html('app.onResume');
     },
     onBackButton : function () {
         // Don't do anything. Ingore button, for now.
