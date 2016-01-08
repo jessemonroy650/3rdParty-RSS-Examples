@@ -41,7 +41,7 @@ $('#getData').on('click', function(event) {
         readerApp.getFeed();
         readerApp.needFeed = false;
         // show the feeds now that we have them 
-        $('feedContainter').removeClass('hidden');
+        //$('#feedContainter').removeClass('hidden');
     }
 });
 
