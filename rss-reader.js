@@ -24,8 +24,8 @@ var readerApp = {
             var xml    = $( data );
             var title  = xml.find( "title" );
             var items  = xml.find( "item" );
-            //externalElements['title'].html(title.text());
-            $('#toggleStory').html(title.text());
+            externalElements['title'](title.text());
+            //$('#toggleStory').html(title.text());
             $('#dbug').html('title:' + title.text() + ":" + items.length );
             $.each(items, function(i, v) {
                 entry = {

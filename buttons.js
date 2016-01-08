@@ -38,7 +38,7 @@ $('#getData').on('click', function(event) {
     $('.feedStatus').html('#getData');
     if (readerApp.needFeed) {
         $('.feedStatus').html('getting Data');
-        readerApp.getFeed();
+        readerApp.getFeed({title: $('#toggleStory').html});
         readerApp.needFeed = false;
     }
 });
@@ -46,7 +46,7 @@ $('#getData').on('click', function(event) {
 $('#Cordova').on('click', function(event) {
     console.log('#Cordova');
     if (readerApp.needFeed) {
-        readerApp.getFeed({title: $('#toggleStory')});
+        readerApp.getFeed({title: $('#toggleStory').html});
         readerApp.needFeed = false;
     }
 });
