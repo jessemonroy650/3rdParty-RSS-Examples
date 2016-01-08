@@ -132,7 +132,7 @@ var buttons = {
     dynamic : function () {
         if (buttons.listTag && buttons.storyTag) {
             $(buttons.listTag).on('click', function(event) {
-                $('.feedStatus').html('.contentLink:' + event.target.id);
+                $('.lastReadLink').html(event.target.id);
                 currentFeed.selectedStory = event.target.id;
                 $(buttons.storyTag).trigger('click');
             });

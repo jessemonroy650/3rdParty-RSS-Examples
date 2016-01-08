@@ -9,6 +9,7 @@ a {text-decoration:none;color:#000000;}
 #content {margin:0.5em;}
 #footer {background:lightblue;}
 .feedStatus {}
+.lastReadLink {}
 .hidden {visibility:collapse;display:none;}
 .expose {visibility:visible;display:block;} /* Here for completeness only. */
 .copyright {padding:5px;align:left;font-style:italic;font-size:small;}
