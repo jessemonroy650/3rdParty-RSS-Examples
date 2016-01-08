@@ -5,6 +5,7 @@
 var currentFeed = {
     RSS           : "https://cordova.apache.org/feed.xml",
     entries       : [],
+    title         : "",
     selectedStory : ""
 };
 
@@ -22,9 +23,9 @@ var readerApp = {
             var xml    = $( data );
             var title  = xml.find( "title" );
             var items  = xml.find( "item" );
-            externalElements['title'](title.text());
+            currentFeed.title = title.text();
             externalElements['status']('title:' + title.text() + ":" + items.length);
-            // Parse our object
+           // Parse our object
             $.each(items, function(i, v) {
                 entry = {
                     title:$(v).find("title").text(),
@@ -33,15 +34,8 @@ var readerApp = {
                 };
                 currentFeed.entries.push(entry);
             });
-            var s = '';
-            //now "shadow" draw the list
-            $.each(currentFeed.entries, function(i, v) {
-                s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
-            });
-            externalElements['clear']();
-            externalElements['attach'](s);
+            externalElements['draw'](currentFeed);
             externalElements['status']('Done.');
-            externalElements['rebind']();
         });
     },
     showAddFeed : function () {
@@ -61,14 +55,6 @@ var readerApp = {
         // fire only if we have a valid reference for theStory and where to put it.
         if (theStory && displayFunc) {
             displayFunc(theStory);
-/*
-            $(tag).html(
-                '<h2>'  + theStory.title + '</h2>' +
-                '<div>' + theStory.description  + '</div>' +
-                '<button id=readMore>Read More ..</button>'
-            );
-            buttons.readmore(theStory.link);   // create handler to open browser
-*/
         }
     },
     hideStory : function () {

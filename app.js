@@ -33,7 +33,7 @@ var app = {
         document.addEventListener("resume", app.onResume, false);
         // Initialize the app module
         app.init();
-        // Make sure we have a place to see links.
+        // Test the localStore and report to 'id=storeavailable'
         if (localStore.test('#storeavailable')) {
             localStore.put('0','https://cordova.apache.org/feed.xml');
             $('#Cordova').html(localStore.get('0'));
@@ -54,7 +54,7 @@ var app = {
     onResume : function () {
         $('#appState').html('app.onResume');
         console.log('app.onResume');
-        alert('resume');
+        //alert('resume');
     },
     onBackButton : function () {
         // Don't do anything. Ingore button, for now.

@@ -45,6 +45,22 @@ $('#getData').on('click', function(event) {
             clear:  function (parm) { $("#linksList li").remove(); },
             // attach a new list of stories
             attach: function (parm) { $("#linksList").append(parm); },
+            // Reduce
+            draw  : function (parm) {
+                //externalElements['title'](parm.title);
+                $('#toggleStory').html(parm.title);
+                var s = '';
+                //now "shadow" draw the list
+                $.each(parm.entries, function(i, v) {
+                    s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
+                });
+                //externalElements['clear']();
+                $("#linksList li").remove();
+                //externalElements['attach'](s);
+                $("#linksList").append(s);
+                //externalElements['rebind']();
+                buttons.rebind();
+            }
             // output of status
             status: function (parm) { $('.feedStatus').html(parm); },
             // rebind buttons created in the dynamic list
