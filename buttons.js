@@ -60,7 +60,7 @@ $('#getData').on('click', function(event) {
                 $("#linksList").append(s);
                 //externalElements['rebind']();
                 buttons.rebind();
-            }
+            },
             // output of status
             status: function (parm) { $('.feedStatus').html(parm); },
             // rebind buttons created in the dynamic list
