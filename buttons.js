@@ -38,7 +38,12 @@ $('#getData').on('click', function(event) {
     $('.feedStatus').html('#getData');
     if (readerApp.needFeed) {
         $('.feedStatus').html('getting Data');
-        readerApp.getFeed({title: $('#toggleStory').html});
+        var passingReference = {
+            title:  function (parm) { $('#toggleStory').html(parm); },
+            dbug:   function (parm) { $('#dbug').html(parm); },
+            status: function (parm) { $('.feedStatus').html(parm); }
+        };
+        readerApp.getFeed(passingReference);
         readerApp.needFeed = false;
     }
 });
