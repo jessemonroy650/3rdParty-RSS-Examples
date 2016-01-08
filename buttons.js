@@ -111,6 +111,11 @@ $('#cancelBtn').on('click', function(event) {
     $('#addFeed').trigger('click');           // trigger the toggle button
 });
 
+/*
+    Since the list is dynamically created, the rebinding of buttons
+    has to be done everytime the list is created. These button
+    module deals with that.
+*/
 var buttons = {
     listTag : null,
     storyTag : null,
@@ -127,8 +132,7 @@ var buttons = {
     dynamic : function () {
         if (buttons.listTag && buttons.storyTag) {
             $(buttons.listTag).on('click', function(event) {
-                //console.log('.contentLink:' + event.target.id);
-                //alert('.contentLink:' + event.target.id);
+                $('.feedStatus').html('.contentLink:' + event.target.id);
                 currentFeed.selectedStory = event.target.id;
                 $(buttons.storyTag).trigger('click');
             });
@@ -141,7 +145,7 @@ var buttons = {
         if (! tag) {
             tag = buttons.browserTag;
         }
-        if (tag) {
+        if (tag && link) {
             $(tag).on('click', function(event) {
                 window.open(link, '_system');
             });

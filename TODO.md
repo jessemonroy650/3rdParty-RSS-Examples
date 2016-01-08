@@ -7,4 +7,5 @@ Last Update: 2016-01-07
 - [ ] Icons
 - [ ] Add device information to iconButton
 - [ ] Allow new URL/RSS Feed
+- [ ] Change buttons to dynaButtons
 
