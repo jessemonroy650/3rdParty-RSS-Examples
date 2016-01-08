@@ -6,6 +6,9 @@ var currentFeed = {
     RSS           : "https://cordova.apache.org/feed.xml",
     entries       : [],
     title         : "",
+    description   : "",
+    length        : "",
+    pubDate       : "",
     selectedStory : ""
 };
 
@@ -20,10 +23,15 @@ var readerApp = {
         externalElements['status']('Contacting Server ...');
         $.get(currentFeed.RSS, function(data, errorCode) {
             externalElements['status']('Got Feed.');
-            var xml    = $( data );
-            var title  = xml.find( "title" );
-            var items  = xml.find( "item" );
-            currentFeed.title = title.text();
+            var xml           = $( data );
+            var title         = xml.find( "title" );
+            var description   = xml.find( "description" );
+            var items         = xml.find( "item" );
+            var pubDate       = xml.find( "pubDate" );
+            currentFeed.title       = title.text();
+            currentFeed.description = description.text();
+            currentFeed.pubDate     = pubDate.text();
+            currentFeed.length      = items.length;
             externalElements['status']('title:' + title.text() + ":" + items.length);
            // Parse our object
             $.each(items, function(i, v) {
@@ -38,16 +46,6 @@ var readerApp = {
             externalElements['status']('Done.');
         });
     },
-    showAddFeed : function () {
-    },
-    hideAddFeed : function () {
-    },
-    addFeed: function (){
-    },
-    showLinksList : function () {
-    },
-    hideLinksList : function () {
-    },
     getStory : function (displayFunc) {
         //alert('readerApp:showStory - storyId:' + storyId );
         var storyId  = currentFeed.selectedStory;
@@ -57,6 +55,4 @@ var readerApp = {
             displayFunc(theStory);
         }
     },
-    hideStory : function () {
-    }    
 }

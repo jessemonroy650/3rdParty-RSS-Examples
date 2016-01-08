@@ -39,32 +39,20 @@ $('#getData').on('click', function(event) {
     if (readerApp.needFeed) {
         $('.feedStatus').html('getting Data');
         var passingReference = {
-            // place to insert the title
-            title:  function (parm) { $('#toggleStory').html(parm); },
-            // clear our list of stories
-            clear:  function (parm) { $("#linksList li").remove(); },
-            // attach a new list of stories
-            attach: function (parm) { $("#linksList").append(parm); },
             // Reduce
             draw  : function (parm) {
-                //externalElements['title'](parm.title);
                 $('#toggleStory').html(parm.title);
                 var s = '';
                 //now "shadow" draw the list
                 $.each(parm.entries, function(i, v) {
                     s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
                 });
-                //externalElements['clear']();
                 $("#linksList li").remove();
-                //externalElements['attach'](s);
                 $("#linksList").append(s);
-                //externalElements['rebind']();
                 buttons.rebind();
             },
             // output of status
             status: function (parm) { $('.feedStatus').html(parm); },
-            // rebind buttons created in the dynamic list
-            rebind: function (parm) { buttons.rebind(); }
         };
         readerApp.getFeed(passingReference);
         readerApp.needFeed = false;
@@ -73,10 +61,13 @@ $('#getData').on('click', function(event) {
 
 $('#Cordova').on('click', function(event) {
     console.log('#Cordova');
+    $('#getData').trigger('click');
+/*
     if (readerApp.needFeed) {
         readerApp.getFeed({title: $('#toggleStory').html});
         readerApp.needFeed = false;
     }
+*/
 });
 
 // Toggle the visibility of the "Story"
@@ -148,7 +139,6 @@ var buttons = {
                 //console.log('.contentLink:' + event.target.id);
                 //alert('.contentLink:' + event.target.id);
                 currentFeed.selectedStory = event.target.id;
-                //readerApp.showStory();
                 $('#toggleStory').trigger('click');
             });
         } else {
