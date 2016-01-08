@@ -16,20 +16,14 @@ var readerApp = {
         console.log("readerApp.init");
     },
     getFeed : function(externalElements) {
-        //$('.feedStatus').html
-        externalElements['status']('Contacting Server');
+        externalElements['status']('Contacting Server ...');
         $.get(currentFeed.RSS, function(data, errorCode) {
-            //$('.feedStatus').html
-            externalElements['status']('Got Feed');
-            //alert("got data");
-            //console.log("got data");
+            externalElements['status']('Got Feed.');
             var xml    = $( data );
             var title  = xml.find( "title" );
             var items  = xml.find( "item" );
-            //$('#toggleStory').html
-            externalElements['title'](title.text());
-            //$('#dbug').html
-            externalElements['dbug']('title:' + title.text() + ":" + items.length );
+            externalElements['title']('title:' + title.text() + ":" + items.length);
+            // Parse our object
             $.each(items, function(i, v) {
                 entry = {
                     title:$(v).find("title").text(),
@@ -38,21 +32,15 @@ var readerApp = {
                 };
                 currentFeed.entries.push(entry);
             });
-            //$('#dbug').html( $('#dbug').html() + ":" + currentFeed.entries.length + ":" + 'List' );
-            //now draw the list
             var s = '';
+            //now "shadow" draw the list
             $.each(currentFeed.entries, function(i, v) {
                 s += '<li id="' + i + '" class="contentLink button button-block">' + v.title + '</li>';
             });
-            //$("#linksList li").remove();
             externalElements['clear']();
-            //$("#linksList").append(s);
             externalElements['attach'](s);
-            //$('#dbug').html
-            externalElements['dbug']( $('#dbug').html() + ":" + 'Done' );
-            //$('.feedStatus').html
             externalElements['status']('Done.');
-            buttons.rebind();
+            externalElements['rebind']();
         });
     },
     showAddFeed : function () {

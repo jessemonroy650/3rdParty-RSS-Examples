@@ -39,11 +39,16 @@ $('#getData').on('click', function(event) {
     if (readerApp.needFeed) {
         $('.feedStatus').html('getting Data');
         var passingReference = {
+            // place to insert the title
             title:  function (parm) { $('#toggleStory').html(parm); },
+            // clear our list of stories
             clear:  function (parm) { $("#linksList li").remove(); },
+            // attach a new list of stories
             attach: function (parm) { $("#linksList").append(parm); },
-            dbug:   function (parm) { $('#dbug').html(parm); },
-            status: function (parm) { $('.feedStatus').html(parm); }
+            // output of status
+            status: function (parm) { $('.feedStatus').html(parm); },
+            // rebind buttons created in the dynamic list
+            rebind: function (parm) { buttons.rebind(); }
         };
         readerApp.getFeed(passingReference);
         readerApp.needFeed = false;
@@ -99,25 +104,34 @@ $('#cancelBtn').on('click', function(event) {
 });
 
 var buttons = {
+    dynamicTag = null;
 
-    init : function () {
+    init : function (tag) {
+        buttons.dynamicTag = tag;
         console.log("buttons.init");
         buttons.dynamic();
     },
 
-    dynamic : function () {
-        $('.contentLink').on('click', function(event) {
-            //console.log('.contentLink:' + event.target.id);
-            //alert('.contentLink:' + event.target.id);
-            currentFeed.selectedStory = event.target.id;
-            //readerApp.showStory();
-            $('#toggleStory').trigger('click');
-        }); 
+    dynamic : function (tag) {
+        if (! tag) {
+            tag = buttons.dynamicTag;
+        }
+        if (tag) {
+            $(tag).on('click', function(event) {
+                //console.log('.contentLink:' + event.target.id);
+                //alert('.contentLink:' + event.target.id);
+                currentFeed.selectedStory = event.target.id;
+                //readerApp.showStory();
+                $('#toggleStory').trigger('click');
+            });
+        } else {
+            alert('Cannot bind dynamic buttons');
+        }
     },
 
     readmore : function (link) {   
         $('#readMore').on('click', function(event) {
-            window.open(link, '_system' );
+            window.open(link, '_system');
         }); 
     },
 

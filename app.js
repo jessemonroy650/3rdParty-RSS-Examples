@@ -29,15 +29,19 @@ var app = {
         } else if (device.platform == 'browser') {
 /*          document.getElementById('exitApp').addEventListener('click', function() { alert('app.exit'); }); */
         }
+        // Trap the resume event
+        document.addEventListener("resume", app.onResume, false);
+        // Initialize the app module
         app.init();
+        // Make sure we have a place to see links.
         if (localStore.test('#storeavailable')) {
             localStore.put('0','https://cordova.apache.org/feed.xml');
             $('#Cordova').html(localStore.get('0'));
         }
+        // Initialize the Reader
         readerApp.init();
-        buttons.init();
-        // Trap the resume event
-        document.addEventListener("resume", app.onResume, false);
+        // setup dynamic button linker
+        buttons.init('.contentLink');
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the first RSS feed on startup
