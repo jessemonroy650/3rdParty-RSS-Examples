@@ -36,14 +36,7 @@ $('#menuIcon').on('click', function(event) {
 $('#getData').on('click', function(event) {
     console.log('#getData');
     if (readerApp.needFeed) {
-        readerApp.getFeed(
-            {theTitle:  $('#toggleStory'),
-             theLinks:  $("#linksList li"),
-             attachPnt: $("#linksList"),
-             dbug:      $('#dbug'),
-             status:    $('#feedStatus')
-        });
-        buttons.rebind();
+        readerApp.getFeed();
         readerApp.needFeed = false;
     }
 });
@@ -71,19 +64,17 @@ $('#toggleStory').on('click', function(event) {
 $('#addFeed').on('click', function(event) {
     console.log('#addFeed');
     if (feedInput.isVisible) {
-        //readerApp.hideAddFeed();
-        $('#feedInput').addClass('hidden');
+        readerApp.hideAddFeed();
         feedInput.isVisible = false;
     } else {
-        //readerApp.showAddFeed();
-        $('#feedInput').removeClass('hidden');
+        readerApp.showAddFeed();
         feedInput.isVisible = true;
     }
 });
 
 $('#addBtn').on('click', function(event) {
     console.log('#addBtn');
-    //readerApp.addFeed($('#addField').val());  // Add the data to storage 
+    readerApp.addFeed($('#addField').val());  // Add the data to storage 
     //$('#addField').val('');                 // clear the field
     //$('#addFeed').trigger('click');         // trigger the toggle button
 });
