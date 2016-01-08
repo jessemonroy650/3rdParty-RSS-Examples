@@ -57,10 +57,8 @@ var readerApp = {
     addFeed: function (){
     },
     showLinksList : function () {
-        $('#linksList').removeClass('hidden');
     },
     hideLinksList : function () {
-        $('#linksList').addClass('hidden');
     },
     showStory : function () {
         //alert('readerApp:showStory - storyId:' + storyId );
@@ -74,10 +72,8 @@ var readerApp = {
                 '<button id=readMore>Read More ..</button>'
             );
             buttons.readmore(theStory.link);   // create handler to open browser
-            $('#story').removeClass('hidden'); // make story visible
         }
     },
     hideStory : function () {
-        $('#story').addClass('hidden');
     }    
 }

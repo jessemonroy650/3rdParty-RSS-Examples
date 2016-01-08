@@ -55,10 +55,14 @@ $('#Cordova').on('click', function(event) {
 $('#toggleStory').on('click', function(event) {
     console.log('#toggleStory');
     if (story.isVisible) {
-        readerApp.hideStory();
+        //readerApp.hideStory();
+        $('#story').addClass('hidden');
+        $('#linksList').removeClass('hidden');
         story.isVisible = false;
     } else {
         readerApp.showStory();
+        $('#story').removeClass('hidden'); // make story visible
+        $('#linksList').addClass('hidden');
         story.isVisible = true;
     }
 });
