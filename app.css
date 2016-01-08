@@ -8,6 +8,7 @@ a {text-decoration:none;color:#000000;}
 #exitApp {margin:0.1em;float:right;}
 #content {margin:0.5em;}
 #footer {background:lightblue;}
+.feedStatus {}
 .hidden {visibility:collapse;display:none;}
 .expose {visibility:visible;display:block;} /* Here for completeness only. */
 .copyright {padding:5px;align:left;font-style:italic;font-size:small;}

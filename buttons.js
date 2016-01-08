@@ -40,8 +40,6 @@ $('#getData').on('click', function(event) {
         $('#feedStatus').html('getting Data');
         readerApp.getFeed();
         readerApp.needFeed = false;
-        // show the feeds now that we have them 
-        //$('#feedContainter').removeClass('hidden');
     }
 });
 
