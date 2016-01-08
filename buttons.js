@@ -28,7 +28,7 @@ $('#menuIcon').on('click', function(event) {
         feedList.isVisible = false;
     } else {
         $('#feedContainter').addClass('hidden');        // hide the feeds 
-        $('#RSSListContainter').removeClass('hidden'); // show our config menu 
+        $('#RSSListContainter').removeClass('hidden');  // show our config menu 
         feedList.isVisible = true;
     }
 });
@@ -40,6 +40,8 @@ $('#getData').on('click', function(event) {
         $('#feedStatus').html('getting Data');
         readerApp.getFeed();
         readerApp.needFeed = false;
+        // show the feeds now that we have them 
+        $('feedContainter').removeClass('hidden');
     }
 });
 
