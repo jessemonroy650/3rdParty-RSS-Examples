@@ -10,9 +10,13 @@ var localStore = {
         $(id).html(v);
         return v;
     },
-    put     : function (key, value) { localStorage[key] = value; },
+    length  : function ()    { return localStorage.length; },
+    clear   : function ()    { localStorage.clear(); },
+    put     : function (k,v) { localStorage[k] = v; },
     get     : function (key) { return localStorage.getItem(key) ? localStorage.getItem(key) : ''; },
-    putTemp : function (key, value) { sessionStorage[key] = value; },
+    key     : function (num) { return localStorage.key(num); },
+    remove  : function (key) { localStorage.removeItem(key); },
+    putTemp : function (k,v) { sessionStorage[k] = v; },
     getTemp : function (key) { return sessionStorage.getItem(key) ? sessionStorage.getItem(key) : ''; },
     storageAvailable: function (type) {
         try {

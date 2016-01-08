@@ -59,6 +59,23 @@ $('#getData').on('click', function(event) {
     }
 });
 
+$('#getFeeds').on('click', function(event) {
+    console.log('#getFeeds');
+    $('.feedStatus').html('#getData');
+            var s = '';
+            console.log(localStore.length());
+            //now "shadow" draw the list
+            for (i = 0; i < localStore.length(); i++ ) {
+               var v = localStore.get(i);
+               s += '<li id="' + i + '" class="feedLink button button-block">' + v + '</li>';
+            };
+            s += '<li id=addFeed class="button button-block">Add a Feed</li>';
+            console.log(s);
+            $("#RSSList li").remove();
+            $("#RSSList").append(s);
+            buttons.dynamic2();
+});
+
 $('#Cordova').on('click', function(event) {
     console.log('#Cordova');
     $('#getData').trigger('click');
@@ -139,6 +156,19 @@ var buttons = {
         } else {
             alert('Cannot bind dynamic buttons');
         }
+    },
+
+    dynamic2 : function () {
+            $('.feedLink').on('click', function(event) {
+                //$('.lastReadLink').html(event.target.id);
+                //currentFeed.selectedStory = event.target.id;
+                console.log('id:' + event.target.id);
+                console.log(localStore.get(event.target.id));
+                // reset the need for a feed.
+                readerApp.needFeed = true;
+                currentFeed.RSS    = localStore.get(event.target.id);
+                $('#getData').trigger('click');
+            });
     },
 
     readmore : function (link, tag) {   
