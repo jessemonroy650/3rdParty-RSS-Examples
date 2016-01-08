@@ -22,7 +22,8 @@ var readerApp = {
             var xml    = $( data );
             var title  = xml.find( "title" );
             var items  = xml.find( "item" );
-            externalElements['title']('title:' + title.text() + ":" + items.length);
+            externalElements['title'](title.text());
+            externalElements['status']('title:' + title.text() + ":" + items.length);
             // Parse our object
             $.each(items, function(i, v) {
                 entry = {
@@ -44,10 +45,8 @@ var readerApp = {
         });
     },
     showAddFeed : function () {
-        $('#feedInput').removeClass('hidden');
     },
     hideAddFeed : function () {
-        $('#feedInput').addClass('hidden');
     },
     addFeed: function (){
     },
@@ -55,18 +54,21 @@ var readerApp = {
     },
     hideLinksList : function () {
     },
-    showStory : function () {
+    getStory : function (displayFunc) {
         //alert('readerApp:showStory - storyId:' + storyId );
         var storyId  = currentFeed.selectedStory;
         var theStory = currentFeed.entries[storyId];
-        // fire only if we have a valid reference
-        if (theStory) {
-            $('#story').html(
+        // fire only if we have a valid reference for theStory and where to put it.
+        if (theStory && displayFunc) {
+            displayFunc(theStory);
+/*
+            $(tag).html(
                 '<h2>'  + theStory.title + '</h2>' +
                 '<div>' + theStory.description  + '</div>' +
                 '<button id=readMore>Read More ..</button>'
             );
             buttons.readmore(theStory.link);   // create handler to open browser
+*/
         }
     },
     hideStory : function () {

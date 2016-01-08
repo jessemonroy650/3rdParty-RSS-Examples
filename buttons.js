@@ -72,7 +72,16 @@ $('#toggleStory').on('click', function(event) {
         $('#linksList').removeClass('hidden');
         story.isVisible = false;
     } else {
-        readerApp.showStory();
+        var loadStory = function (parm) {
+            $('#story').html(
+                '<h2>'  + parm.title + '</h2>' +
+                '<div>' + parm.description  + '</div>' +
+                '<button id=readMore>Read More ..</button>'
+            );
+            buttons.readmore(parm.link);   // create handler to open browser
+        };
+        
+        readerApp.getStory(loadStory);
         $('#story').removeClass('hidden'); // make story visible
         $('#linksList').addClass('hidden');
         story.isVisible = true;
@@ -82,10 +91,12 @@ $('#toggleStory').on('click', function(event) {
 $('#addFeed').on('click', function(event) {
     console.log('#addFeed');
     if (feedInput.isVisible) {
-        readerApp.hideAddFeed();
+        //readerApp.hideAddFeed();
+        $('#feedInput').addClass('hidden');
         feedInput.isVisible = false;
     } else {
-        readerApp.showAddFeed();
+        //readerApp.showAddFeed();
+        $('#feedInput').removeClass('hidden');
         feedInput.isVisible = true;
     }
 });
