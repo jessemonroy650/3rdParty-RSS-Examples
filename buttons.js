@@ -35,7 +35,9 @@ $('#menuIcon').on('click', function(event) {
 
 $('#getData').on('click', function(event) {
     console.log('#getData');
+    $('#feedStatus').html('#getData');
     if (readerApp.needFeed) {
+        $('#feedStatus').html('getting Data');
         readerApp.getFeed();
         readerApp.needFeed = false;
     }
