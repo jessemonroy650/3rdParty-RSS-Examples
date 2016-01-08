@@ -58,6 +58,11 @@ var app = {
     init : function () {
         console.log('app.init');
         $('#appState').html('app.init');
+        document.getElementById('cordova').innerHTML = device.cordova;
+        document.getElementById('model').innerHTML = device.model;
+        document.getElementById('platform').innerHTML = device.platform;
+        document.getElementById('uuid').innerHTML = device.uuid;
+        document.getElementById('version').innerHTML = device.version;
     },
     onPause : function () {
         console.log('app.onPause');
