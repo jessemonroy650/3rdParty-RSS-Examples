@@ -104,7 +104,7 @@ $('#cancelBtn').on('click', function(event) {
 });
 
 var buttons = {
-    dynamicTag = null;
+    dynamicTag : null,
 
     init : function (tag) {
         buttons.dynamicTag = tag;
