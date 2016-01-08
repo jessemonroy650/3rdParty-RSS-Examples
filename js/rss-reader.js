@@ -3,8 +3,10 @@
 */
 //
 var currentFeed = {
+    // reset when click('.feedLink')
     RSS           : "https://cordova.apache.org/feed.xml",
     entries       : [],
+    // reset when getFeed();
     title         : "",
     description   : "",
     length        : "",
