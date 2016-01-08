@@ -62,19 +62,12 @@ $('#getData').on('click', function(event) {
 $('#Cordova').on('click', function(event) {
     console.log('#Cordova');
     $('#getData').trigger('click');
-/*
-    if (readerApp.needFeed) {
-        readerApp.getFeed({title: $('#toggleStory').html});
-        readerApp.needFeed = false;
-    }
-*/
 });
 
 // Toggle the visibility of the "Story"
 $('#toggleStory').on('click', function(event) {
     console.log('#toggleStory');
     if (story.isVisible) {
-        //readerApp.hideStory();
         $('#story').addClass('hidden');
         $('#linksList').removeClass('hidden');
         story.isVisible = false;
@@ -98,11 +91,9 @@ $('#toggleStory').on('click', function(event) {
 $('#addFeed').on('click', function(event) {
     console.log('#addFeed');
     if (feedInput.isVisible) {
-        //readerApp.hideAddFeed();
         $('#feedInput').addClass('hidden');
         feedInput.isVisible = false;
     } else {
-        //readerApp.showAddFeed();
         $('#feedInput').removeClass('hidden');
         feedInput.isVisible = true;
     }
