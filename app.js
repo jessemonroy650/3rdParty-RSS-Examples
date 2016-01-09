@@ -41,7 +41,7 @@ var app = {
         }
 */
         // Write device information to screen
-        document.getElementById('cordova').innerHTML = device.cordova;
+        //document.getElementById('cordova').innerHTML = device.cordova;
         document.getElementById('model').innerHTML   = device.model;
         document.getElementById('version').innerHTML = device.version;
         /////////////////////////////////////////////////////////

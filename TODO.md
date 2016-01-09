@@ -14,6 +14,7 @@ Last Update: 2016-01-07
 
 ### Next Release ###
 
+- [ ] Make Splash Screen nicer - may be 9-patch
 - [ ] Add Better UX Messaging
 - [ ] Delete a URL/RSS Feed
 - [ ] Change 'buttons' to 'dynaButtons' (code)
