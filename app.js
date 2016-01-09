@@ -83,6 +83,7 @@ var app = {
             navigator.app.exitApp();
         } else {
             alert('exit button hit.');
+            // This is here to deal with a bug on LG Leon - which I own.
             navigator.app.exitApp();
         }
     }
