@@ -44,10 +44,8 @@ var app = {
         if (localStore.test('#storeavailable')) {
             localStore.clear();
             localStore.put('0','https://cordova.apache.org/feed.xml');
-            localStore.put('1','http://feeds.feedburner.com/RaymondCamdensBlog?format=xml');
-            localStore.put('2','http://devgirl.org/feed/');
-            localStore.put('3','https://iphonedevlog.wordpress.com/feed/');
-            localStore.put('4','http://feeds.feedburner.com/AndrewMcgivery?format=xml');
+            //localStore.put('1','http://feeds.feedburner.com/RaymondCamdensBlog?format=xml');
+            //localStore.put('2','http://feeds.feedburner.com/AndrewMcgivery?format=xml');
             $('#Cordova').html(localStore.get('0'));
         }
         // Initialize the Reader
@@ -61,9 +59,7 @@ var app = {
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the first RSS feed on startup
-        setTimeout (function () {
-            $('#getData').trigger('click');
-        },2000);
+        setTimeout (function () {$('#getData').trigger('click');}, 1000);
         $('#appState').html('deviceready done.');
     },
     init : function () {

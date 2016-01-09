@@ -144,9 +144,9 @@ addFeedBinding();
 
 $('#addBtn').on('click', function(event) {
     console.log('#addBtn');
-    readerApp.addFeed($('#addField').val());  // Add the data to storage 
-    //$('#addField').val('');                 // clear the field
-    //$('#addFeed').trigger('click');         // trigger the toggle button
+    localStore.put(localStore.length() , $('#addField').val());  // Add the data to storage
+    $('#addField').val('');                 // clear the field
+    $('#addFeed').trigger('click');         // trigger the toggle button
 });
 
 $('#cancelBtn').on('click', function(event) {
