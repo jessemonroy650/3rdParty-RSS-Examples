@@ -74,7 +74,7 @@ var app = {
         //setTimeout (function () {$('#getData').trigger('click');}, 1000);
         setTimeout (function () {$('#getFeeds').trigger('click');}, 1000);
         $('#appState').html('deviceready done.');
-        show('Loading...', 'long', 'center');
+        //show('Loading...', 'long', 'center');
     },
     init : function () {
         console.log('app.init');
