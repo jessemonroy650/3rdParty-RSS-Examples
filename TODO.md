@@ -9,7 +9,6 @@ Last Update: 2016-01-07
 - [X] Allow new URL/RSS Feed
 - [X] Feed list is first screen
 - [X] Add App-Version
-- [ ] Add 'toast'
 - [ ] Don't allow feeds with bad XML
 - [ ] ~~Change 'buttons' to 'dynaButtons' (code)~~, do later
 - [ ] [Google Play Release Signing Certificate](http://developer.android.com/tools/publishing/app-signing.html#signing-manually)
@@ -18,7 +17,7 @@ Last Update: 2016-01-07
 ### Next Release ###
 
 - [ ] Make Splash Screen nicer - may be 9-patch
-- [ ] Add Better UX Messaging, instead of 'toast'
+- [ ] Add Better UX Messaging, or 'toast'
 - [ ] Delete a URL/RSS Feed
 - [ ] Change 'buttons' to 'dynaButtons' (code)
 
