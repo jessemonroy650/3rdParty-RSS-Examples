@@ -7,12 +7,19 @@ var feedList   = {isVisible:false};
 var story      = {isVisible:false};
 var feedInput  = {isVisible:false};
 
+var xfunc = function() { $('#feedContainter').removeClass('hidden'); };
+
+var ifBothFalseFunc = function ( first, second, func ) {
+    if ((first === false) && (second === false) ){
+        func();
+    }
+};
+
 $('#appIcon').on('click', function(event) {
     console.log('#appIcon');
     if (configMenu.isVisible) {
-        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible,
-            func () { $('#feedContainter').removeClass('hidden'); // show the feeds
-        });
+        // show the feeds, if both menus
+        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible, xfunc);
         $('#configMenu').addClass('hidden');        // hide our config menu 
         configMenu.isVisible = false;
     } else {
@@ -22,18 +29,11 @@ $('#appIcon').on('click', function(event) {
     }
 });
 
-ifBothFalseFunc = function ( first, second, func ) {
-    if ((first === false) && (second === false) ){
-        func();
-    }
-};
-
 $('#menuIcon').on('click', function(event) {
     console.log('#menuIcon');
     if (feedList.isVisible) {
-        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible,
-            func () { $('#feedContainter').removeClass('hidden'); // show the feeds
-        });
+        // show the feeds, if both menus
+        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible, xfunc);
         $('#RSSListContainter').addClass('hidden'); // hide our config menu 
         feedList.isVisible = false;
     } else {
