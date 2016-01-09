@@ -24,16 +24,17 @@ var readerApp = {
     getFeed : function(externalElements) {
         externalElements['status']('Contacting Server ...');
         $.get(currentFeed.RSS, function(data, errorCode) {
-            externalElements['status']('Got Feed.');
+              externalElements['status']('Got Feed.');
             var xml           = $( data );
+              externalElements['status']('xml make object okay');
             var title         = xml.find( "title" );
-            externalElements['status']('xml title okay');
+              externalElements['status']('xml title okay');
             var description   = xml.find( "description" );
-            externalElements['status']('xml description okay');
+              externalElements['status']('xml description okay');
             var items         = xml.find( "item" );
-            externalElements['status']('xml items okay');
+              externalElements['status']('xml items okay');
             var lastBuildDate = xml.find( "lastBuildDate" );
-            externalElements['status']('xml parse okay');
+              externalElements['status']('xml parse okay');
             currentFeed.title         = title.text();
             currentFeed.description   = description.text();
             currentFeed.lastBuildDate = lastBuildDate.text();
