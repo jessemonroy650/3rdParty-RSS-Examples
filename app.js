@@ -36,6 +36,7 @@ var app = {
         // The versions we define
         try {
         if (AppVersion) {
+            document.getElementById('cordovathing').innerHTML = AppVersion.cordova;
             document.getElementById('appversion').innerHTML   = AppVersion.version;
             document.getElementById('buildversion').innerHTML = AppVersion.build;
         }
