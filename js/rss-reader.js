@@ -32,11 +32,10 @@ var readerApp = {
             }
             catch(err) {
                 externalElements['status']('Cannot create xml Object.');
-                navigator.notification.alert(
-                    'Sorry, I can't parse this RSS format. I'll fix soon, if I can.',  // message
+                navigator.notification.alert("Sorry, I can't parse this RSS format. I'll fix soon, if I can.",
                     function () {},
-                    'Bad XML format',            // title
-                    'Done'                  // buttonName
+                    'Bad XML format',
+                    'Done'
                 );
                 return;
             }
