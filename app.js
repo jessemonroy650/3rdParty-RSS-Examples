@@ -83,6 +83,7 @@ var app = {
             navigator.app.exitApp();
         } else {
             alert('exit button hit.');
+            navigator.app.exitApp();
         }
     }
 };
