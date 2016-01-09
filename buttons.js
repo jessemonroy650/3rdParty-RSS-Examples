@@ -3,7 +3,7 @@
 */
 
 var configMenu = {isVisible:false};
-var feedList   = {isVisible:false};
+var feedList   = {isVisible:true};
 var story      = {isVisible:false};
 var feedInput  = {isVisible:false};
 
@@ -197,6 +197,7 @@ var buttons = {
             // reset the need for a feed.
             readerApp.needFeed = true;
             currentFeed.RSS    = localStore.get(event.target.id);
+            $('#menuIcon').trigger('click');
             $('#getData').trigger('click');
         });
     },

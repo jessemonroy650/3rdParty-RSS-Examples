@@ -42,7 +42,7 @@ var app = {
         app.init();
         // Test the localStore and report to 'id=storeavailable'
         if (localStore.test('#storeavailable')) {
-            localStore.clear(); // This was a mistake that cost me hours.
+            //localStore.clear(); // This was a mistake that cost me hours.
             //if (localStore.key(0) == "" ){
                 localStore.put('Cordova','https://cordova.apache.org/feed.xml');
             //}
