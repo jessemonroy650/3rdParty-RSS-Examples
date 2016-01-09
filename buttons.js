@@ -174,7 +174,7 @@ var buttons = {
                 console.log(localStore.get(event.target.id));
                 // reset the need for a feed.
                 readerApp.needFeed = true;
-                readerApp.entries  = [];
+                currentFeed.entries  = [];
                 currentFeed.RSS    = localStore.get(event.target.id);
                 $('#getData').trigger('click');
             });
