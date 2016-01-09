@@ -21,7 +21,7 @@
         <platform name="android" >
             <!-- PREFERENCE * PREFERENCE * PREFERENCE -->
             <preference name="SplashScreen" value="splash" />
-            <preference name="SplashScreenDelay" value="2000" />
+            <preference name="SplashScreenDelay" value="1000" />
             <!-- ICON * ICON * ICON -->
             <icon src="icon.png" />
             <icon src="res/icons/android/icon-36-ldpi.png"     qualifier="ldpi" />
