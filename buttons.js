@@ -159,6 +159,12 @@ $('#cancelBtn').on('click', function(event) {
 });
 
 
+$('#codeURL').on('click', function(event) {
+    console.log('#codeURL');
+    window.open('https://github.com/jessemonroy650/3rdParty-RSS-Examples', '_system');
+});
+
+
 $('#testToast').on('click', function(event) {
     console.log('#testToast');
     show('Loading...', 'long', 'center');

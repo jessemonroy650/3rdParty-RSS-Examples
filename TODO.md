@@ -9,8 +9,9 @@ Last Update: 2016-01-07
 - [X] Allow new URL/RSS Feed
 - [X] Feed list is first screen
 - [X] Add App-Version
-- [ ] Don't allow feeds with bad XML
-- [ ] ~~Change 'buttons' to 'dynaButtons' (code)~~, do later
+- [X] ~~Don't allow feeds with bad XML~~, do later - for now let user know of parse error
+- [X] ~~Change 'buttons' to 'dynaButtons' (code)~~, do later
+- [X] Add code repository URL to [appIcon]
 - [ ] [Google Play Release Signing Certificate](http://developer.android.com/tools/publishing/app-signing.html#signing-manually)
 - [ ] Report 'unique' ID requirement
 
@@ -18,6 +19,7 @@ Last Update: 2016-01-07
 
 - [ ] Make Splash Screen nicer - may be 9-patch
 - [ ] Add Better UX Messaging, or 'toast'
+- [ ] Don't allow feed entry with XML we can't read.
 - [ ] Delete a URL/RSS Feed
 - [ ] Change 'buttons' to 'dynaButtons' (code)
 
