@@ -10,25 +10,35 @@ var feedInput  = {isVisible:false};
 $('#appIcon').on('click', function(event) {
     console.log('#appIcon');
     if (configMenu.isVisible) {
-        $('#feedContainter').removeClass('hidden'); // show the feeds 
-        $('#configMenu').addClass('hidden');       // hide our config menu 
+        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible,
+            func () { $('#feedContainter').removeClass('hidden'); // show the feeds
+        });
+        $('#configMenu').addClass('hidden');        // hide our config menu 
         configMenu.isVisible = false;
     } else {
         $('#feedContainter').addClass('hidden');    // hide the feeds 
-        $('#configMenu').removeClass('hidden');    // show our config menu
+        $('#configMenu').removeClass('hidden');     // show our config menu
         configMenu.isVisible = true;
     }
 });
 
+ifBothFalseFunc = function ( first, second, func ) {
+    if ((first === false) && (second === false) ){
+        func();
+    }
+};
+
 $('#menuIcon').on('click', function(event) {
     console.log('#menuIcon');
     if (feedList.isVisible) {
-        $('#feedContainter').removeClass('hidden');  // show the feeds 
+        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible,
+            func () { $('#feedContainter').removeClass('hidden'); // show the feeds
+        });
         $('#RSSListContainter').addClass('hidden'); // hide our config menu 
         feedList.isVisible = false;
     } else {
-        $('#feedContainter').addClass('hidden');        // hide the feeds 
-        $('#RSSListContainter').removeClass('hidden');  // show our config menu 
+        $('#feedContainter').addClass('hidden');       // hide the feeds 
+        $('#RSSListContainter').removeClass('hidden'); // show our config menu 
         feedList.isVisible = true;
     }
 });
