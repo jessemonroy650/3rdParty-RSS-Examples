@@ -161,7 +161,7 @@ $('#cancelBtn').on('click', function(event) {
 
 $('#testToast').on('click', function(event) {
     console.log('#testToast');
-    show('Loading...', 'long', 'center')
+    show('Loading...', 'long', 'center');
 });
 
 /*

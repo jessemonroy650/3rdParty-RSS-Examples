@@ -33,33 +33,27 @@ var app = {
         // Trap the pause/resume event
         document.addEventListener("pause",  app.onPause, false);
         document.addEventListener("resume", app.onResume, false);
-        // The versions we define
         try {
-        if (AppVersion) {
-            document.getElementById('cordovathing').innerHTML = AppVersion.cordova;
-            document.getElementById('appversion').innerHTML   = AppVersion.version;
-            document.getElementById('buildversion').innerHTML = AppVersion.build;
-        }
+            // The versions we define
+            if (AppVersion) {
+                document.getElementById('appversion').innerHTML   = AppVersion.version;
+                document.getElementById('buildversion').innerHTML = AppVersion.build;
+            }
         } 
         catch (e) {
             $('#appState').html('Cant get version/build.');
         };
         // Write device information to screen
-        // document.getElementById('cordova').innerHTML = device.cordova;
-        document.getElementById('model').innerHTML   = device.model;
-        document.getElementById('version').innerHTML = device.version;
+        document.getElementById('cordovathing').innerHTML = device.cordova;
+        document.getElementById('model').innerHTML        = device.model;
+        document.getElementById('version').innerHTML      = device.version;
         /////////////////////////////////////////////////////////
         // Initialize the app module
         app.init();
         // Test the localStore and report to 'id=storeavailable'
         if (localStore.test('#storeavailable')) {
             //localStore.clear(); // This was a mistake that cost me hours.
-            //if (localStore.key(0) == "" ){
-                localStore.put('Apache Cordova','https://cordova.apache.org/feed.xml');
-            //}
-            //localStore.put('1','http://feeds.feedburner.com/RaymondCamdensBlog?format=xml');
-            //localStore.put('2','http://feeds.feedburner.com/AndrewMcgivery?format=xml');
-            //$('#Cordova').html(localStore.get('Apache Cordova'));
+            localStore.put('Apache Cordova','https://cordova.apache.org/feed.xml');
         }
         // Initialize the Reader
         readerApp.init();
@@ -71,8 +65,7 @@ var app = {
         });
         // reset the need for a Feed
         readerApp.needFeed = true;
-        // get the first RSS feed on startup
-        //setTimeout (function () {$('#getData').trigger('click');}, 1000);
+        // get the RSS feeds on startup
         $('#getFeeds').trigger('click');
         $('#appState').html('deviceready done.');
     },
