@@ -33,6 +33,12 @@ var app = {
         // Trap the pause/resume event
         document.addEventListener("pause",  app.onPause, false);
         document.addEventListener("resume", app.onResume, false);
+        // Write device information to screen
+        // document.getElementById('cordova').innerHTML = device.cordova;
+        document.getElementById('model').innerHTML      = device.model;
+        document.getElementById('platform').innerHTML   = device.platform;
+        document.getElementById('uuid').innerHTML       = device.uuid;
+        document.getElementById('version').innerHTML    = device.version;
         /////////////////////////////////////////////////////////
         // Initialize the app module
         app.init();
