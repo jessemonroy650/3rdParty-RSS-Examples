@@ -61,7 +61,9 @@ var app = {
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the first RSS feed on startup
-        $('#getData').trigger('click');
+        setTimeout (function () {
+            $('#getData').trigger('click');
+        },2000);
         $('#appState').html('deviceready done.');
     },
     init : function () {
