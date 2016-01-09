@@ -42,10 +42,10 @@ var app = {
         app.init();
         // Test the localStore and report to 'id=storeavailable'
         if (localStore.test('#storeavailable')) {
-            //localStore.clear(); // This was a mistake that cost me hours.
-            if (localStore.key(0) == "" ){
-                localStore.put('0','https://cordova.apache.org/feed.xml');
-            }
+            localStore.clear(); // This was a mistake that cost me hours.
+            //if (localStore.key(0) == "" ){
+                localStore.put('Cordova','https://cordova.apache.org/feed.xml');
+            //}
             //localStore.put('1','http://feeds.feedburner.com/RaymondCamdensBlog?format=xml');
             //localStore.put('2','http://feeds.feedburner.com/AndrewMcgivery?format=xml');
             $('#Cordova').html(localStore.get('0'));
@@ -61,7 +61,8 @@ var app = {
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the first RSS feed on startup
-        setTimeout (function () {$('#getData').trigger('click');}, 1000);
+        //setTimeout (function () {$('#getData').trigger('click');}, 1000);
+        setTimeout (function () {$('#getFeeds').trigger('click');}, 1000);
         $('#appState').html('deviceready done.');
     },
     init : function () {
@@ -100,9 +101,9 @@ document.getElementById('appState').innerHTML = "dom loaded";
 // Thanks http://www.quirksmode.org/js/detect.html
 if ('mozApps' in navigator) {
     document.addEventListener("DOMContentLoaded", app.onDeviceReady, false);
-    document.getElementById("product").innerHTML = "got mozApps";
+    //document.getElementById("product").innerHTML = "got mozApps";
 } else {
     document.addEventListener("deviceready", app.onDeviceReady, false);
-    document.getElementById("product").innerHTML  = JSON.stringify(navigator);
+    //document.getElementById("product").innerHTML  = JSON.stringify(navigator);
     document.getElementById('appState').innerHTML = "addEventListener - deviceready";
 }

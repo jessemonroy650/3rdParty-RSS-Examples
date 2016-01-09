@@ -89,8 +89,9 @@ $('#getFeeds').on('click', function(event) {
     $('.feedStatus').html(localStore.length());
     //now "shadow" draw the list
     for (i = 0; i < localStore.length(); i++ ) {
-        var v = localStore.get(i);
-        s += '<li id="' + i + '" class="feedLink button button-block">' + v + '</li>';
+        var k = localStore.key(i);
+        var v = localStore.get(k);
+        s += '<li id="' + k + '" class="feedLink button button-block">' + k + '</li>';
     };
     s += '<li id=addFeed class="button button-block">Add a Feed</li>';
     console.log(s);
@@ -144,14 +145,16 @@ addFeedBinding();
 
 $('#addBtn').on('click', function(event) {
     console.log('#addBtn');
-    localStore.put(localStore.length() , $('#addField').val());  // Add the data to storage
-    $('#addField').val('');                 // clear the field
-    $('#addFeed').trigger('click');         // trigger the toggle button
+    // Add the data to storage
+    localStore.put($('#RSSLabel').val(), $('#RSSURL').val());
+    $('#RSSURL').val('');            // clear the field
+    $('#addFeed').trigger('click');  // trigger to close the AddFeed form
+    $('#getFeeds').trigger('click'); // trigger to recycle the list
 });
 
 $('#cancelBtn').on('click', function(event) {
     console.log('#cancelBtn');
-    $('#addField').val('');                   // clear the field
+    $('#RSSURL').val('');                   // clear the field
     $('#addFeed').trigger('click');           // trigger the toggle button
 });
 

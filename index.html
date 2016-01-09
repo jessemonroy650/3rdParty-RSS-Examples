@@ -19,7 +19,7 @@
 </div>
 
 <!-- ***Feed Containter *** -->
-<div id=feedContainter>
+<div id=feedContainter class=hidden>
     <!-- ***Toggle Button*** -->
     <div  id=toggleStory class="button button-block button-rounded button-primary button-large">Feed</div>
 
@@ -50,20 +50,23 @@
     <div class="button button-block button-action">model <span id=model></span></div>
     <div class="button button-block button-highlight">Version <span id=version>version</span></div>
 
-    <pre>Product: <span id="product"></span></pre>
+    <!-- <pre>Product: <span id="product"></span></pre> -->
 </div>
 
 <!-- ***Menu Icon*** -->
-<div id=RSSListContainter class="hidden colorPrimaryLight">
+<div id=RSSListContainter class="colorPrimaryLight">
     <ul id=RSSList class=plain-list>
         <li id=Cordova class="feedLink button button-block">Cordova</li>
         <li id=addFeed class="feedLink button button-block">Add a Feed</li>
     </ul>
     <!-- ***Feed Input Form*** -->
     <div id=feedInput class="hidden colorPrimary">
-        <input id=addField type=text placeholder="RSS feed URL" class=clearBoth>
-        <button id=addBtn    class="button button-rounded button-primary" >Add Feed</button>
-        <button id=cancelBtn class="button button-rounded button-caution floatRight" >Cancel</button>
+        <input id=RSSLabel type=text placeholder="Feed Label" class=clearBoth>
+        <input id=RSSURL   type=text placeholder="RSS feed URL" class=clearBoth>
+        <div>
+            <button id=addBtn    class="button button-rounded button-primary" >Add Feed</button>
+            <button id=cancelBtn class="button button-rounded button-caution floatRight" >Cancel</button>
+        </div>
     </div>
 </div>
 
@@ -73,7 +76,7 @@
 <!-- ***HIDDEN BUTTON*** -->
 <!-- This button is hidden as an alternative method to loading stories. -->
 <button id=getData class="hidden button button-pill button-action button-large">getData</button>
-<button id=getFeeds class=" button button-pill button-action button-large">getFeeds</button>
+<button id=getFeeds class="button button-pill button-action button-large">getFeeds</button>
 <br> feedStatus: <span class=feedStatus>feedStatus</span>
 
 <!-- ***Copyright*** -->

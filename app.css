@@ -23,16 +23,17 @@ a {text-decoration:none;color:#000000;}
 #RSSListContainter {margin:0;padding:0;}
 #RSSList {font-size:large;}
 .plain-list {list-style-type:none;margin:0;padding:0.1em;}
-.feedLink {overflow:hidden;}
+.feedLink {font-size:large;overflow:hidden;}
 /* #RSSList > li {overflow:hidden;} */
 /* This cause an issue with zepto/jquery when the list is inserted */
 /* #linksList > li {overflow:hidden;} */
-.contentLink {overflow:hidden;}
+.contentLink {font-size:large;overflow:hidden;}
 #story {padding:0.2em}
 
 /*  */
 #feedInput {margin:0.2em;padding:0.2em;}
-#addField {font-size:large;padding:0.1em;}
+#RSSURL {font-size:large;padding:0.1em;width:100%}
+#RSSLabel {font-size:large;padding:0.1em;width:100%}
 
 
 
