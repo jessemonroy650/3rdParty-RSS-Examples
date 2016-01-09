@@ -74,6 +74,7 @@ $('#getFeeds').on('click', function(event) {
             $("#RSSList li").remove();
             $("#RSSList").append(s);
             buttons.dynamic2();
+    addFeedBinding();
 });
 
 $('#Cordova').on('click', function(event) {
@@ -104,6 +105,7 @@ $('#toggleStory').on('click', function(event) {
     }
 });
 
+addFeedBinding = function () {
 $('#addFeed').on('click', function(event) {
     console.log('#addFeed');
     if (feedInput.isVisible) {
@@ -114,6 +116,8 @@ $('#addFeed').on('click', function(event) {
         feedInput.isVisible = true;
     }
 });
+};
+addFeedBinding();
 
 $('#addBtn').on('click', function(event) {
     console.log('#addBtn');
