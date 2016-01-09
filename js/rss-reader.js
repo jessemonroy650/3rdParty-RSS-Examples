@@ -10,7 +10,7 @@ var currentFeed = {
     title         : "",
     description   : "",
     length        : "",
-    pubDate       : "",
+    lastBuildDate : "",
     selectedStory : ""
 };
 
@@ -27,13 +27,17 @@ var readerApp = {
             externalElements['status']('Got Feed.');
             var xml           = $( data );
             var title         = xml.find( "title" );
+            externalElements['status']('xml title okay');
             var description   = xml.find( "description" );
+            externalElements['status']('xml description okay');
             var items         = xml.find( "item" );
-            //var pubDate       = xml.find( "pubDate" );
-            currentFeed.title       = title.text();
-            currentFeed.description = description.text();
-            //currentFeed.pubDate     = pubDate.text();
-            currentFeed.length      = items.length;
+            externalElements['status']('xml items okay');
+            var lastBuildDate = xml.find( "lastBuildDate" );
+            externalElements['status']('xml parse okay');
+            currentFeed.title         = title.text();
+            currentFeed.description   = description.text();
+            currentFeed.lastBuildDate = lastBuildDate.text();
+            currentFeed.length        = items.length;
             externalElements['status']('title:' + title.text() + ":" + items.length);
             // Parse our object
             currentFeed.entries = [];
