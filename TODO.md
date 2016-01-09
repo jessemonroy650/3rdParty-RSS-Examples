@@ -8,6 +8,6 @@ Last Update: 2016-01-07
 - [X] Add device information to iconButton. My LG Leon is buggy.
 - [X] Allow new URL/RSS Feed
 - [X] Feed list is first screen
-- [ ] Change 'buttons' to 'dynaButtons'
+- [ ] ~~Change 'buttons' to 'dynaButtons'~~, do later
 - [ ] Google Play Release Certificate
 
