@@ -29,10 +29,10 @@ var readerApp = {
             var title         = xml.find( "title" );
             var description   = xml.find( "description" );
             var items         = xml.find( "item" );
-            var pubDate       = xml.find( "pubDate" );
+            //var pubDate       = xml.find( "pubDate" );
             currentFeed.title       = title.text();
             currentFeed.description = description.text();
-            currentFeed.pubDate     = pubDate.text();
+            //currentFeed.pubDate     = pubDate.text();
             currentFeed.length      = items.length;
             externalElements['status']('title:' + title.text() + ":" + items.length);
             // Parse our object
