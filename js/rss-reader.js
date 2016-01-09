@@ -24,17 +24,22 @@ var readerApp = {
     getFeed : function(externalElements) {
         externalElements['status']('Contacting Server ...');
         $.get(currentFeed.RSS, function(data, errorCode) {
-              externalElements['status']('Got Feed.');
-            var xml           = $( data );
-              externalElements['status']('xml make object okay');
+            externalElements['status']('Got Feed.');
+            // let's see if it will parse
+            try {
+                var xml           = $( data );
+                externalElements['status']('xml make object okay');
+            }
+            catch(err) {
+                externalElements['status']('Cannot create xml Object.');
+                return;
+            }
+            //
             var title         = xml.find( "title" );
-              externalElements['status']('xml title okay');
             var description   = xml.find( "description" );
-              externalElements['status']('xml description okay');
             var items         = xml.find( "item" );
-              externalElements['status']('xml items okay');
             var lastBuildDate = xml.find( "lastBuildDate" );
-              externalElements['status']('xml parse okay');
+            // assign 
             currentFeed.title         = title.text();
             currentFeed.description   = description.text();
             currentFeed.lastBuildDate = lastBuildDate.text();
