@@ -18,10 +18,10 @@ var ifBothFalseFunc = function ( first, second, func ) {
 $('#appIcon').on('click', function(event) {
     console.log('#appIcon');
     if (configMenu.isVisible) {
-        // show the feeds, if both menus
-        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible, xfunc);
         $('#configMenu').addClass('hidden');        // hide our config menu 
         configMenu.isVisible = false;
+        // show the feeds, if both menus
+        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible, xfunc);
     } else {
         $('#feedContainter').addClass('hidden');    // hide the feeds 
         $('#configMenu').removeClass('hidden');     // show our config menu
@@ -32,10 +32,10 @@ $('#appIcon').on('click', function(event) {
 $('#menuIcon').on('click', function(event) {
     console.log('#menuIcon');
     if (feedList.isVisible) {
-        // show the feeds, if both menus
-        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible, xfunc);
         $('#RSSListContainter').addClass('hidden'); // hide our config menu 
         feedList.isVisible = false;
+        // show the feeds, if both menus
+        ifBothFalseFunc(configMenu.isVisible, feedList.isVisible, xfunc);
     } else {
         $('#feedContainter').addClass('hidden');       // hide the feeds 
         $('#RSSListContainter').removeClass('hidden'); // show our config menu 
