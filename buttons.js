@@ -42,6 +42,8 @@ $('#getData').on('click', function(event) {
             // Reduce
             draw  : function (parm) {
                 $('#toggleStory').html(parm.title);
+                $('.storyStatus').html(parm.entries.length);
+
                 var s = '';
                 //now "shadow" draw the list
                 $.each(parm.entries, function(i, v) {
