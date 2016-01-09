@@ -15,6 +15,9 @@ var ifBothFalseFunc = function ( first, second, func ) {
     }
 };
 
+//
+//    App Icon on the top left
+//
 $('#appIcon').on('click', function(event) {
     console.log('#appIcon');
     if (configMenu.isVisible) {
@@ -29,6 +32,9 @@ $('#appIcon').on('click', function(event) {
     }
 });
 
+//
+//    Menu Icon on the top right corner
+//
 $('#menuIcon').on('click', function(event) {
     console.log('#menuIcon');
     if (feedList.isVisible) {
@@ -43,6 +49,9 @@ $('#menuIcon').on('click', function(event) {
     }
 });
 
+//
+//    Create list of headlines
+//
 $('#getData').on('click', function(event) {
     console.log('#getData');
     $('.feedStatus').html('#getData');
@@ -69,24 +78,26 @@ $('#getData').on('click', function(event) {
     }
 });
 
+//
+//    get a list of feeds from localStorage
+//
 $('#getFeeds').on('click', function(event) {
     console.log('#getFeeds');
     $('.feedStatus').html('#getData');
-            var s = '';
-            console.log(localStore.length());
-     $('.feedStatus').html(localStore.length());
-            //now "shadow" draw the list
-            for (i = 0; i < localStore.length(); i++ ) {
-               var v = localStore.get(i);
-               s += '<li id="' + i + '" class="feedLink button button-block">' + v + '</li>';
-            };
-            s += '<li id=addFeed class="button button-block">Add a Feed</li>';
-            console.log(s);
-//    $('.feedStatus').html('code' + s + '</code>');
-            $("#RSSList li").remove();
-            $("#RSSList").append(s);
-            buttons.dynamic2();
-    addFeedBinding();
+    var s = '';
+    console.log(localStore.length());
+    $('.feedStatus').html(localStore.length());
+    //now "shadow" draw the list
+    for (i = 0; i < localStore.length(); i++ ) {
+        var v = localStore.get(i);
+        s += '<li id="' + i + '" class="feedLink button button-block">' + v + '</li>';
+    };
+    s += '<li id=addFeed class="button button-block">Add a Feed</li>';
+    console.log(s);
+    $("#RSSList li").remove(); // remove children of the DOM
+    $("#RSSList").append(s);   // appeand our list of Feeds
+    buttons.dynamic2();        // bind the list to touching
+    addFeedBinding();          // bind our button to add more feeds
 });
 
 $('#Cordova').on('click', function(event) {
@@ -118,16 +129,16 @@ $('#toggleStory').on('click', function(event) {
 });
 
 addFeedBinding = function () {
-$('#addFeed').on('click', function(event) {
-    console.log('#addFeed');
-    if (feedInput.isVisible) {
-        $('#feedInput').addClass('hidden');
-        feedInput.isVisible = false;
-    } else {
-        $('#feedInput').removeClass('hidden');
-        feedInput.isVisible = true;
-    }
-});
+    $('#addFeed').on('click', function(event) {
+        console.log('#addFeed');
+        if (feedInput.isVisible) {
+            $('#feedInput').addClass('hidden');
+            feedInput.isVisible = false;
+        } else {
+            $('#feedInput').removeClass('hidden');
+            feedInput.isVisible = true;
+        }
+    });
 };
 addFeedBinding();
 
@@ -182,8 +193,7 @@ var buttons = {
             console.log(localStore.get(event.target.id));
             // reset the need for a feed.
             readerApp.needFeed = true;
-            //currentFeed.entries  = [];
-            currentFeed.RSS      = localStore.get(event.target.id);
+            currentFeed.RSS    = localStore.get(event.target.id);
             $('#getData').trigger('click');
         });
     },

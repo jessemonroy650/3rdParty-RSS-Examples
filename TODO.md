@@ -2,8 +2,8 @@
 Date: 2016-01-06<br>
 Last Update: 2016-01-07
 
-- [x] Trap Back Button
-- [/] Hide 'list of stories' when using [appIcon] and [menuIcon], still buggy
+- [X] Trap Back Button
+- [X] Hide 'list of stories' when using [appIcon] and [menuIcon]
 - [X] Icons
 - [/] Add device information to iconButton, first attempt buggy
 - [/] Allow new URL/RSS Feed
