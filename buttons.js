@@ -158,6 +158,12 @@ $('#cancelBtn').on('click', function(event) {
     $('#addFeed').trigger('click');           // trigger the toggle button
 });
 
+
+$('#testToast').on('click', function(event) {
+    console.log('#testToast');
+    show('Loading...', 'long', 'center')
+});
+
 /*
     Since the list is dynamically created, the rebinding of buttons
     has to be done everytime the list is created. These button
