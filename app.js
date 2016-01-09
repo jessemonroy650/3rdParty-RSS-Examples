@@ -34,8 +34,10 @@ var app = {
         document.addEventListener("pause",  app.onPause, false);
         document.addEventListener("resume", app.onResume, false);
         // The versions we define
-        document.getElementById('appversion').innerHTML   = AppVersion.version;
-        document.getElementById('buildversion').innerHTML = AppVersion.build;
+        if ('AppVersion' in window) {
+            document.getElementById('appversion').innerHTML   = AppVersion.version;
+            document.getElementById('buildversion').innerHTML = AppVersion.build;
+        }
         // Write device information to screen
         document.getElementById('cordova').innerHTML = device.cordova;
         document.getElementById('model').innerHTML   = device.model;
