@@ -44,7 +44,7 @@ var app = {
         if (localStore.test('#storeavailable')) {
             //localStore.clear(); // This was a mistake that cost me hours.
             //if (localStore.key(0) == "" ){
-                localStore.put('Cordova','https://cordova.apache.org/feed.xml');
+                localStore.put('Apache Cordova','https://cordova.apache.org/feed.xml');
             //}
             //localStore.put('1','http://feeds.feedburner.com/RaymondCamdensBlog?format=xml');
             //localStore.put('2','http://feeds.feedburner.com/AndrewMcgivery?format=xml');

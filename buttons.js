@@ -86,7 +86,7 @@ $('#getFeeds').on('click', function(event) {
     $('.feedStatus').html('#getData');
     var s = '';
     console.log(localStore.length());
-    $('.feedStatus').html(localStore.length());
+    $('.feedStatus').html(localStore.length() + ' Feed(s)');
     //now "shadow" draw the list
     for (i = 0; i < localStore.length(); i++ ) {
         var k = localStore.key(i);

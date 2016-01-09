@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Generic RSS Reader</title>
+    <title>Text-Only RSS Reader</title>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Security-Policy"
              content="default-src *;style-src 'self' ;script-src 'self';" />
@@ -13,8 +13,7 @@
 <!-- ***Header*** -->
 <div id=header class="button button-block button-large">
     <img id=appIcon src=res/icons/android/icon-48-mdpi.png>
-    <!-- <img id=appIcon src=images/favicon-48x48.png> -->
-    <div id=appTitle>Generic RSS Reader</div>
+    <div id=appTitle>Text-Only RSS Reader</div>
     <img id=menuIcon src=images/3menubars_black.png>
 </div>
 
@@ -43,7 +42,7 @@
     storeavailable: <span id=storeavailable>no</span><br>
     appState: <span id=appState>zero</span><br>
     lastReadLink: <span class=lastReadLink>lastReadLink</span><br>
-    feedStatus: <span class=feedStatus>feedStatus</span><br>
+    Feed Status: <span class=feedStatus>feedStatus</span><br>
     <button id=exitApp class="button button-pill button-primary button-large">Exit</button>
     <div class=clearBoth></div>
 
@@ -73,11 +72,11 @@
 <!-- ***DEBUG*** -->
 <pre id=dbug class="hidden clearBoth"></pre>
 
-<!-- ***HIDDEN BUTTON*** -->
+<!-- ***HIDDEN BUTTONS*** -->
 <!-- This button is hidden as an alternative method to loading stories. -->
-<button id=getData class="hidden button button-pill button-action button-large">getData</button>
-<button id=getFeeds class="button button-pill button-action button-large">getFeeds</button>
-<br> feedStatus: <span class=feedStatus>feedStatus</span>
+<button id=getData  class="hidden button button-pill button-action button-large">getData</button>
+<button id=getFeeds class="hidden button button-pill button-action button-large">getFeeds</button>
+<p class=feedStatusWrapper>Feed Status: <span class=feedStatus>feedStatus</span></p>
 
 <!-- ***Copyright*** -->
 <div class="copyright">

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.bsdmasterindex.rss-reader"
+        id          = "com.bsdmasterindex.text-only-rss-reader"
         version     = "1.0.0"
         versionCode = "100" > <!-- versionCode is optional and Android only -->
         <!-- Tool Set Version -->        
         <preference name='phonegap-version' value='cli-5.2.0' />
 
-        <name>Generic RSS Reader</name>
-        <description>Phonegap Generic RSS Reader</description>
+        <name>Text-Only RSS Reader</name>
+        <description>Text Only RSS Reader - a simple Text-Only RSS reader </description>
         <author href="http://bsdmasterindex.com" email="jessemonroy650@yahoo.com">
         Jesse Monroy
         </author>

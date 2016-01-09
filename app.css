@@ -6,8 +6,10 @@ a {text-decoration:none;color:#000000;}
 #menuIcon {margin:0;padding:0;float:right;}
 #feedBtn {margin:0;padding:0;width:100%}
 #exitApp {margin:0.1em;float:right;}
+#configMenu {margin:0.1em;}
 #content {margin:0.5em;}
 #footer {background:lightblue;}
+.feedStatusWrapper {font-size:small;padding:0.5em;}
 .feedStatus {}
 .lastReadLink {}
 .hidden {visibility:collapse;display:none;}
@@ -23,18 +25,14 @@ a {text-decoration:none;color:#000000;}
 #RSSListContainter {margin:0;padding:0;}
 #RSSList {font-size:large;}
 .plain-list {list-style-type:none;margin:0;padding:0.1em;}
-.feedLink {font-size:large;overflow:hidden;}
-/* #RSSList > li {overflow:hidden;} */
 /* This cause an issue with zepto/jquery when the list is inserted */
+/* #RSSList > li {overflow:hidden;} */
 /* #linksList > li {overflow:hidden;} */
-.contentLink {font-size:large;overflow:hidden;}
-#story {padding:0.2em}
+.feedLink {padding:0.2em;font-size:large;overflow:hidden;}
+.contentLink {padding:0.2em;font-size:large;overflow:hidden;}
+#story {padding:0.2em;}
 
 /*  */
 #feedInput {margin:0.2em;padding:0.2em;}
 #RSSURL {font-size:large;padding:0.1em;width:100%}
 #RSSLabel {font-size:large;padding:0.1em;width:100%}
-
-
-
-
