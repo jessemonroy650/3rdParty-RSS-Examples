@@ -42,8 +42,10 @@ var app = {
         app.init();
         // Test the localStore and report to 'id=storeavailable'
         if (localStore.test('#storeavailable')) {
-            localStore.clear();
-            localStore.put('0','https://cordova.apache.org/feed.xml');
+            //localStore.clear(); // This was a mistake that cost me hours.
+            if (localStore.key(0) == "" ){
+                localStore.put('0','https://cordova.apache.org/feed.xml');
+            }
             //localStore.put('1','http://feeds.feedburner.com/RaymondCamdensBlog?format=xml');
             //localStore.put('2','http://feeds.feedburner.com/AndrewMcgivery?format=xml');
             $('#Cordova').html(localStore.get('0'));
