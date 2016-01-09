@@ -59,7 +59,7 @@ var app = {
             //}
             //localStore.put('1','http://feeds.feedburner.com/RaymondCamdensBlog?format=xml');
             //localStore.put('2','http://feeds.feedburner.com/AndrewMcgivery?format=xml');
-            $('#Cordova').html(localStore.get('0'));
+            //$('#Cordova').html(localStore.get('Apache Cordova'));
         }
         // Initialize the Reader
         readerApp.init();
@@ -73,9 +73,9 @@ var app = {
         readerApp.needFeed = true;
         // get the first RSS feed on startup
         //setTimeout (function () {$('#getData').trigger('click');}, 1000);
-        setTimeout (function () {$('#getFeeds').trigger('click');}, 1000);
+        $('#getFeeds').trigger('click');
         $('#appState').html('deviceready done.');
-        //show('Loading...', 'long', 'center');
+        show('Loading...', 'long', 'center');
     },
     init : function () {
         console.log('app.init');
