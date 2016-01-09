@@ -165,17 +165,17 @@ var buttons = {
     },
 
     dynamic2 : function () {
-            $('.feedLink').on('click', function(event) {
-                //$('.lastReadLink').html(event.target.id);
-                //currentFeed.selectedStory = event.target.id;
-                console.log('id:' + event.target.id);
-                console.log(localStore.get(event.target.id));
-                // reset the need for a feed.
-                readerApp.needFeed = true;
-                currentFeed.entries  = [];
-                currentFeed.RSS    = localStore.get(event.target.id);
-                $('#getData').trigger('click');
-            });
+        $('.feedLink').on('click', function(event) {
+            //$('.lastReadLink').html(event.target.id);
+            //currentFeed.selectedStory = event.target.id;
+            console.log('id:' + event.target.id);
+            console.log(localStore.get(event.target.id));
+            // reset the need for a feed.
+            readerApp.needFeed = true;
+            //currentFeed.entries  = [];
+            currentFeed.RSS      = localStore.get(event.target.id);
+            $('#getData').trigger('click');
+        });
     },
 
     readmore : function (link, tag) {   

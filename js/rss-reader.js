@@ -35,7 +35,8 @@ var readerApp = {
             currentFeed.pubDate     = pubDate.text();
             currentFeed.length      = items.length;
             externalElements['status']('title:' + title.text() + ":" + items.length);
-           // Parse our object
+            // Parse our object
+            currentFeed.entries = [];
             $.each(items, function(i, v) {
                 entry = {
                     title:$(v).find("title").text(),
