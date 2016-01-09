@@ -64,6 +64,7 @@ $('#getFeeds').on('click', function(event) {
     $('.feedStatus').html('#getData');
             var s = '';
             console.log(localStore.length());
+     $('.feedStatus').html(localStore.length());
             //now "shadow" draw the list
             for (i = 0; i < localStore.length(); i++ ) {
                var v = localStore.get(i);
@@ -71,6 +72,7 @@ $('#getFeeds').on('click', function(event) {
             };
             s += '<li id=addFeed class="button button-block">Add a Feed</li>';
             console.log(s);
+//    $('.feedStatus').html('code' + s + '</code>');
             $("#RSSList li").remove();
             $("#RSSList").append(s);
             buttons.dynamic2();
