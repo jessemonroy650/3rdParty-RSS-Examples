@@ -13,6 +13,7 @@ Last Update: 2016-01-07
 - [ ] Don't allow feeds with bad XML
 - [ ] ~~Change 'buttons' to 'dynaButtons' (code)~~, do later
 - [ ] [Google Play Release Signing Certificate](http://developer.android.com/tools/publishing/app-signing.html#signing-manually)
+- [ ] Report 'unique' ID requirement
 
 ### Next Release ###
 
