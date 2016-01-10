@@ -35,7 +35,7 @@ var app = {
         document.addEventListener("resume", app.onResume, false);
         try {
             // The versions we define
-            if (AppVersion) {
+            if ('version' in AppVersion) {
                 document.getElementById('appversion').innerHTML   = AppVersion.version;
                 document.getElementById('buildversion').innerHTML = AppVersion.build;
             }
