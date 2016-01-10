@@ -44,8 +44,9 @@ var app = {
             $('#appState').html('Cant get version/build.');
         };
         // Write device information to screen
-        document.getElementById('model').innerHTML        = device.model;
-        document.getElementById('version').innerHTML      = device.version;
+        document.getElementById('cordova').innerHTML = device.cordova;
+        document.getElementById('model').innerHTML   = device.model;
+        document.getElementById('version').innerHTML = device.version;
         $('#appState').html('Loaded version and device info.');
         /////////////////////////////////////////////////////////
         // Initialize the app module
