@@ -106,6 +106,7 @@ $('#toggleStory').on('click', function(event) {
     console.log('#toggleStory');
     if (story.isVisible) {
         $('#story').addClass('hidden');
+        $('#backIcon').addClass('hidden');
         $('#linksList').removeClass('hidden');
         story.isVisible = false;
     } else {
@@ -118,7 +119,8 @@ $('#toggleStory').on('click', function(event) {
             buttons.readmore(parm.link);   // create handler to open browser
         };
         readerApp.getStory(loadStory);
-        $('#story').removeClass('hidden'); // make story visible
+        $('#backIcon').removeClass('hidden'); // make icon visible
+        $('#story').removeClass('hidden');    // make story visible
         $('#linksList').addClass('hidden');
         story.isVisible = true;
     }
