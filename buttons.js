@@ -101,11 +101,6 @@ $('#getFeeds').on('click', function(event) {
     addFeedBinding();          // bind our button to add more feeds
 });
 
-$('#Cordova').on('click', function(event) {
-    console.log('#Cordova');
-    $('#getData').trigger('click');
-});
-
 // Toggle the visibility of the "Story"
 $('#toggleStory').on('click', function(event) {
     console.log('#toggleStory');
