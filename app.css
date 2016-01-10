@@ -38,5 +38,5 @@ a {text-decoration:none;color:#000000;}
 /*  */
 #feedContainter {}
 #toggleWrapper {overflow:hidden;}
-#backIcon {height:40px;vertical-align:middle;}
+#backIcon {height:24px;width:48px;vertical-align:middle;}
 #toggleStory {margin:0.2em;}
