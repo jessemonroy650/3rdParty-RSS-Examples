@@ -12,11 +12,14 @@ Last Update: 2016-01-07
 - [X] ~~Don't allow feeds with bad XML~~, do later - for now let user know of parse error
 - [X] ~~Change 'buttons' to 'dynaButtons' (code)~~, do later
 - [X] Add code repository URL to [appIcon]
+- [ ] Fix "Blog name", add (overflow:hidden;)
+- [ ] Exchange "Blog name" for [back button] like icons, when reading story
 - [ ] [Google Play Release Signing Certificate](http://developer.android.com/tools/publishing/app-signing.html#signing-manually)
 - [ ] Report 'unique' ID requirement
 
 ### Next Release ###
 
+- [ ] Connection physical [back button], when in reading story, to flip back to reading list
 - [ ] Make Splash Screen nicer - may be 9-patch
 - [ ] Add Better UX Messaging, or 'toast'
 - [ ] Don't allow feed entry with XML we can't read.
@@ -27,3 +30,5 @@ Last Update: 2016-01-07
 
 - [ ] Move URL/RSS Feed on list
 - [ ] Handle more types of RSS Feeds
+- [ ] Left Handed/Right Handed toggle
+- [ ] Swipe

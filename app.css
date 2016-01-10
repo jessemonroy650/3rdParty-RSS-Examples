@@ -19,10 +19,14 @@ a {text-decoration:none;color:#000000;}
 .clearBoth  {clear:both;}
 .floatLeft  {float:left;}
 .floatRight {float:right;}
-/*  */
+/* RSS List */
 #RSSListContainter {margin:0;padding:0;}
 #RSSList {font-size:large;}
 .plain-list {list-style-type:none;margin:0;padding:0.1em;}
+/* Feed Form */
+#feedInput {margin:0.2em;padding:0.2em;}
+#RSSURL {font-size:large;padding:0.1em;width:100%}
+#RSSLabel {font-size:large;padding:0.1em;width:100%}
 /* This cause an issue with zepto/jquery when the list is inserted */
 /* #RSSList > li {overflow:hidden;} */
 /* #linksList > li {overflow:hidden;} */
@@ -30,9 +34,7 @@ a {text-decoration:none;color:#000000;}
 .contentLink {padding:0.2em;font-size:large;overflow:hidden;}
 #story {padding:0.2em;}
 /*  */
-#feedInput {margin:0.2em;padding:0.2em;}
-#RSSURL {font-size:large;padding:0.1em;width:100%}
-#RSSLabel {font-size:large;padding:0.1em;width:100%}
-/*  */
 #codeURL {font-size:small;padding:0.1em;}
-
+/*  */
+#backIcon {height:40px;vertical-align:middle;}
+#toggleStory {margin:0.2em;}
