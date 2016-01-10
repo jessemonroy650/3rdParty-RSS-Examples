@@ -102,12 +102,12 @@ $('#getFeeds').on('click', function(event) {
 });
 
 // Toggle the visibility of the "Story"
-$('#toggleStory').on('click', function(event) {
-    console.log('#toggleStory');
+$('#toggleWrapper').on('click', function(event) {
+    console.log('#toggleWrapper');
     if (story.isVisible) {
-        $('#story').addClass('hidden');
-        $('#backIcon').addClass('hidden');
-        $('#linksList').removeClass('hidden');
+        $('#linksList').removeClass('hidden'); // show list
+        $('#story').addClass('hidden');        // hide story
+        $('#backIcon').addClass('hidden');     // hide icon
         story.isVisible = false;
     } else {
         var loadStory = function (parm) {
@@ -119,9 +119,9 @@ $('#toggleStory').on('click', function(event) {
             buttons.readmore(parm.link);   // create handler to open browser
         };
         readerApp.getStory(loadStory);
-        $('#backIcon').removeClass('hidden'); // make icon visible
-        $('#story').removeClass('hidden');    // make story visible
-        $('#linksList').addClass('hidden');
+        $('#backIcon').removeClass('hidden'); // show icon
+        $('#story').removeClass('hidden');    // show story
+        $('#linksList').addClass('hidden');   // hist list
         story.isVisible = true;
     }
 });

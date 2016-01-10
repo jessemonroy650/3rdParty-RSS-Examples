@@ -12,10 +12,14 @@ Last Update: 2016-01-07
 - [X] ~~Don't allow feeds with bad XML~~, do later - for now let user know of parse error
 - [X] ~~Change 'buttons' to 'dynaButtons' (code)~~, do later
 - [X] Add code repository URL to [appIcon]
-- [ ] Fix "Blog name", add (overflow:hidden;)
-- [ ] Exchange "Blog name" for [back button] like icons, when reading story
+- [X] Fix "Blog name", add (overflow:hidden;)
+- [X] Add [back button], like icons, when reading story
+- [X] Report 'unique' ID requirement
 - [ ] [Google Play Release Signing Certificate](http://developer.android.com/tools/publishing/app-signing.html#signing-manually)
-- [ ] Report 'unique' ID requirement
+
+### Soon ##
+
+- [ ] Make sample App with 'unique' ID issue
 
 ### Next Release ###
 

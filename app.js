@@ -61,7 +61,7 @@ var app = {
         // setup dynamic button linker
         buttons.init({
             list:    '.contentLink',
-            story:   '#toggleStory',
+            story:   '#toggleWrapper',
             browser: '#readMore'
         });
         // reset the need for a Feed
