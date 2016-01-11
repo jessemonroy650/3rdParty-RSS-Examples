@@ -1,9 +1,23 @@
 #= NOTES =
 Date: 2016-01-04
 
+
+Claims Jquery 1.5 will do the parsing.
+
+- Displaying Feed Content using jQuery
+http://www.htmlgoodies.com/beyond/javascript/stips/displaying-feed-content-using-jquery.html
+
+Follow up; a little help.
+
+- *Parsing RSS Feeds in JavaScript ? Options*
+http://www.raymondcamden.com/2015/12/08/parsing-rss-feeds-in-javascript-options
+
+THIS WORKED
+
 - *PhoneGap RSS Reader - October 11, 2011 (by Raymond Camden)*
 - http://www.raymondcamden.com/2011/10/11/PhoneGap-RSS-Reader
 
+This Had issues.
 
 - *xml2json.js and json2xml.js*
 - http://goessner.net/download/prj/jsonxml/

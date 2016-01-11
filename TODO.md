@@ -23,6 +23,8 @@ Last Update: 2016-01-07
 
 ### Next Release ###
 
+- [X] `feedContainter:isVisible` to `buttons.js`
+- [ ] Clean up naming convention (variables and `id`)
 - [ ] Connection physical [back button], when in reading story, to flip back to reading list
 - [ ] Make Splash Screen nicer - may be 9-patch
 - [ ] Add Better UX Messaging, or 'toast'
@@ -35,4 +37,6 @@ Last Update: 2016-01-07
 - [ ] Move URL/RSS Feed on list
 - [ ] Handle more types of RSS Feeds
 - [ ] Left Handed/Right Handed toggle
-- [ ] Swipe
+- [ ] Swipe left/right to advance story
+
+

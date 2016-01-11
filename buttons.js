@@ -2,10 +2,11 @@
     Date: 2016-01-05
 */
 
-var configMenu = {isVisible:false};
-var feedList   = {isVisible:true};
-var story      = {isVisible:false};
-var feedInput  = {isVisible:false};
+var configMenu     = {isVisible:false};
+var feedList       = {isVisible:true};
+var feedInput      = {isVisible:false};
+var feedContainter = {isVisible:true};
+var story          = {isVisible:false};
 
 var xfunc = function() { $('#feedContainter').removeClass('hidden'); };
 
