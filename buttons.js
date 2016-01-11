@@ -19,7 +19,7 @@ var ifBothFalseFunc = function ( first, second, func ) {
 //
 //    App Icon on the top left
 //
-$('#appIcon').on('click', function(event) {
+$('#appIcon').click(function(event) {
     console.log('#appIcon');
     if (configMenu.isVisible) {
         $('#configMenu').addClass('hidden');        // hide our config menu 
@@ -36,7 +36,7 @@ $('#appIcon').on('click', function(event) {
 //
 //    Menu Icon on the top right corner
 //
-$('#menuIcon').on('click', function(event) {
+$('#menuIcon').click(function(event) {
     console.log('#menuIcon');
     if (feedList.isVisible) {
         $('#RSSListContainter').addClass('hidden'); // hide our config menu 
@@ -53,7 +53,7 @@ $('#menuIcon').on('click', function(event) {
 //
 //    Create list of headlines
 //
-$('#getData').on('click', function(event) {
+$('#getData').click(function(event) {
     console.log('#getData');
     $('.feedStatus').html('#getData');
     if (readerApp.needFeed) {
@@ -82,7 +82,7 @@ $('#getData').on('click', function(event) {
 //
 //    get a list of feeds from localStorage
 //
-$('#getFeeds').on('click', function(event) {
+$('#getFeeds').click(function(event) {
     console.log('#getFeeds');
     $('.feedStatus').html('#getData');
     var s = '';
@@ -103,7 +103,7 @@ $('#getFeeds').on('click', function(event) {
 });
 
 // Toggle the visibility of the "Story"
-$('#toggleWrapper').on('click', function(event) {
+$('#toggleWrapper').click(function(event) {
     console.log('#toggleWrapper');
     if (story.isVisible) {
         $('#linksList').removeClass('hidden'); // show list
@@ -128,7 +128,7 @@ $('#toggleWrapper').on('click', function(event) {
 });
 
 addFeedBinding = function () {
-    $('#addFeed').on('click', function(event) {
+    $('#addFeed').click(function(event) {
         console.log('#addFeed');
         if (feedInput.isVisible) {
             $('#feedInput').addClass('hidden');
@@ -141,7 +141,7 @@ addFeedBinding = function () {
 };
 addFeedBinding();
 
-$('#addBtn').on('click', function(event) {
+$('#addBtn').click(function(event) {
     console.log('#addBtn');
     // Add the data to storage
     localStore.put($('#RSSLabel').val(), $('#RSSURL').val());
@@ -150,20 +150,20 @@ $('#addBtn').on('click', function(event) {
     $('#getFeeds').trigger('click'); // trigger to recycle the list
 });
 
-$('#cancelBtn').on('click', function(event) {
+$('#cancelBtn').click(function(event) {
     console.log('#cancelBtn');
     $('#RSSURL').val('');                   // clear the field
     $('#addFeed').trigger('click');           // trigger the toggle button
 });
 
 
-$('#codeURL').on('click', function(event) {
+$('#codeURL').click(function(event) {
     console.log('#codeURL');
     window.open('https://github.com/jessemonroy650/3rdParty-RSS-Examples', '_system');
 });
 
 
-$('#testToast').on('click', function(event) {
+$('#testToast').click(function(event) {
     console.log('#testToast');
     show('Loading...', 'long', 'center');
 });
@@ -188,7 +188,7 @@ var buttons = {
 
     dynamic : function () {
         if (buttons.listTag && buttons.storyTag) {
-            $(buttons.listTag).on('click', function(event) {
+            $(buttons.listTag).click(function(event) {
                 $('.lastReadLink').html(event.target.id);
                 currentFeed.selectedStory = event.target.id;
                 $(buttons.storyTag).trigger('click');
@@ -199,7 +199,7 @@ var buttons = {
     },
 
     dynamic2 : function () {
-        $('.feedLink').on('click', function(event) {
+        $('.feedLink').click(function(event) {
             //$('.lastReadLink').html(event.target.id);
             //currentFeed.selectedStory = event.target.id;
             console.log('id:' + event.target.id);
@@ -217,7 +217,7 @@ var buttons = {
             tag = buttons.browserTag;
         }
         if (tag && link) {
-            $(tag).on('click', function(event) {
+            $(tag).click(function(event) {
                 window.open(link, '_system');
             });
         } else {
