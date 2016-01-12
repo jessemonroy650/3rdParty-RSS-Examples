@@ -41,15 +41,16 @@ var readerApp = {
             }
             //
             var title         = xml.find( "title" );
+            var xtitle        = title[0];
             var description   = xml.find( "description" );
             var items         = xml.find( "item" );
             var lastBuildDate = xml.find( "lastBuildDate" );
-            // assign 
-            currentFeed.title         = title.text();
+            // assign
+            currentFeed.title         = xtitle; // title.text();
             currentFeed.description   = description.text();
             currentFeed.lastBuildDate = lastBuildDate.text();
             currentFeed.length        = items.length;
-            externalElements['status']('title:' + title[0].text() + ":" + title.length + ":" + items.length);
+            externalElements['status']('title:' + title.text() + ":" + title.length + ":" + items.length);
             // Parse our object
             currentFeed.entries = [];
             $.each(items, function(i, v) {
