@@ -4,7 +4,7 @@ Last Update: 2016-01-05
 
 My version of Raymond Camden's [PhoneGap RSS Reader](http://www.raymondcamden.com/2011/10/11/PhoneGap-RSS-Reader) done in 2011.
 
-- `jquery-1.7.2.min.js` as used over `zepto-1.1.6.js` because it handles both majors of RSS and the methon `.on()`.
+- `jquery-1.7.2.min.js` as used over `zepto-1.1.6.js` because it handles both majors of RSS and the method `.on()`. However, it had a RSS parsing bug. A work around fixed the issue (see js/rss-reader.js).
 
 ###Known Bugs###
 

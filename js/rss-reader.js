@@ -1,5 +1,7 @@
 /*
     Date: 2016-01-06
+
+	BUG FIX:2016-01-12: jquery-1.7.2 returned ALL titles, but just the "channel" title.
 */
 //
 var currentFeed = {
@@ -41,7 +43,7 @@ var readerApp = {
             }
             //
             var title         = xml.find( "title" );
-            var xtitle        = title[0];
+            var xtitle        = title[0]; // bug in jquery - 2016-01-12
             var description   = xml.find( "description" );
             var items         = xml.find( "item" );
             var lastBuildDate = xml.find( "lastBuildDate" );
@@ -50,7 +52,7 @@ var readerApp = {
             currentFeed.description   = description.text();
             currentFeed.lastBuildDate = lastBuildDate.text();
             currentFeed.length        = items.length;
-            externalElements['status']('title:' + title.text() + ":" + title.length + ":" + items.length);
+            externalElements['status']('title:' + xtitle + ":" + items.length);
             // Parse our object
             currentFeed.entries = [];
             $.each(items, function(i, v) {
@@ -62,7 +64,7 @@ var readerApp = {
                 currentFeed.entries.push(entry);
             });
             externalElements['draw'](currentFeed);
-            //externalElements['status']('Done.');
+            externalElements['status']('Done.');
         });
     },
     getStory : function (displayFunc) {
