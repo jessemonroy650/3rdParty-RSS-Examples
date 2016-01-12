@@ -49,7 +49,7 @@ var readerApp = {
             currentFeed.description   = description.text();
             currentFeed.lastBuildDate = lastBuildDate.text();
             currentFeed.length        = items.length;
-            externalElements['status']('title:' + title.text() + ":" + items.length);
+            externalElements['status']('title:' + title.text() + ":" + title.length + ":" + items.length);
             // Parse our object
             currentFeed.entries = [];
             $.each(items, function(i, v) {
@@ -61,7 +61,7 @@ var readerApp = {
                 currentFeed.entries.push(entry);
             });
             externalElements['draw'](currentFeed);
-            externalElements['status']('Done.');
+            //externalElements['status']('Done.');
         });
     },
     getStory : function (displayFunc) {
