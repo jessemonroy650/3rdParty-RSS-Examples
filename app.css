@@ -30,8 +30,8 @@ a {text-decoration:none;color:#000000;}
 /* This cause an issue with zepto/jquery when the list is inserted */
 /* #RSSList > li {overflow:hidden;} */
 /* #linksList > li {overflow:hidden;} */
-.feedLink {padding:0.2em;font-size:large;overflow:hidden;}
-.contentLink {padding:0.2em;font-size:large;overflow:hidden;}
+.feedLink {padding:0.5em;font-size:large;overflow:hidden;}
+.contentLink {padding:0.5em;font-size:large;overflow:hidden;}
 #story {padding:0.2em;}
 /*  */
 #codeURL {font-size:small;padding:0.1em;}

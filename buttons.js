@@ -94,7 +94,7 @@ $('#getFeeds').on('click', function(event) {
         var v = localStore.get(k);
         s += '<li id="' + k + '" class="feedLink button button-block">' + k + '</li>';
     };
-    s += '<li id=addFeed class="button button-block">Add a Feed</li>';
+    s += '<li id=addFeed class="feedLink button button-block">Add a Feed</li>';
     console.log(s);
     $("#RSSList li").remove(); // remove children of the DOM
     $("#RSSList").append(s);   // appeand our list of Feeds
