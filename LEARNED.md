@@ -20,3 +20,4 @@ Last Update: 2016-01-16
 
 - Learned on 2016-01-16T04:20:03
 - Turning off `<allow-navigation (...) />` forces links in XML generated webpages to use external webbrowser
+- Adding "img-src 'self';" blocks images from loading in stories

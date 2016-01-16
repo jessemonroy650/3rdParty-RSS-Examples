@@ -47,5 +47,6 @@ Last Update: 2016-01-07
 - [ ] Swipe left/right to advance story
 - [ ] Do Background scheduled fetches
 - [ ] Write a Google news filter - to get rid of table
+- [ ] Option to load story image/picture
 
 
