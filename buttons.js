@@ -86,7 +86,7 @@ $('#getFeeds').on('click', function(event) {
     console.log('#getFeeds');
     $('.feedStatus').html('#getData');
     var s = '';
-    console.log(localStore.length());
+    console.log("Num of Feeds: " + localStore.length());
     $('.feedStatus').html(localStore.length() + ' Feed(s)');
     //now "shadow" draw the list
     for (i = 0; i < localStore.length(); i++ ) {
@@ -94,7 +94,7 @@ $('#getFeeds').on('click', function(event) {
         var v = localStore.get(k);
         s += '<li id="' + k + '" class="feedLink button button-block">' + k + '</li>';
     };
-    s += '<li id=addFeed class="feedLink button button-block">Add a Feed</li>';
+    s += '<li id=addFeed class="xfeedLink button button-block">Add a Feed</li>';
     console.log(s);
     $("#RSSList li").remove(); // remove children of the DOM
     $("#RSSList").append(s);   // appeand our list of Feeds
@@ -141,19 +141,31 @@ addFeedBinding = function () {
 };
 addFeedBinding();
 
+clearFeedFields  = function() {
+    $('#RSSLabel').val('');          // clear the field
+    $('#RSSURL').val('');            // clear the field
+}
+
 $('#addBtn').on('click', function(event) {
     console.log('#addBtn');
     // Add the data to storage
-    localStore.put($('#RSSLabel').val(), $('#RSSURL').val());
-    $('#RSSURL').val('');            // clear the field
-    $('#addFeed').trigger('click');  // trigger to close the AddFeed form
-    $('#getFeeds').trigger('click'); // trigger to recycle the list
+    if ($('#RSSLabel').val() && $('#RSSURL').val()) {
+        localStore.put($('#RSSLabel').val(), $('#RSSURL').val());
+        clearFeedFields();
+        // $('#RSSURL').val('');            // clear the field
+        $('#addFeed').trigger('click');  // trigger to close the AddFeed form
+        $('#getFeeds').trigger('click'); // trigger to recycle the list
+    } else {
+        alert('Both fields must have something.');
+    }
 });
 
 $('#cancelBtn').on('click', function(event) {
     console.log('#cancelBtn');
-    $('#RSSURL').val('');                   // clear the field
-    $('#addFeed').trigger('click');           // trigger the toggle button
+    clearFeedFields();
+    //$('#RSSLabel').val('');          // clear the field
+    //$('#RSSURL').val('');            // clear the field
+    $('#addFeed').trigger('click');  // trigger the toggle button
 });
 
 

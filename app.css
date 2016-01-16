@@ -31,6 +31,7 @@ a {text-decoration:none;color:#000000;}
 /* #RSSList > li {overflow:hidden;} */
 /* #linksList > li {overflow:hidden;} */
 .feedLink {padding:0.5em;font-size:large;overflow:hidden;}
+.xfeedLink{padding:0.5em;font-size:large;overflow:hidden;}
 .contentLink {padding:0.5em;font-size:large;overflow:hidden;}
 #story {padding:0.2em;}
 /*  */
