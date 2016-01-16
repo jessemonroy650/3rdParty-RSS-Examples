@@ -15,14 +15,21 @@ Last Update: 2016-01-07
 - [X] Fix "Blog name", add (overflow:hidden;)
 - [X] Add [back button], like icons, when reading story
 - [X] Report 'unique' ID requirement
+- [ ] Featured Graphics
+- [ ] Screenshots (phone and tablet)
 - [ ] [Google Play Release Signing Certificate](http://developer.android.com/tools/publishing/app-signing.html#signing-manually)
+- [ ] Release App to Google Play App Store
 
 ### Soon ##
 
 - [ ] Make sample App with 'unique' ID issue
+- [ ] Release App to App iTunes App Stores
 
 ### Next Release ###
 
+- [ ] Check for text-only version of news
+- [ ] Check for full story version of news
+- [ ] Write a privacy policy
 - [X] `feedContainter:isVisible` to `buttons.js`
 - [ ] Clean up naming convention (variables and `id`)
 - [ ] Connection physical [back button], when in reading story, to flip back to reading list
@@ -38,5 +45,6 @@ Last Update: 2016-01-07
 - [ ] Handle more types of RSS Feeds
 - [ ] Left Handed/Right Handed toggle
 - [ ] Swipe left/right to advance story
+- [ ] Do Background scheduled fetches
 
 
