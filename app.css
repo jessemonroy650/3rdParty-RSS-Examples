@@ -32,7 +32,7 @@ a {text-decoration:none;color:#000000;}
 /* #linksList > li {overflow:hidden;} */
 .feedLink {padding:0.5em;font-size:large;overflow:hidden;}
 .xfeedLink{padding:0.5em;font-size:large;overflow:hidden;}
-.contentLink {padding:0.5em;font-size:large;overflow:hidden;}
+.contentLink {margin:0.2em;padding:0.3em;font-size:large;overflow:hidden;}
 #story {padding:0.2em;}
 /*  */
 #codeURL {font-size:small;padding:0.1em;}
