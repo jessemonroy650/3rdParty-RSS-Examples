@@ -85,7 +85,7 @@
 
         <!-- WHITELIST * WHITELIST * WHITELIST -->
         <!-- https://github.com/jessemonroy650/top-phonegap-mistakes/blob/master/the-whitelist-system.md -->
-        <!-- <allow-navigation href="*" /> -->
+        <allow-navigation href="*" />
         <allow-intent href="*" />
         <access origin="*" /> <!-- Required for iOS9 -->
     </widget>
