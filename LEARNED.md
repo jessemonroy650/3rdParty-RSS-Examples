@@ -1,6 +1,6 @@
 # LEARNED.md #
 Date: 2016-01-09 <br>
-Last Update: 2016-01-09
+Last Update: 2016-01-16
 
 - A CSS ID must be unique on the page. Else Phonegap fails to load.
 - [Does ID have to be unique in the whole page?](http://stackoverflow.com/questions/9454645/does-id-have-to-be-unique-in-the-whole-page)
@@ -18,3 +18,5 @@ Last Update: 2016-01-09
 
 >   The id attribute specifies its element's unique identifier (ID). The value must be unique amongst all the IDs in the element's home subtree and must contain at least one character. The value must not contain any space characters.
 
+- Learned on 2016-01-16T04:20:03
+- Turning off `<allow-navigation (...) />` forces links in XML generated webpages to use external webbrowser

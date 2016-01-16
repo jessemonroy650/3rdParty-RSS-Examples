@@ -27,8 +27,8 @@ Last Update: 2016-01-07
 
 ### Next Release ###
 
-- [ ] Check for text-only version of news
-- [ ] Check for full story version of news
+- [X] Check for text-only version of news
+- [X] Check for full story version of news
 - [ ] Write a privacy policy
 - [X] `feedContainter:isVisible` to `buttons.js`
 - [ ] Clean up naming convention (variables and `id`)
@@ -46,5 +46,6 @@ Last Update: 2016-01-07
 - [ ] Left Handed/Right Handed toggle
 - [ ] Swipe left/right to advance story
 - [ ] Do Background scheduled fetches
+- [ ] Write a Google news filter - to get rid of table
 
 
