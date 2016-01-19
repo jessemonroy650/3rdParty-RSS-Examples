@@ -20,3 +20,4 @@ My version of Raymond Camden's [PhoneGap RSS Reader](http://www.raymondcamden.co
 - LG Leon (Android 5.1.0) sometimes the app refuses to exit, when the app is first started.
 - LG Leon (Android 5.1.0) sometimes the Cordova *device* plugin fails, when the app is first started.
 - With some blogs, the *title* to the story gets mangled with other fields.
+- Some news feeds use improper format, namely Google news.

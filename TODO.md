@@ -1,6 +1,6 @@
 ## TO DO ##
 Date: 2016-01-06<br>
-Last Update: 2016-01-07
+Last Update: 2016-01-18
 
 - [X] Trap Back Button
 - [X] Hide 'list of stories' when using [appIcon] and [menuIcon]
@@ -15,10 +15,10 @@ Last Update: 2016-01-07
 - [X] Fix "Blog name", add (overflow:hidden;)
 - [X] Add [back button], like icons, when reading story
 - [X] Report 'unique' ID requirement
-- [ ] Featured Graphics
-- [ ] Screenshots (phone and tablet)
-- [ ] [Google Play Release Signing Certificate](http://developer.android.com/tools/publishing/app-signing.html#signing-manually)
-- [ ] Release App to Google Play App Store
+- [X] Featured Graphics
+- [X] Screenshots (phone and tablet)
+- [X] [Google Play Release Signing Certificate](http://developer.android.com/tools/publishing/app-signing.html#signing-manually)
+- [X] Release App to Google Play App Store
 
 ### Soon ##
 
