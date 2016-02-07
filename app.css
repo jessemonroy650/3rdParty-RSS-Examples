@@ -1,9 +1,10 @@
 body {margin:0px;font-size:large;box-sizing:border-box;}
 a {text-decoration:none;color:#000000;}
+img {display:none;}
 #header {margin:0;padding:0;height:50px;}
-#appIcon {margin:0;padding:2px;float:left;height:46px;}
+#appIcon {margin:0;padding:2px;float:left;height:46px;display:inline;}
 #appTitle {display:inline-block;margin:0.3em;}
-#menuIcon {margin:0;padding:0;float:right;}
+#menuIcon {margin:0;padding:0;float:right;display:inline;}
 #feedBtn {margin:0;padding:0;width:100%}
 #exitApp {margin:0.1em;float:right;}
 #configMenu {margin:0.1em;}
@@ -33,11 +34,11 @@ a {text-decoration:none;color:#000000;}
 .feedLink {padding:0.5em;font-size:large;overflow:hidden;}
 .xfeedLink{padding:0.5em;font-size:large;overflow:hidden;}
 .contentLink {margin:0.3em;padding:0.2em;font-size:large;overflow:hidden;}
-#story {padding:0.2em;}
+#story {padding:0.2em;font-size:large;}
 /*  */
 #codeURL {font-size:small;padding:0.1em;}
 /*  */
 #feedContainter {}
 #toggleWrapper {overflow:hidden;}
-#backIcon {height:24px;width:48px;vertical-align:middle;}
+#backIcon {height:24px;width:48px;vertical-align:middle;display:inline;}
 #toggleStory {margin:0.2em;}

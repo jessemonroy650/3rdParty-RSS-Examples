@@ -1,7 +1,7 @@
 /*
     Date: 2016-01-06
 
-	BUG FIX:2016-01-12: jquery-1.7.2 returned ALL titles, but just the "channel" title.
+	BUG FIX:2016-01-12: jquery-1.7.2 returned ALL titles, not just the "channel" title.
 */
 //
 var currentFeed = {

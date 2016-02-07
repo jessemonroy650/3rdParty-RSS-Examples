@@ -22,31 +22,32 @@ Last Update: 2016-01-18
 
 ### Soon ##
 
-- [ ] Make sample App with 'unique' ID issue
-- [ ] Release App to App iTunes App Stores
+- [ ] Release App to iTunes App Stores
 
 ### Next Release ###
 
+- [ ] Make sample App with 'unique' ID issue ~/PGB.Mine/PUBLIC-CORDOVA-BUGS/cordova-bug-duplicate-id/
 - [X] Check for text-only version of news
 - [X] Check for full story version of news
-- [ ] Write a privacy policy
 - [X] `feedContainter:isVisible` to `buttons.js`
-- [ ] Clean up naming convention (variables and `id`)
+- [ ] Add Title header/toggle for RSS List (similar to Story/Link List)
+- [ ] Add a large font-size
+- [ ] Add Better UX Messaging, or 'toast'
+- [ ] Create a Lottery-only version of the RSS Reader
+- [ ] Delete a URL/RSS Feed
+- [ ] Don't allow feed entry with XML we can't read.
 - [ ] Connection physical [back button], when in reading story, to flip back to reading list
 - [ ] Make Splash Screen nicer - may be 9-patch
-- [ ] Add Better UX Messaging, or 'toast'
-- [ ] Don't allow feed entry with XML we can't read.
-- [ ] Delete a URL/RSS Feed
+- [ ] Clean up naming convention (variables and `id`)
 - [ ] Change 'buttons' to 'dynaButtons' (code)
+- [ ] Write a privacy policy
 
 ### When Possible ###
 
-- [ ] Move URL/RSS Feed on list
+- [ ] Move URL/RSS Feed entry on list
 - [ ] Handle more types of RSS Feeds
-- [ ] Left Handed/Right Handed toggle
+- [ ] Left Handed/Right Handed Interface toggle
 - [ ] Swipe left/right to advance story
 - [ ] Do Background scheduled fetches
 - [ ] Write a Google news filter - to get rid of table
-- [ ] Option to load story image/picture
-
 
