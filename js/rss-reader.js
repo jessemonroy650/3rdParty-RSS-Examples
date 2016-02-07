@@ -46,7 +46,7 @@ var readerApp = {
             //$('#dbug').html(title + '<br>' + title[0]);
             var mtitle        = xml.closest( "title" );
             $('#dbug').html(mtitle[0]);
-            var xtitle        = title[0]; // bug in jquery - 2016-01-12
+            var xtitle        = title[0][0]; // bug in jquery - 2016-01-12
             var description   = xml.find( "description" );
             var items         = xml.find( "item" );
             var lastBuildDate = xml.find( "lastBuildDate" );
