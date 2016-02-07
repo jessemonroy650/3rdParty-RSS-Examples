@@ -43,7 +43,8 @@ var readerApp = {
             }
             //
             var title         = xml.find( "title" );
-            $('#dbug').html(JSON.stringify(title) + '<br>' + JSON.stringify(title[0]));
+            //$('#dbug').html(JSON.stringify(title) + '<br>' + JSON.stringify(title[0]));
+            $('#dbug').html(JSON.stringify(title[0]));
             var xtitle        = title[0]; // bug in jquery - 2016-01-12
             var description   = xml.find( "description" );
             var items         = xml.find( "item" );
