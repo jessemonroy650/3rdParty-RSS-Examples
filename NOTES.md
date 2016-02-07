@@ -1,6 +1,18 @@
 #= NOTES =
-Date: 2016-01-04
+Date: 2016-01-04<br>
+Last Update: 2016-02-07
 
+----
+Date: 2016-02-07
+
+Tring to fix parsing routine for the <title>, but am getting <media:title> added.
+
+
+
+
+----
+
+Date: 2016-01-04
 
 Claims Jquery 1.5 will do the parsing.
 
