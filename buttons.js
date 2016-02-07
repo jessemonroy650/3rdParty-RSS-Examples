@@ -116,7 +116,7 @@ $('#toggleWrapper').on('click', function(event) {
                 '<h2>'  + parm.title + '</h2>' +
                 '<div>' + parm.description  + '</div>' +
                 '<button id=readMore ' +
-                ' class="button button-pill button-royal" ' + 
+                ' class="button button-pill button-action" ' + 
                 '>Read More ..</button>'
             );
             buttons.readmore(parm.link);   // create handler to open browser
