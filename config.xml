@@ -81,7 +81,7 @@
 
         <!-- 3RD-Party * 3RD-Party * 3RD-Party -->
         <plugin name="cordova-plugin-appversion"     source="npm" spec="1.0.0" />
-        <!-- <plugin name="cordova-plugin-x-toast"        source="npm" spec="2.3.1" /> -->
+        <plugin name="cordova-plugin-x-toast"        source="npm" spec="2.3.1" />
 
         <!-- WHITELIST * WHITELIST * WHITELIST -->
         <!-- https://github.com/jessemonroy650/top-phonegap-mistakes/blob/master/the-whitelist-system.md -->
