@@ -7,7 +7,7 @@ Date: 2016-02-07
 
 Tring to fix parsing routine for the <title>, but am getting <media:title> added.
 
-
+Tried various "Tree Traversal" (.first .next .closest ), but did not work.
 
 
 ----
