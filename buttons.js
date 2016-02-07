@@ -115,7 +115,9 @@ $('#toggleWrapper').on('click', function(event) {
             $('#story').html(
                 '<h2>'  + parm.title + '</h2>' +
                 '<div>' + parm.description  + '</div>' +
-                '<button id=readMore>Read More ..</button>'
+                '<button id=readMore ' +
+                ' class="button button-pill button-royal" ' + 
+                '>Read More ..</button>'
             );
             buttons.readmore(parm.link);   // create handler to open browser
         };
