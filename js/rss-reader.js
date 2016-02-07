@@ -44,6 +44,8 @@ var readerApp = {
             //
             var title         = xml.find( "title" );
             $('#dbug').html(title + '<br>' + title[0]);
+            var mtitle        = xml.find( "media\:title" );
+            $('#dbug').html(decodeURImtitle);
             var xtitle        = title[0]; // bug in jquery - 2016-01-12
             var description   = xml.find( "description" );
             var items         = xml.find( "item" );
