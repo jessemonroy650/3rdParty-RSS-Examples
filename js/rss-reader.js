@@ -42,13 +42,13 @@ var readerApp = {
                 return;
             }
             //
-            this.parseXML(xml);
+            readerApp.parseXML(xml, externalElements);
             externalElements['draw'](currentFeed);
             externalElements['status']('Done.');
         });
     },
-    parseXML(xml) {
-        externalElements['status']('parsing xml');
+    parseXML(xml, ee) {
+        ee['status']('parsing xml');
         var title         = xml.find( "title" );
         //$('#dbug').html(title + '<br>' + title[0]);
         var xtitle        = title[0]; // bug in jquery - 2016-01-12
