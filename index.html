@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Security-Policy"
      content="default-src *;style-src 'self' ;script-src 'self';img-src 'self';" />
     <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="popup/popup.css" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="content.css" />
 </head>
@@ -31,6 +32,11 @@
     appState: <span id=appState>zero</span><br>
     lastReadLink: <span class=lastReadLink>lastReadLink</span><br>
     Feed Status: <span class=feedStatus>feedStatus</span><br>
+
+<p><button id=launch>Launch</button> network request and delayed response.
+
+<div id=popup class=popup><div id=message class=message>This is a popup message goes away after <span id=timeouttime></span> seconds.</div></div>
+
 
     <!-- This creates some bizzare bug in Android 5.1.0 -->
     <div class="button button-block button-action">Cordova <span id=acordova></span></div>
@@ -107,6 +113,8 @@
     <script type="text/javascript" src="js/rss-reader.js"></script>
     <!-- <script type="text/javascript" src="js/zepto-1.1.6.js"></script> -->
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="popup/popup.js"></script>
+    <script type="text/javascript" src="popup/popup-test.js"></script>
     <script type="text/javascript" src="buttons.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript">

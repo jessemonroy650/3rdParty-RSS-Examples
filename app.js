@@ -67,6 +67,9 @@ var app = {
         readerApp.needFeed = true;
         // get the RSS feeds on startup
         $('#getFeeds').trigger('click');
+        // Load the button and async example
+        loadScreenButton();
+        //
         $('#appState').html('deviceready done.');
     },
     init : function () {
