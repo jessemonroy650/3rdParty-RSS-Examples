@@ -60,7 +60,7 @@ var readerApp = {
         currentFeed.description   = description.text();
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
-        externalElements['status']('title:' + xtitle + ":" + items.length);
+        ee['status']('title:' + xtitle + ":" + items.length);
         // Parse our object
         currentFeed.entries = [];
         $.each(items, function(i, v) {
