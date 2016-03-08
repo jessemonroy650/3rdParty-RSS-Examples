@@ -1,5 +1,6 @@
 /*
     Date: 2016-01-05
+          2016-03-08 - Changed Entry point and method
 */
 var app = {
     self : {},
@@ -7,14 +8,11 @@ var app = {
     onDeviceReady : function () {
         $('#appState').html('deviceready');
         console.log("device ready.");
-        //alert("device ready.");
         if (device.platform === "iOS") {
             $('#appState').html('iOS');
             // hide Exit button. They don't have one on iOS devices.
-            // http://www.mzcart.com/javascript-how-to-addremove-css-class-from-a-dom-element/
             document.getElementById('exitApp').classList.add("hidden");
             // deals with post-iOS-7 change that covers the status bar
-            // http://coenraets.org/blog/2013/09/phonegap-and-cordova-with-ios-7/
             document.body.style.marginTop = "20px";
             // hide the Splash Screen for iOS only
             navigator.splashscreen.hide();
@@ -27,6 +25,7 @@ var app = {
             // exit app on [exit button]
             document.getElementById('exitApp').addEventListener('click', function() { app.exit(); });
         } else if (device.platform == 'browser') {
+            // hide Exit button. They don't have one on browsers.
             document.getElementById('exitApp').addEventListener('click', function() { alert('app.exit'); });
         }
         /////////////////////////////////////////////////////////
@@ -44,9 +43,9 @@ var app = {
             $('#appState').html('Cant get version/build.');
         };
         // Write device information to screen
-        //document.getElementById('cordova').innerHTML = device.cordova;
-        document.getElementById('model').innerHTML   = device.model;
-        document.getElementById('version').innerHTML = device.version;
+        document.getElementById('acordova').innerHTML = device.cordova;
+        document.getElementById('model').innerHTML    = device.model;
+        document.getElementById('version').innerHTML  = device.version;
         $('#appState').html('Loaded version and device info.');
         /////////////////////////////////////////////////////////
         // Initialize the app module
@@ -99,16 +98,22 @@ var app = {
     }
 };
 
-// This is to have the 'deviceready' code from firing in a webbrowser.
-var device = {platform:'browser'};
+//
+//    Entry Point
+//
+document.addEventListener('DOMContentLoaded', function() {
+    // Detect if we are using Cordova/Phonegap or a browser.
+    // https://videlais.com/2014/08/21/lessons-learned-from-detecting-apache-cordova/
+    var isCordovaApp = (typeof window.cordova !== "undefined");
 
-document.getElementById('appState').innerHTML = "dom loaded";
-// Thanks http://www.quirksmode.org/js/detect.html
-if ('mozApps' in navigator) {
-    document.addEventListener("DOMContentLoaded", app.onDeviceReady, false);
-    //document.getElementById("product").innerHTML = "got mozApps";
-} else {
-    document.addEventListener("deviceready", app.onDeviceReady, false);
-    //document.getElementById("product").innerHTML  = JSON.stringify(navigator);
-    document.getElementById('appState').innerHTML = "addEventListener - deviceready";
-}
+    // Is it a device we know?
+    if ( isCordovaApp === true ) {
+        // Wait for PhoneGap to load
+        document.addEventListener("deviceready", app.onDeviceReady, false);
+    } else {
+        // This needs to be global so other modules can see it.
+        device = {platform:'browser'};
+        // Force the function.
+        app.onDeviceReady();
+    }
+});

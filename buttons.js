@@ -1,7 +1,7 @@
 /*
     Date: 2016-01-05
+          2016-03-08 - cutting in new library.
 */
-
 var configMenu     = {isVisible:false};
 var feedList       = {isVisible:true};
 var feedInput      = {isVisible:false};
@@ -86,10 +86,11 @@ $('#getFeeds').on('click', function(event) {
     console.log('#getFeeds');
     $('.feedStatus').html('#getData');
     var s = '';
-    console.log("Num of Feeds: " + localStore.length());
-    $('.feedStatus').html(localStore.length() + ' Feed(s)');
+    var l = localStore.len();
+    console.log("Num of Feeds: " + l);
+    $('.feedStatus').html(l + ' Feed(s)');
     //now "shadow" draw the list
-    for (i = 0; i < localStore.length(); i++ ) {
+    for (i = 0; i < l; i++ ) {
         var k = localStore.key(i);
         var v = localStore.get(k);
         s += '<li id="' + k + '" class="feedLink button button-block">' + k + '</li>';
@@ -154,7 +155,6 @@ $('#addBtn').on('click', function(event) {
     if ($('#RSSLabel').val() && $('#RSSURL').val()) {
         localStore.put($('#RSSLabel').val(), $('#RSSURL').val());
         clearFeedFields();
-        // $('#RSSURL').val('');            // clear the field
         $('#addFeed').trigger('click');  // trigger to close the AddFeed form
         $('#getFeeds').trigger('click'); // trigger to recycle the list
     } else {
@@ -165,8 +165,6 @@ $('#addBtn').on('click', function(event) {
 $('#cancelBtn').on('click', function(event) {
     console.log('#cancelBtn');
     clearFeedFields();
-    //$('#RSSLabel').val('');          // clear the field
-    //$('#RSSURL').val('');            // clear the field
     $('#addFeed').trigger('click');  // trigger the toggle button
 });
 
@@ -176,11 +174,6 @@ $('#codeURL').on('click', function(event) {
     window.open('https://github.com/jessemonroy650/3rdParty-RSS-Examples', '_system');
 });
 
-
-$('#testToast').on('click', function(event) {
-    console.log('#testToast');
-    show('Loading...', 'long', 'center');
-});
 
 /*
     Since the list is dynamically created, the rebinding of buttons
