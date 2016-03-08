@@ -1,7 +1,7 @@
 /*
     Date: 2016-01-06
-
-	BUG FIX:2016-01-12: jquery-1.7.2 returned ALL titles, not just the "channel" title.
+	      2016-01-12 [BUG FIX] jquery-1.7.2 returned ALL titles, not just the "channel" title.
+          2016-03-08 create parseXML()
 */
 //
 var currentFeed = {
@@ -42,30 +42,33 @@ var readerApp = {
                 return;
             }
             //
-            var title         = xml.find( "title" );
-            //$('#dbug').html(title + '<br>' + title[0]);
-            var xtitle        = title[0]; // bug in jquery - 2016-01-12
-            var description   = xml.find( "description" );
-            var items         = xml.find( "item" );
-            var lastBuildDate = xml.find( "lastBuildDate" );
-            // assign
-            currentFeed.title         = xtitle; // title.text();
-            currentFeed.description   = description.text();
-            currentFeed.lastBuildDate = lastBuildDate.text();
-            currentFeed.length        = items.length;
-            externalElements['status']('title:' + xtitle + ":" + items.length);
-            // Parse our object
-            currentFeed.entries = [];
-            $.each(items, function(i, v) {
-                entry = {
-                    title:$(v).find("title").text(),
-                    link:$(v).find("link").text(),
-                    description:$.trim($(v).find("description").text())
-                };
-                currentFeed.entries.push(entry);
-            });
+            this.parseXML(xml);
             externalElements['draw'](currentFeed);
             externalElements['status']('Done.');
+        });
+    },
+    parseXML(xml) {
+        var title         = xml.find( "title" );
+        //$('#dbug').html(title + '<br>' + title[0]);
+        var xtitle        = title[0]; // bug in jquery - 2016-01-12
+        var description   = xml.find( "description" );
+        var items         = xml.find( "item" );
+        var lastBuildDate = xml.find( "lastBuildDate" );
+        // assign
+        currentFeed.title         = xtitle; // title.text();
+        currentFeed.description   = description.text();
+        currentFeed.lastBuildDate = lastBuildDate.text();
+        currentFeed.length        = items.length;
+        externalElements['status']('title:' + xtitle + ":" + items.length);
+        // Parse our object
+        currentFeed.entries = [];
+        $.each(items, function(i, v) {
+            entry = {
+                title:$(v).find("title").text(),
+                link:$(v).find("link").text(),
+                description:$.trim($(v).find("description").text())
+            };
+            currentFeed.entries.push(entry);
         });
     },
     getStory : function (displayFunc) {
