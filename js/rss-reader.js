@@ -24,9 +24,9 @@ var readerApp = {
         console.log("readerApp.init");
     },
     getFeed : function(externalElements) {
-        externalElements['status']('Contacting Server ...');
+        externalElements['preFetch']('Contacting Server ...');
         $.get(currentFeed.RSS, function(data, errorCode) {
-            externalElements['status']('Got Feed.');
+            externalElements['postFetch']('Got Feed.');
             // let's see if it will parse
             try {
                 var xml           = $( data );
@@ -47,8 +47,8 @@ var readerApp = {
             externalElements['status']('Done.');
         });
     },
-    parseXML(xml, ee) {
-        ee['status']('parsing xml');
+    parseXML(xml, extEl) {
+        extEl['status']('parsing xml');
         var title         = xml.find( "title" );
         //$('#dbug').html(title + '<br>' + title[0]);
         var xtitle        = title[0]; // bug in jquery - 2016-01-12
@@ -60,7 +60,7 @@ var readerApp = {
         currentFeed.description   = description.text();
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
-        ee['status']('title:' + xtitle + ":" + items.length);
+        extEl['status']('title:' + xtitle + ":" + items.length);
         // Parse our object
         currentFeed.entries = [];
         $.each(items, function(i, v) {

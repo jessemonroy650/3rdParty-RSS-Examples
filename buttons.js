@@ -72,7 +72,14 @@ $('#getData').on('click', function(event) {
                 buttons.rebind();
             },
             // output of status
-            status: function (parm) { $('.feedStatus').html(parm); },
+            status : function (parm) { $('.feedStatus').html(parm); },
+            preFetch  : function (parm) {
+                popup.init({'id':'popup','mid':'message', 'timeout':'0'});
+                popup.fire({'message':'<p>&nbsp;<p>' + parm ,'color':'blue','minShowTime':2000});
+            },
+            postFetch : function (parm) {
+                popup.extingish({'message':'<p>&nbsp;<p>' + parm,'color':'black'}, 2000);
+            }
         };
         readerApp.getFeed(passingReference);
         readerApp.needFeed = false;
