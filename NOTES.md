@@ -1,6 +1,11 @@
 #= NOTES =
 Date: 2016-01-04<br>
-Last Update: 2016-02-07
+Last Update: 2016-03-08
+
+----
+Date: 2016-03-08
+
+Tried jquery-1.11.1js same results.
 
 ----
 Date: 2016-02-07
