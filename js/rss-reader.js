@@ -48,6 +48,7 @@ var readerApp = {
         });
     },
     parseXML(xml) {
+        externalElements['status']('parsing xml');
         var title         = xml.find( "title" );
         //$('#dbug').html(title + '<br>' + title[0]);
         var xtitle        = title[0]; // bug in jquery - 2016-01-12
