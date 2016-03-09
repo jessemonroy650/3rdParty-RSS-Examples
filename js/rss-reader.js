@@ -29,6 +29,7 @@ var readerApp = {
             externalElements['postFetch']('Got Feed.');
             // let's see if it will parse
             try {
+                // replace(/(^[ \t]*\n)/gm, "")
                 var xml           = $( data );
                 externalElements['status']('xml make object okay');
             }
@@ -48,7 +49,6 @@ var readerApp = {
         });
     },
     parseXML(xml, extEl) {
-        // Try removing offending line
         extEl['status']('parsing xml');
         var title         = xml.find( "title" );
         //$('#dbug').html(title + '<br>' + title[0]);
@@ -62,7 +62,6 @@ var readerApp = {
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
         extEl['status']('title:' + xtitle + ":" + items.length);
-        $('#dbug2').html(JSON.stringify(xtitle));
         // Parse our object
         currentFeed.entries = [];
         $.each(items, function(i, v) {
