@@ -62,6 +62,7 @@ var readerApp = {
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
         extEl['status']('title:' + xtitle + ":" + items.length);
+        $('#dbug2').html(JSON.stringify(xtitle, null, 4));
         // Parse our object
         currentFeed.entries = [];
         $.each(items, function(i, v) {
