@@ -62,10 +62,10 @@ var readerApp = {
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
         extEl['status']('title:' + xtitle + ":" + items.length);
+        $(v).find("media\\:content").remove();
         // Parse our object
         currentFeed.entries = [];
         $.each(items, function(i, v) {
-            $(v).find("media\\:content").text().remove();
             entry = {
                 title:$(v).find("title").text(),
                 link:$(v).find("link").text(),
