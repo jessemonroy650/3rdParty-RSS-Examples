@@ -29,6 +29,7 @@ var readerApp = {
             externalElements['postFetch']('Got Feed.');
             // let's see if it will parse
             try {
+                // replace(/(^[ \t]*\n)/gm, "")
                 var xml           = $( data );
                 externalElements['status']('xml make object okay');
             }

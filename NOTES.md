@@ -5,7 +5,9 @@ Last Update: 2016-03-08
 ----
 Date: 2016-03-08
 
-Tried jquery-1.11.1js same results.
+Tried jquery-1.11.1js and jquery-2.1.1.min.js same results.
+
+TRY NEXT. Remove line with regex
 
 ----
 Date: 2016-02-07
