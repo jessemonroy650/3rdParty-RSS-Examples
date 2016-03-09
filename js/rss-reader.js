@@ -68,12 +68,12 @@ var readerApp = {
         $.each(items, function(i, v) {
             console.log("entry:", i);
             //console.log($(v).find("media\\:content").remove());
-            $(v).find("media\\:content").remove()
+            //$(v).find("media\\:content").remove()
             //console.log($(v).find("media\:content").text);
-            console.log("text", $(v).find("title").text());
+            //console.log("text", $(v).find("title").text());
             console.log("media\\:content", $(v).find("media\\:content").text());
             entry = {
-                title:$(v).find("title").text(),
+                title:$(v).next("title").text(),
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
