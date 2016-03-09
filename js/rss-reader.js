@@ -51,10 +51,8 @@ var readerApp = {
         // Try removing offending line
         extEl['status']('parsing xml');
         var title         = xml.find( "title" );
-        var buggy_title   = xml.find( "media\\:title" );
         //$('#dbug').html(title + '<br>' + title[0]);
         var xtitle        = title[0]; // bug in jquery - 2016-01-12
-            xtitle        = buggy_title;
         var description   = xml.find( "description" );
         var items         = xml.find( "item" );
         var lastBuildDate = xml.find( "lastBuildDate" );
@@ -68,7 +66,8 @@ var readerApp = {
         currentFeed.entries = [];
         $.each(items, function(i, v) {
             entry = {
-                title:$(v).find("title").text(),
+                /* title:$(v).find("title").text(), */
+                title:$(v).find("title")[0],
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
