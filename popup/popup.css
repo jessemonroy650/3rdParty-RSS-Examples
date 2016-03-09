@@ -14,6 +14,6 @@
   opacity: 0;
   /* WITHOUT THIS THE BUTTON UNDERNEATH IS BLOCKED */
   visibility: collapse;
-  /* transition: opacity 4s ease; */
+  /* transition: opacity 4s ease; removed fade 2016-03-08T17:47:56 */
 }
 .message {padding:0.2em;}
