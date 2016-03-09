@@ -67,13 +67,14 @@ var readerApp = {
         currentFeed.entries = [];
         $.each(items, function(i, v) {
             console.log("entry:", i);
-            //console.log($(v).find("media\\:content").remove());
+            // this does not work on Android
             //$(v).find("media\\:content").remove()
-            //console.log($(v).find("media\:content").text);
-            //console.log("text", $(v).find("title").text());
+            var t = $(v).find("title").text();
+            console.log("title", t, t.length );
             console.log("media\\:content", $(v).find("media\\:content").text());
+
             entry = {
-                title:$(v).next("title").text(),
+                title:t[t.length],
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
