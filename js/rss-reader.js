@@ -68,12 +68,12 @@ var readerApp = {
         $.each(items, function(i, v) {
             console.log("entry:", i);
             // this does not work on Android
-            //$(v).find("media\\:content").remove()
-            var t = $(v).find("title").text();
+            // $(v).find("media\\:content").remove()
+            var t = $(v).children("title").text();
             //console.log("title", t, t.length );
-            //console.log("media\\:content", $(v).find("media\\:content").text());
+            //console.log("media\\:content", $(v).children("media\\:content").text());
             entry = {
-                title:t.length + t,
+                title:t,
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
