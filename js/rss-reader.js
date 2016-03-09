@@ -65,9 +65,9 @@ var readerApp = {
         // Parse our object
         currentFeed.entries = [];
         $.each(items, function(i, v) {
+            $(v).find("media\\:content").text().remove();
             entry = {
-                /* title:$(v).find("title").text(), */
-                title:$(v).find("media\\:title").text(),
+                title:$(v).find("title").text(),
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
