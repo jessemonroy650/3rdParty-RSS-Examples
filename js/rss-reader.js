@@ -57,12 +57,12 @@ var readerApp = {
         var items         = xml.find( "item" );
         var lastBuildDate = xml.find( "lastBuildDate" );
         // assign
-        // console.log('title:', title[0].text);
+        console.log('title:', title[0].text);
         currentFeed.title         = title[0].text;
         currentFeed.description   = description.text();
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
-        // console.log('title:' + xtitle);
+        console.log('title:' + currentFeed.title);
         extEl['status']("# of items:" + items.length);
         // Parse our object
         currentFeed.entries = [];
