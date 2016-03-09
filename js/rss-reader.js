@@ -63,6 +63,7 @@ var readerApp = {
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
         console.log('title:' + currentFeed.title);
+        $('#dbug2').text(currentFeed.title);
         extEl['status']("# of items:" + items.length);
         // Parse our object
         currentFeed.entries = [];
