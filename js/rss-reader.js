@@ -70,11 +70,10 @@ var readerApp = {
             // this does not work on Android
             //$(v).find("media\\:content").remove()
             var t = $(v).find("title").text();
-            console.log("title", t, t.length );
-            console.log("media\\:content", $(v).find("media\\:content").text());
-
+            //console.log("title", t, t.length );
+            //console.log("media\\:content", $(v).find("media\\:content").text());
             entry = {
-                title:t[t.length],
+                title:t,
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
