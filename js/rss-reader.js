@@ -73,7 +73,7 @@ var readerApp = {
             //console.log("title", t, t.length );
             //console.log("media\\:content", $(v).find("media\\:content").text());
             entry = {
-                title:t,
+                title:t.length + t,
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
