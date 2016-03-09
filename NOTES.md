@@ -3,6 +3,11 @@ Date: 2016-01-04<br>
 Last Update: 2016-03-08
 
 ----
+Date: 2016-03-09
+
+WORKS obj.children('title') not obj.find('title')
+
+----
 Date: 2016-03-08T19:10:35
 
 Tried: 'obj.replace(/(^<media:title .*$)/gm, "")' before and after object creation.

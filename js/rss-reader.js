@@ -2,6 +2,7 @@
     Date: 2016-01-06
 	      2016-01-12 [BUG FIX] jquery-1.7.2 returned ALL titles, not just the "channel" title.
           2016-03-08 create parseXML()
+          2016-03-09 obj.children('title') fixes bug, instead of obj.find('title')
 */
 //
 var currentFeed = {
@@ -49,31 +50,26 @@ var readerApp = {
         });
     },
     parseXML(xml, extEl) {
-        console.log('parsing xml');
+        //console.log('parsing xml');
+        extEl['status']('parsing xml');
         var title         = xml.find( "title" );
-        //$('#dbug').html(title + '<br>' + title[0]);
-        var xtitle        = title[0].text; // bug in jquery - 2016-01-12
         var description   = xml.find( "description" );
         var items         = xml.find( "item" );
         var lastBuildDate = xml.find( "lastBuildDate" );
         // assign
-        currentFeed.title         = xtitle; // title.text();
+        // console.log('title:', title[0].text);
+        currentFeed.title         = title[0].text;
         currentFeed.description   = description.text();
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
-        console.log('title:' + xtitle);
-        console.log("# of items:" + items.length);
+        // console.log('title:' + xtitle);
+        extEl['status']("# of items:" + items.length);
         // Parse our object
         currentFeed.entries = [];
         $.each(items, function(i, v) {
-            console.log("entry:", i);
-            // this does not work on Android
-            // $(v).find("media\\:content").remove()
-            var t = $(v).children("title").text();
-            //console.log("title", t, t.length );
-            //console.log("media\\:content", $(v).children("media\\:content").text());
+            // console.log("entry:", i);
             entry = {
-                title:t,
+                title:$(v).children("title").text(),
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
