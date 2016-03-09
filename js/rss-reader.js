@@ -67,7 +67,7 @@ var readerApp = {
         $.each(items, function(i, v) {
             entry = {
                 /* title:$(v).find("title").text(), */
-                title:$(v).find("title").text()[0],
+                title:$(v).find("media\\:title").text(),
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
