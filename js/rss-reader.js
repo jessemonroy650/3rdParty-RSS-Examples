@@ -49,10 +49,10 @@ var readerApp = {
         });
     },
     parseXML(xml, extEl) {
-        extEl['status']('parsing xml');
+        console.log('parsing xml');
         var title         = xml.find( "title" );
         //$('#dbug').html(title + '<br>' + title[0]);
-        var xtitle        = title[0]; // bug in jquery - 2016-01-12
+        var xtitle        = title[0].text; // bug in jquery - 2016-01-12
         var description   = xml.find( "description" );
         var items         = xml.find( "item" );
         var lastBuildDate = xml.find( "lastBuildDate" );
@@ -61,11 +61,17 @@ var readerApp = {
         currentFeed.description   = description.text();
         currentFeed.lastBuildDate = lastBuildDate.text();
         currentFeed.length        = items.length;
-        extEl['status']('title:' + xtitle + ":" + items.length);
-       /* $('#dbug2').html(JSON.stringify(xtitle)); */
+        console.log('title:' + xtitle);
+        console.log("# of items:" + items.length);
         // Parse our object
         currentFeed.entries = [];
         $.each(items, function(i, v) {
+            console.log("entry:", i);
+            //console.log($(v).find("media\\:content").remove());
+            $(v).find("media\\:content").remove()
+            //console.log($(v).find("media\:content").text);
+            console.log("text", $(v).find("title").text());
+            console.log("media\\:content", $(v).find("media\\:content").text());
             entry = {
                 title:$(v).find("title").text(),
                 link:$(v).find("link").text(),
