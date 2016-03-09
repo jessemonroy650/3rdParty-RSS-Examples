@@ -29,8 +29,6 @@ var readerApp = {
             externalElements['postFetch']('Got Feed.');
             // let's see if it will parse
             try {
-                // replace(/(^<media:title .*$)/gm, "")
-                // try to remove offending line. Did not work here. 2016-03-08T18:47:16
                 var xml           = $( data );
                 externalElements['status']('xml make object okay');
             }
@@ -51,9 +49,9 @@ var readerApp = {
     },
     parseXML(xml, extEl) {
         // Try removing offending line
-        xml.replace(/(^<media:title .*$)/gm, "");
         extEl['status']('parsing xml');
         var title         = xml.find( "title" );
+        var buggy_title   = xml.find( "media\\:title" );
         //$('#dbug').html(title + '<br>' + title[0]);
         var xtitle        = title[0]; // bug in jquery - 2016-01-12
         var description   = xml.find( "description" );
