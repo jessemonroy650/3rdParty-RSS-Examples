@@ -58,7 +58,7 @@ var app = {
             $('#appState').html('localstore put');
         }
         // Initialize the Reader
-        readerApp.init();
+        //readerApp.init();
         // setup dynamic button linker
         buttons.init({
             list:    '.contentLink',
