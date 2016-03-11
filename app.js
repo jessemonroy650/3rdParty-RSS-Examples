@@ -52,8 +52,10 @@ var app = {
         app.init();
         // Test the localStore and report to 'id=storeavailable'
         if (localStore.test('storeavailable')) {
+            $('#appState').html('localstore found');
             //localStore.clear(); // This was a mistake that cost me hours.
             localStore.put('Apache Cordova','https://cordova.apache.org/feed.xml');
+            $('#appState').html('localstore put');
         }
         // Initialize the Reader
         readerApp.init();

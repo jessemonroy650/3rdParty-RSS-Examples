@@ -198,12 +198,10 @@ var buttons = {
     browserTag : null,
 
     init : function (tag) {
-        $('#appState').html("buttons.init start");
         buttons.listTag = tag.list;
         buttons.storyTag = tag.story;
         buttons.browserTag = tag.browser;
         console.log("buttons.init");
-
         buttons.dynamic();
     },
 
