@@ -33,8 +33,7 @@ Last Update: 2016-01-18
 - [ ] FIX Title header/toggle for RSS List (similar to Story/Link List)
 - [X] Add font-sizing system
 - [X] Add Better UX Messaging, or 'toast'
-- [ ] Add orientation button (landscape, portrait, or default/auto)
-- [ ] Add Automatic Reducing Messaging -> from 1 word/second -> 2 words/second -> 4 words/second SEE: NOTES.onReading.md
+- [/] Add orientation button (landscape, portrait, or default/auto)
 - [ ] Create a Lottery-only version of the RSS Reader
 - [/] Delete a URL/RSS Feed - 1/2 library done -> see: ~/PGB.Mine/PUBLIC-CORDOVA-STORAGE/cordova-storage-localstorage/records.html 
 - [ ] Don't allow feed entry with XML we can't read.
@@ -46,10 +45,10 @@ Last Update: 2016-01-18
 
 ### When Possible ###
 
+- [ ] Add Automatic Reducing Messaging -> from 1 word/second -> 2 words/second -> 4 words/second SEE: NOTES.onReading.md
 - [ ] Move URL/RSS Feed entry on list
 - [ ] Handle more types of RSS Feeds
 - [ ] Left Handed/Right Handed Interface toggle
 - [ ] Swipe left/right to advance story
 - [ ] Do Background scheduled fetches
 - [ ] Write a Google news filter - to get rid of table
-
