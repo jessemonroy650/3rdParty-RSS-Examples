@@ -30,12 +30,13 @@ Last Update: 2016-01-18
 - [X] Check for text-only version of news
 - [X] Check for full story version of news
 - [X] `feedContainter:isVisible` to `buttons.js`
-- [ ] Add Title header/toggle for RSS List (similar to Story/Link List)
+- [ ] FIX Title header/toggle for RSS List (similar to Story/Link List)
 - [X] Add font-sizing system
 - [X] Add Better UX Messaging, or 'toast'
-- [ ] Add orientation button
+- [ ] Add orientation button (landscape, portrait, or default/auto)
+- [ ] Add Automatic Reducing Messaging -> from 1 word/second -> 2 words/second -> 4 words/second SEE: NOTES.onReading.md
 - [ ] Create a Lottery-only version of the RSS Reader
-- [/] Delete a URL/RSS Feed
+- [/] Delete a URL/RSS Feed - 1/2 library done -> see: ~/PGB.Mine/PUBLIC-CORDOVA-STORAGE/cordova-storage-localstorage/records.html 
 - [ ] Don't allow feed entry with XML we can't read.
 - [ ] Connection physical [back button], when in reading story, to flip back to reading list
 - [ ] Make Splash Screen nicer - may be 9-patch

@@ -8,6 +8,11 @@ var feedInput      = {isVisible:false};
 var feedContainter = {isVisible:true};
 var story          = {isVisible:false};
 
+// time is in milliseconds
+var preFetchMinTime  = 2000;
+var postFetchMinTime = 2000;
+
+
 var xfunc = function() { $('#feedContainter').removeClass('hidden'); };
 
 var ifBothFalseFunc = function ( first, second, func ) {
@@ -75,10 +80,10 @@ $('#getData').on('click', function(event) {
             status : function (parm) { $('.feedStatus').html(parm); },
             preFetch  : function (parm) {
                 popup.init({'id':'popup','mid':'message', 'timeout':'0'});
-                popup.fire({'message':'<p>&nbsp;<p>' + parm ,'color':'blue','minShowTime':2000});
+                popup.fire({'message':'<p>&nbsp;<p>' + parm ,'color':'blue','minShowTime': preFetchMinTime});
             },
             postFetch : function (parm) {
-                popup.extingish({'message':'<p>&nbsp;<p>' + parm,'color':'black'}, 2000);
+                popup.extingish({'message':'<p>&nbsp;<p>' + parm,'color':'black'}, postFetchMinTime);
             }
         };
         readerApp.getFeed(passingReference);
@@ -243,3 +248,21 @@ var buttons = {
         buttons.dynamic();
     }
 }
+
+///////////////////////////////////////
+//
+//    Screen Orientation toggles
+//
+document.getElementById('portrait').addEventListener('click', function () {
+    screen.unlockOrientation();
+    screen.lockOrientation('portrait');
+});
+document.getElementById('landscape').addEventListener('click', function () {
+    screen.unlockOrientation();
+    screen.lockOrientation('landscape');
+});
+
+
+
+
+
