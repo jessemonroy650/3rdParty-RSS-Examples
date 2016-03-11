@@ -59,14 +59,15 @@ var app = {
         }
         $('#appState').html('out of localstore');
         // Initialize the Reader
-        //readerApp.init();
+        readerApp.init();
+        $('#appState').html('readerApp.init');
         // setup dynamic button linker
         buttons.init({
             list:    '.contentLink',
             story:   '#toggleWrapper',
             browser: '#readMore'
         });
-        //$('#appState').html('buttons.init.');
+        $('#appState').html('buttons.init.');
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the RSS feeds on startup
