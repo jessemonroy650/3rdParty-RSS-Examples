@@ -15,6 +15,7 @@
 
     <!-- App requested permission -->
     <preference name="permissions" value="none"/>
+    <preference name="orientation" value="portrait" />
 
     <!-- https://github.com/phonegap/phonegap/wiki/App-Icon-Sizes -->
     <!-- ANDROID * ANDROID * ANDROID -->
