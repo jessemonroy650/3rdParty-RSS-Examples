@@ -23,6 +23,7 @@ var readerApp = {
     //
     init : function () {
         console.log("readerApp.init");
+        $('#appState').html('readerApp.init inside');
     },
     getFeed : function(externalElements) {
         externalElements['preFetch']('Contacting Server ...');
