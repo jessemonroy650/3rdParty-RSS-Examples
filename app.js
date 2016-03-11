@@ -57,6 +57,7 @@ var app = {
             localStore.put('Apache Cordova','https://cordova.apache.org/feed.xml');
             $('#appState').html('localstore put');
         }
+        $('#appState').html('out of localstore');
         // Initialize the Reader
         //readerApp.init();
         // setup dynamic button linker
