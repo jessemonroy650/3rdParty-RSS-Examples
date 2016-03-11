@@ -201,7 +201,8 @@ var buttons = {
         buttons.listTag = tag.list;
         buttons.storyTag = tag.story;
         buttons.browserTag = tag.browser;
-        console.log("buttons.init");
+        alert("buttons.init");
+        $('#appState').html("buttons.init");
         buttons.dynamic();
     },
 
