@@ -63,10 +63,12 @@ var app = {
             story:   '#toggleWrapper',
             browser: '#readMore'
         });
+        $('#appState').html('buttons.init.');
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the RSS feeds on startup
         $('#getFeeds').trigger('click');
+        $('#appState').html('#getFeeds.trigger');
         // Load the button and async example
         loadScreenButton();
         //
