@@ -33,9 +33,9 @@ var app = {
         //buttons.init({list:'.contentLink',story:'#toggleWrapper',browser:'#readMore'});
         //$('#appState').html('buttons.init.');
         // reset the need for a Feed
-        readerApp.needFeed = true;
+        //readerApp.needFeed = true;
         // get the RSS feeds on startup
-        $('#getFeeds').trigger('click');
+        //$('#getFeeds').trigger('click');
         //
         $('#appState').html('deviceready done.');
     },
