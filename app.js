@@ -36,11 +36,11 @@ var app = {
         // setup dynamic button linker
         //buttons.init({list:'.contentLink',story:'#toggleWrapper',browser:'#readMore'});
         buttons.init();
-        //$('#appState').html('buttons.init.');
+        $('#appState').html('buttons.init.');
         // reset the need for a Feed
-        //readerApp.needFeed = true;
+        readerApp.needFeed = true;
         // get the RSS feeds on startup
-        //$('#getFeeds').trigger('click');
+        $('#getFeeds').trigger('click');
         //
         $('#appState').html('deviceready done.');
     },
