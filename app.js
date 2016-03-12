@@ -30,12 +30,8 @@ var app = {
         }
         /////////////////////////////////////////////////////////
         // setup dynamic button linker
-        buttons.init({
-            list:    '.contentLink',
-            story:   '#toggleWrapper',
-            browser: '#readMore'
-        });
-        $('#appState').html('buttons.init.');
+        //buttons.init({list:'.contentLink',story:'#toggleWrapper',browser:'#readMore'});
+        //$('#appState').html('buttons.init.');
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the RSS feeds on startup

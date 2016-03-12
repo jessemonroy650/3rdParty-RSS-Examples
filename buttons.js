@@ -194,9 +194,9 @@ $('#codeURL').on('click', function(event) {
     module deals with that.
 */
 var buttons = {
-    listTag : null,
-    storyTag : null,
-    browserTag : null,
+    listTag : '.contentLink',
+    storyTag : '#toggleWrapper',
+    browserTag : '#readMore',
 
     init : function (tag) {
         buttons.listTag = tag.list;
