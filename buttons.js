@@ -190,10 +190,12 @@ var buttons = {
     storyTag : '#toggleWrapper',
     browserTag : '#readMore',
 
-    init : function (tag) {
+    init : function () {
+/*
         buttons.listTag = tag.list;
         buttons.storyTag = tag.story;
         buttons.browserTag = tag.browser;
+*/
         console.log("buttons.init");
         buttons.dynamic();
         buttons.bindAppOptions();
