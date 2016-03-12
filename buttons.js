@@ -108,7 +108,8 @@ $('#getFeeds').on('click', function(event) {
         s += '<li id="' + k + '" class="feedLink button button-block">' + k + '</li>';
     };
     s += '<li id=addFeed class="xfeedLink button button-block">Add a Feed</li>';
-    console.log(s);
+    // list of feeds
+    //console.log(s);
     $("#RSSList li").remove(); // remove children of the DOM
     $("#RSSList").append(s);   // appeand our list of Feeds
     buttons.dynamic2();        // bind the list to touching
@@ -222,7 +223,7 @@ var buttons = {
             //$('.lastReadLink').html(event.target.id);
             //currentFeed.selectedStory = event.target.id;
             console.log('id:' + event.target.id);
-            console.log(localStore.get(event.target.id));
+            console.log('URL:' +localStore.get(event.target.id));
             // reset the need for a feed.
             readerApp.needFeed = true;
             currentFeed.RSS    = localStore.get(event.target.id);

@@ -26,41 +26,11 @@ var app = {
             document.getElementById('exitApp').addEventListener('click', function() { app.exit(); });
         } else if (device.platform == 'browser') {
             // hide Exit button. They don't have one on browsers.
-            document.getElementById('exitApp').addEventListener('click', function() { alert('app.exit'); });
+            document.getElementById('exitApp').classList.add("hidden");
         }
+        // Load the button and async example
+        popupTest.setupLoadScreenButton();
         /////////////////////////////////////////////////////////
-        // Trap the pause/resume event
-        document.addEventListener("pause",  app.onPause, false);
-        document.addEventListener("resume", app.onResume, false);
-        try {
-            // The versions we define
-            if ('version' in AppVersion) {
-                document.getElementById('appversion').innerHTML   = AppVersion.version;
-                document.getElementById('buildversion').innerHTML = AppVersion.build;
-            }
-        } 
-        catch (e) {
-            $('#appState').html('Cant get version/build.');
-        };
-        // Write device information to screen
-        document.getElementById('acordova').innerHTML = device.cordova;
-        document.getElementById('model').innerHTML    = device.model;
-        document.getElementById('version').innerHTML  = device.version;
-        $('#appState').html('Loaded version and device info.');
-        /////////////////////////////////////////////////////////
-        // Initialize the app module
-        app.init();
-        // Test the localStore and report to 'id=storeavailable'
-        if (localStore.test('storeavailable')) {
-            $('#appState').html('localstore found');
-            //localStore.clear(); // This was a mistake that cost me hours.
-            localStore.put('Apache Cordova','https://cordova.apache.org/feed.xml');
-            $('#appState').html('localstore put');
-        }
-        $('#appState').html('out of localstore');
-        // Initialize the Reader
-        readerApp.init();
-        $('#appState').html('readerApp.init');
         // setup dynamic button linker
         buttons.init({
             list:    '.contentLink',
@@ -72,9 +42,6 @@ var app = {
         readerApp.needFeed = true;
         // get the RSS feeds on startup
         $('#getFeeds').trigger('click');
-        //$('#appState').html('#getFeeds.trigger');
-        // Load the button and async example
-        loadScreenButton();
         //
         $('#appState').html('deviceready done.');
     },
@@ -82,28 +49,12 @@ var app = {
         console.log('app.init');
         $('#appState').html('app.init');
     },
-    onPause : function () {
-        console.log('app.onPause');
-        $('#appState').html('app.onPause');
-    },
-    onResume : function () {
-        console.log('app.onResume');
-        $('#appState').html('app.onResume');
-    },
     onBackButton : function () {
         // Don't do anything. Ingore button, for now.
         $('#appState').html('app.onBackButton');
     },
     exit : function () {
-        console.log('Called app.exit()');
-        $('#appState').html('app.exit');
-        if ('app' in navigator) {
-            navigator.app.exitApp();
-        } else {
-            alert('exit button hit.');
-            // This is here to deal with a bug on LG Leon - which I own.
-            navigator.app.exitApp();
-        }
+        navigator.app.exitApp();
     }
 };
 
