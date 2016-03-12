@@ -1,6 +1,7 @@
 /*
     Date: 2016-01-05
           2016-03-08 - cutting in new library.
+          2016-03-12 - Moved buttons for "App Options" into buttons.bindAppOptions()
 */
 var configMenu     = {isVisible:false};
 var feedList       = {isVisible:true};
@@ -12,7 +13,10 @@ var story          = {isVisible:false};
 var preFetchMinTime  = 2000;
 var postFetchMinTime = 2000;
 
-
+///////////////////////////////////////
+//
+//    Some Lambda functions
+//
 var xfunc = function() { $('#feedContainter').removeClass('hidden'); };
 
 var ifBothFalseFunc = function ( first, second, func ) {
@@ -21,6 +25,13 @@ var ifBothFalseFunc = function ( first, second, func ) {
     }
 };
 
+var clearFeedFields  = function() {
+    $('#RSSLabel').val('');          // clear the field
+    $('#RSSURL').val('');            // clear the field
+}
+
+
+///////////////////////////////////////
 //
 //    App Icon on the top left
 //
@@ -111,9 +122,9 @@ $('#getFeeds').on('click', function(event) {
     // list of feeds
     //console.log(s);
     $("#RSSList li").remove(); // remove children of the DOM
-    $("#RSSList").append(s);   // appeand our list of Feeds
+    $("#RSSList").append(s);   // append our list of Feeds
     buttons.dynamic2();        // bind the list to touching
-    addFeedBinding();          // bind our button to add more feeds
+    buttons.addFeedBinding();          // bind our button to add more feeds
 });
 
 // Toggle the visibility of the "Story"
@@ -143,25 +154,6 @@ $('#toggleWrapper').on('click', function(event) {
     }
 });
 
-addFeedBinding = function () {
-    $('#addFeed').on('click', function(event) {
-        console.log('#addFeed');
-        if (feedInput.isVisible) {
-            $('#feedInput').addClass('hidden');
-            feedInput.isVisible = false;
-        } else {
-            $('#feedInput').removeClass('hidden');
-            feedInput.isVisible = true;
-        }
-    });
-};
-addFeedBinding();
-
-clearFeedFields  = function() {
-    $('#RSSLabel').val('');          // clear the field
-    $('#RSSURL').val('');            // clear the field
-}
-
 $('#addBtn').on('click', function(event) {
     console.log('#addBtn');
     // Add the data to storage
@@ -190,7 +182,7 @@ $('#codeURL').on('click', function(event) {
 
 /*
     Since the list is dynamically created, the rebinding of buttons
-    has to be done everytime the list is created. These button
+    has to be done everytime the list is created. This button
     module deals with that.
 */
 var buttons = {
@@ -204,6 +196,7 @@ var buttons = {
         buttons.browserTag = tag.browser;
         console.log("buttons.init");
         buttons.dynamic();
+        buttons.bindAppOptions();
     },
 
     dynamic : function () {
@@ -248,22 +241,37 @@ var buttons = {
     rebind : function () {
         buttons.dynamic();
     }
-}
+};
 
 ///////////////////////////////////////
 //
 //    Screen Orientation toggles
 //
-document.getElementById('portrait').addEventListener('click', function () {
-    screen.unlockOrientation();
-    screen.lockOrientation('portrait');
-});
-document.getElementById('landscape').addEventListener('click', function () {
-    screen.unlockOrientation();
-    screen.lockOrientation('landscape');
-});
+buttons.bindAppOptions = function() {
+    document.getElementById('portrait').addEventListener('click', function () {
+        screen.unlockOrientation();
+        screen.lockOrientation('portrait');
+    });
+    document.getElementById('landscape').addEventListener('click', function () {
+        screen.unlockOrientation();
+        screen.lockOrientation('landscape');
+    });
+};
 
-
-
-
+///////////////////////////////////////
+//
+//    Screen Orientation toggles
+//
+buttons.addFeedBinding = function () {
+    $('#addFeed').on('click', function(event) {
+        console.log('#addFeed');
+        if (feedInput.isVisible) {
+            $('#feedInput').addClass('hidden');
+            feedInput.isVisible = false;
+        } else {
+            $('#feedInput').removeClass('hidden');
+            feedInput.isVisible = true;
+        }
+    });
+};
 

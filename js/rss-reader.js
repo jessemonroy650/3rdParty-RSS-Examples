@@ -69,8 +69,10 @@ var readerApp = {
         currentFeed.entries = [];
         $.each(items, function(i, v) {
             // console.log("entry:", i);
+            var t = $(v).children("title").text();
+            extEl['status']('storyTitle:' + t );
             entry = {
-                title:$(v).children("title").text(),
+                title: t,
                 link:$(v).find("link").text(),
                 description:$.trim($(v).find("description").text())
             };
