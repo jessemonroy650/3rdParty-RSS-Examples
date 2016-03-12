@@ -19,11 +19,15 @@ var app = {
         } else if (device.platform == 'Android') {
             $('#appState').html('Android');
             // Get rid of 300ms delay 
-            document.addEventListener('DOMContentLoaded', function() { FastClick.attach(document.body); }, false);
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body); },
+                false);
+            // exit app on [exit button]
+            document.getElementById('exitApp').addEventListener('click', function() {
+                navigator.app.exitApp();
+            });
             // trap the [back button]
             document.addEventListener("backbutton", app.onBackButton, false);
-            // exit app on [exit button]
-            document.getElementById('exitApp').addEventListener('click', function() { app.exit(); });
         } else if (device.platform == 'browser') {
             // hide Exit button. They don't have one on browsers.
             document.getElementById('exitApp').classList.add("hidden");
@@ -31,6 +35,7 @@ var app = {
         /////////////////////////////////////////////////////////
         // setup dynamic button linker
         //buttons.init({list:'.contentLink',story:'#toggleWrapper',browser:'#readMore'});
+        buttons.init();
         //$('#appState').html('buttons.init.');
         // reset the need for a Feed
         //readerApp.needFeed = true;
@@ -46,9 +51,6 @@ var app = {
     onBackButton : function () {
         // Don't do anything. Ingore button, for now.
         $('#appState').html('app.onBackButton');
-    },
-    exit : function () {
-        navigator.app.exitApp();
     }
 };
 
