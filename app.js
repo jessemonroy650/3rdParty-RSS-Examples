@@ -28,8 +28,6 @@ var app = {
             // hide Exit button. They don't have one on browsers.
             document.getElementById('exitApp').classList.add("hidden");
         }
-        // Load the button and async example
-        popupTest.setupLoadScreenButton();
         /////////////////////////////////////////////////////////
         // setup dynamic button linker
         buttons.init({
