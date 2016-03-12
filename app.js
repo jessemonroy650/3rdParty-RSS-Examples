@@ -40,7 +40,8 @@ var app = {
         // reset the need for a Feed
         readerApp.needFeed = true;
         // get the RSS feeds on startup
-        $('#getFeeds').trigger('click');
+        //$('#getFeeds').trigger('click');
+        getFeeds();
         //
         $('#appState').html('deviceready done.');
     },

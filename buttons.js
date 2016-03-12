@@ -105,7 +105,8 @@ $('#getData').on('click', function(event) {
 //
 //    get a list of feeds from localStorage
 //
-$('#getFeeds').on('click', function(event) {
+
+getFeeds = function(event) {
     console.log('#getFeeds');
     $('.feedStatus').html('#getData');
     var s = '';
@@ -125,7 +126,10 @@ $('#getFeeds').on('click', function(event) {
     $("#RSSList").append(s);   // append our list of Feeds
     buttons.dynamic2();        // bind the list to touching
     buttons.addFeedBinding();          // bind our button to add more feeds
-});
+};
+
+
+$('#getFeeds').on('click', getFeeds);
 
 // Toggle the visibility of the "Story"
 $('#toggleWrapper').on('click', function(event) {
